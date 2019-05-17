@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerLvl1 : MonoBehaviour {
+public class PlayerControllerDorian : MonoBehaviour {
 
     public float moveSpeed;
     private Rigidbody2D myRigidbody;
@@ -15,9 +15,14 @@ public class PlayerControllerLvl1 : MonoBehaviour {
 
     public bool isGrounded; 
 
+
+public Vector3 respawn;
+
     // Start is called before the first frame update
     void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
+
+        respawn=this.transform.position;
     }
 
     // Update is called once per frame
@@ -38,5 +43,20 @@ public class PlayerControllerLvl1 : MonoBehaviour {
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
         }
     }
+
+    public void kill(){
+        transform.position=respawn;
+    }
+
+
+
+void OnTriggerEnter2D(Collider2D col)
+{
+    if(col.gameObject.name == "checkpoint")
+    {
+        Debug.Log("alooooo");
+      respawn=col.transform.position+new Vector3(0.2f,0,0);
+    }
+}
 
    }

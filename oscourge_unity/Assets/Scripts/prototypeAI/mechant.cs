@@ -26,6 +26,7 @@ void Update()
     float i=player.transform.position.x-transform.position.x;
     if((i>0f&&i<4f)||(i<0f && i>-4f) ){
         seen=true;
+        Debug.Log(seen);
     }
 
     if(seen){
@@ -47,13 +48,13 @@ void Update()
      myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
      transform.localScale = new Vector3(2f, 2f, 1f);
      z++;
-     Debug.Log("Droite");
+     //Debug.Log("Droite");
  }
  else if (z<60){
 
     myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
     transform.localScale = new Vector3(-2f, 2f, 1f);
-     Debug.Log("Gauche");
+     //Debug.Log("Gauche");
      z++;
 }
 else if (z==60){
@@ -69,7 +70,7 @@ void OnCollisionEnter2D (Collision2D col)
 {
     if(col.gameObject.name == "gentil")
     {
-       col.transform.position=new Vector3(-7f,-1.5f,0);
+      col.gameObject.GetComponent<PlayerControllerDorian>().kill();
        seen=false;
     }
 }
