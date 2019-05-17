@@ -9,12 +9,64 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <marker date="1558085834223" expanded="false" signature="6:78" ph="..." />
+                <marker date="1558085834223" expanded="true" signature="130:1320" ph="{...}" />
+                <marker date="1558085834223" expanded="true" signature="434:492" ph="{...}" />
+                <marker date="1558085834223" expanded="true" signature="551:1314" ph="{...}" />
+                <marker date="1558085834223" expanded="true" signature="704:862" ph="{...}" />
+                <marker date="1558085834223" expanded="true" signature="909:1069" ph="{...}" />
+                <marker date="1558085834223" expanded="true" signature="1210:1308" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="5462" selection-start-line="5462" selection-end-line="5462" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <folding>
+                <marker date="1558097882512" expanded="false" signature="6:78" ph="..." />
+                <marker date="1558097882512" expanded="true" signature="113:849" ph="{...}" />
+                <marker date="1558097882512" expanded="true" signature="262:481" ph="{...}" />
+                <marker date="1558097882512" expanded="true" signature="549:842" ph="{...}" />
+                <marker date="1558097882512" expanded="true" signature="573:598" ph="{...}" />
+                <marker date="1558097882512" expanded="true" signature="598:836" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/NouveauMenu/MainMenu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <marker date="1557419074149" expanded="false" signature="6:113" ph="..." />
+                <marker date="1557419074149" expanded="true" signature="152:578" ph="{...}" />
+                <marker date="1557419074149" expanded="true" signature="181:311" ph="{...}" />
+                <marker date="1557419074149" expanded="true" signature="339:406" ph="{...}" />
+                <marker date="1557419074149" expanded="true" signature="476:497" ph="{...}" />
+                <marker date="1557419074149" expanded="true" signature="555:576" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,17 +77,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NouveauMenu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/menu/menu.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="779" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -45,15 +101,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -100,11 +156,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558085809921</updated>
       <workItem from="1558085814242" duration="35000" />
+      <workItem from="1558096333740" duration="1846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35000" />
+    <option name="totallyTimeSpent" value="1881000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -116,21 +173,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="779" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2549234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -138,13 +188,21 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,8 +223,54 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1558085834223" expanded="false" signature="6:78" ph="..." />
+            <marker date="1558085834223" expanded="true" signature="130:1320" ph="{...}" />
+            <marker date="1558085834223" expanded="true" signature="434:492" ph="{...}" />
+            <marker date="1558085834223" expanded="true" signature="551:1314" ph="{...}" />
+            <marker date="1558085834223" expanded="true" signature="704:862" ph="{...}" />
+            <marker date="1558085834223" expanded="true" signature="909:1069" ph="{...}" />
+            <marker date="1558085834223" expanded="true" signature="1210:1308" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="5462" selection-start-line="5462" selection-end-line="5462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1558097882512" expanded="false" signature="6:78" ph="..." />
+            <marker date="1558097882512" expanded="true" signature="113:849" ph="{...}" />
+            <marker date="1558097882512" expanded="true" signature="262:481" ph="{...}" />
+            <marker date="1558097882512" expanded="true" signature="549:842" ph="{...}" />
+            <marker date="1558097882512" expanded="true" signature="573:598" ph="{...}" />
+            <marker date="1558097882512" expanded="true" signature="598:836" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NouveauMenu/MainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <marker date="1557419074149" expanded="false" signature="6:113" ph="..." />
+            <marker date="1557419074149" expanded="true" signature="152:578" ph="{...}" />
+            <marker date="1557419074149" expanded="true" signature="181:311" ph="{...}" />
+            <marker date="1557419074149" expanded="true" signature="339:406" ph="{...}" />
+            <marker date="1557419074149" expanded="true" signature="476:497" ph="{...}" />
+            <marker date="1557419074149" expanded="true" signature="555:576" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

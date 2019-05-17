@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8671083210714067016}
   - component: {fileID: 8671083210714067018}
   - component: {fileID: 9068912087384079689}
-  m_Layer: 0
-  m_Name: 44
+  m_Layer: 9
+  m_Name: CourgePart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 758958045
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ffe24ff1c1fe62543b24b7f852840405, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
