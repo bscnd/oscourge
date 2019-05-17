@@ -54,7 +54,6 @@ void OnTriggerEnter2D(Collider2D col)
 {
     if(col.gameObject.name == "checkpoint")
     {
-        Debug.Log("alooooo");
       respawn=col.transform.position+new Vector3(0.2f,0,0);
     }
 }
