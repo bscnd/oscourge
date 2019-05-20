@@ -20,31 +20,6 @@ public class PlayerControllerLvl1 : MonoBehaviour {
 		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 
-	private void updateInteractiveObjects(){
-		GameObject[] interactiveObjects = GameObject.FindGameObjectsWithTag("Interactive");
-		Lever nearestLever = null;
-		float distanceLever = float.PositiveInfinity;
-		float maximumDistance = 1.2F;
-
-		foreach(GameObject obj in interactiveObjects){
-			float temp = Vector2.Distance(this.transform.position, obj.transform.position);
-			if(Input.GetButtonDown("ContextualAction")){
-				Lever aLever = obj.GetComponent(typeof(Lever)) as Lever;
-				if(aLever != null){
-					if(temp < distanceLever && temp < maximumDistance){
-						distanceLever = temp;
-						nearestLever = aLever;
-					}
-				}
-
-			}
-		}
-
-		if(nearestLever != null){
-			nearestLever.trigger();
-		}
-	}
-
 	// Update is called once per frame
 	void Update() {
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
@@ -62,7 +37,5 @@ public class PlayerControllerLvl1 : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && isGrounded) {
 			myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
 		}
-
-		updateInteractiveObjects();
 	}
 }
