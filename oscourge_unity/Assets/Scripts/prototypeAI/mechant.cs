@@ -14,11 +14,14 @@ public class mechant : MonoBehaviour
   private bool seen;
   private int z;
 
+  private Vector3 spawn;
+
     // Start is called before the first frame update
   void Start() {
     myRigidbody = GetComponent<Rigidbody2D>();
     seen=false;
     z=0;
+    spawn=transform.position;
   }
 
   void Update()
@@ -69,6 +72,7 @@ void OnCollisionEnter2D (Collision2D col)
 {
   if(col.gameObject.name == "gentil")
   {
+      transform.position=spawn;
     col.gameObject.GetComponent<PlayerControllerDorian>().kill();
     seen=false;
   }
