@@ -152,13 +152,13 @@
             <e p="explosion.cs" t="Include" />
             <e p="menu.cs" t="Include" />
           </e>
-          <e p="NouveauMenu" t="Include">
+          <e p="NewMenu" t="Include">
             <e p="MainMenu.cs" t="Include" />
           </e>
           <e p="prototypeAI" t="Include">
             <e p="camerafollow.cs" t="Include" />
             <e p="mechant.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerControllerDorian.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
