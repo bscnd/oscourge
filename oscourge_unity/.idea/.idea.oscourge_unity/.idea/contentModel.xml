@@ -157,6 +157,7 @@
           </e>
           <e p="prototypeAI" t="Include">
             <e p="camerafollow.cs" t="Include" />
+            <e p="checkpoint.cs" t="Include" />
             <e p="mechant.cs" t="Include" />
             <e p="PlayerControllerDorian.cs" t="Include" />
           </e>
