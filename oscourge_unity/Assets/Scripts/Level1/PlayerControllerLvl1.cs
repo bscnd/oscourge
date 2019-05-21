@@ -26,10 +26,10 @@ public class PlayerControllerLvl1 : MonoBehaviour {
 
 		if (Input.GetAxisRaw("Horizontal") > 0f) {
 			myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
-			transform.localScale = new Vector3(2f, 2f, 1f);
+			transform.localScale = new Vector3(4f, 4f, 1f);
 		} else if (Input.GetAxisRaw("Horizontal") < 0f) {
 			myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
-			transform.localScale = new Vector3(-2f, 2f, 1f);
+			transform.localScale = new Vector3(-4f, 4f, 1f);
 		} else {
 			myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
 		}
