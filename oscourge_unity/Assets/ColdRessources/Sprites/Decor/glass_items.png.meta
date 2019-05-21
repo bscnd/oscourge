@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: c4d8d6730ff24594f90f75470201c591
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1487088893988093466
+    second: glass_items_0
+  - first:
+      213: 6908417322764102390
+    second: glass_items_1
+  - first:
+      213: 3412268811597835150
+    second: glass_items_2
+  - first:
+      213: 3853673377153140019
+    second: glass_items_3
+  - first:
+      213: 1610777689016039365
+    second: glass_items_4
+  - first:
+      213: -6444792108110157944
+    second: glass_items_5
+  - first:
+      213: 8644238101972323734
+    second: glass_items_6
+  - first:
+      213: -199596086656748792
+    second: glass_items_7
+  - first:
+      213: 8647448341877249099
+    second: glass_items_8
+  - first:
+      213: -3973299330455630255
+    second: glass_items_9
+  - first:
+      213: -4981886891548108779
+    second: glass_items_10
+  - first:
+      213: -3863873396818554403
+    second: glass_items_11
+  - first:
+      213: -9210703443922114474
+    second: glass_items_12
+  - first:
+      213: -2465129870663739698
+    second: glass_items_13
+  - first:
+      213: 1627921109848506501
+    second: glass_items_14
+  - first:
+      213: -4920917447019823908
+    second: glass_items_15
+  - first:
+      213: -790630406441118159
+    second: glass_items_16
+  - first:
+      213: -8496571291945900647
+    second: glass_items_17
+  - first:
+      213: 5164761687550459365
+    second: glass_items_26
+  - first:
+      213: -8398422528217211589
+    second: glass_items_31
+  - first:
+      213: 6243639551479973897
+    second: glass_items_35
+  - first:
+      213: -3101762774058855943
+    second: glass_items_37
+  - first:
+      213: 2281408685595158166
+    second: glass_items_38
+  - first:
+      213: -3437232137309579439
+    second: glass_items_39
+  - first:
+      213: 1420226341666353683
+    second: glass_items_41
+  - first:
+      213: -1755650110659158540
+    second: glass_items_42
+  - first:
+      213: -1708856904352174111
+    second: glass_items_44
+  - first:
+      213: 4272109589148421929
+    second: glass_items_45
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glass_items_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 44
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac48ae3e2f684545ad3c691f24ec08e
+      internalID: -1487088893988093466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 44
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fc827ee4896264894c03942e59b572
+      internalID: 6908417322764102390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 44
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfbbd89a2819ed409cb75a29c4d4a79
+      internalID: 8647448341877249099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_10
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 44
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce99623b99497d409d713ba7ca861dd
+      internalID: -4981886891548108779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 44
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476cfe16812dde746aaea30f9602939d
+      internalID: -9210703443922114474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 44
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3c8fefc386d864782a9049bb978370
+      internalID: 1627921109848506501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_16
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 44
+        width: 17
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bdb57ec2d448448924edaf27305c78
+      internalID: -790630406441118159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_17
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 44
+        width: 19
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33586195731f7a42b88530cc3317b4a
+      internalID: -8496571291945900647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_26
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 9
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60feb9ea9fa0d684b9c5aa10782b4657
+      internalID: 5164761687550459365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_31
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 9
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be161b409f402540b642e40ece78054
+      internalID: -8398422528217211589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 9
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e9f684373589b41aa12424412f8ead
+      internalID: 6243639551479973897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 9
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff8e49a284aedd45a753cdd05e62c41
+      internalID: -3101762774058855943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_38
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 9
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aa8b3ac9da29f4aa13f27d0ca4788e
+      internalID: 2281408685595158166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_39
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 9
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925b11951c1a8704ea8ea93403ea6395
+      internalID: -3437232137309579439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_41
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 9
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260324d80a917904896ec5f0c24cdd74
+      internalID: 1420226341666353683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_42
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 9
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa8d67cc985f454f9147626ea9eaef5
+      internalID: -1755650110659158540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_44
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 9
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1903bbbae3ed910489745d1a0c44b897
+      internalID: -1708856904352174111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items_45
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 9
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9732de300ae23a41a0180ef7026b788
+      internalID: 4272109589148421929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5acadf7cf917bf046bbddbc60870f93a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
