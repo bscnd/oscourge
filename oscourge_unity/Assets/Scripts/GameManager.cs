@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 	void GameOver(){
 		player1.GetComponent<PlayerController1>().Kill();
 		player2.GetComponent<PlayerController2>().Kill();	
-		camera1.GetComponent<Camera>().Respawn();
-		camera2.GetComponent<Camera>().Respawn();
+		camera1.GetComponent<CameraController>().Respawn();
+		camera2.GetComponent<CameraController>().Respawn();
 		wallBot.GetComponent<Parallax>().Reset();
 		wallTop.GetComponent<Parallax>().Reset();	
 	}
