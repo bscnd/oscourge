@@ -9,68 +9,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81930">
-              <caret line="5462" selection-start-line="5462" selection-end-line="5462" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding>
-                <marker date="1558097882512" expanded="false" signature="6:78" ph="..." />
-                <marker date="1558097882512" expanded="true" signature="113:849" ph="{...}" />
-                <marker date="1558097882512" expanded="true" signature="262:481" ph="{...}" />
-                <marker date="1558097882512" expanded="true" signature="549:842" ph="{...}" />
-                <marker date="1558097882512" expanded="true" signature="573:598" ph="{...}" />
-                <marker date="1558097882512" expanded="true" signature="598:836" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/mechant.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1558109198595" expanded="false" signature="6:78" ph="..." />
-                <marker date="1558109198595" expanded="true" signature="116:1766" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="344:421" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="438:1590" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="543:567" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="581:1160" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="640:788" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="852:1003" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1065:1155" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1179:1356" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1374:1550" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1568:1582" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1632:1764" ph="{...}" />
-                <marker date="1558109198595" expanded="true" signature="1672:1762" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/explosion.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <marker date="1558085037227" expanded="false" signature="6:78" ph="..." />
-                <marker date="1558085037227" expanded="true" signature="118:1326" ph="{...}" />
-                <marker date="1558085037227" expanded="true" signature="251:318" ph="{...}" />
-                <marker date="1558085037227" expanded="true" signature="361:1315" ph="{...}" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -82,8 +26,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/mechant.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/menu/explosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -91,10 +35,12 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/menu/menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -105,14 +51,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -162,11 +108,13 @@
       <workItem from="1558085814242" duration="35000" />
       <workItem from="1558096333740" duration="1846000" />
       <workItem from="1558105977025" duration="1201000" />
+      <workItem from="1558346096248" duration="602000" />
+      <workItem from="1558427835147" duration="2240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3082000" />
+    <option name="totallyTimeSpent" value="5924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -178,9 +126,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="1" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2713348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -226,39 +174,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/PlayerController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NouveauMenu/MainMenu.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/menu.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menu/explosion.cs" />
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81930">
+        <state relative-caret-position="859">
           <caret line="5462" selection-start-line="5462" selection-end-line="5462" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/menu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <marker date="1558097882512" expanded="false" signature="6:78" ph="..." />
-            <marker date="1558097882512" expanded="true" signature="113:849" ph="{...}" />
-            <marker date="1558097882512" expanded="true" signature="262:481" ph="{...}" />
-            <marker date="1558097882512" expanded="true" signature="549:842" ph="{...}" />
-            <marker date="1558097882512" expanded="true" signature="573:598" ph="{...}" />
-            <marker date="1558097882512" expanded="true" signature="598:836" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/NouveauMenu/MainMenu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -284,16 +207,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/menu/explosion.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/SceneManager.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SceneLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="390">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <marker date="1558085037227" expanded="false" signature="6:78" ph="..." />
-            <marker date="1558085037227" expanded="true" signature="118:1326" ph="{...}" />
-            <marker date="1558085037227" expanded="true" signature="251:318" ph="{...}" />
-            <marker date="1558085037227" expanded="true" signature="361:1315" ph="{...}" />
+            <marker date="1558428853400" expanded="false" signature="6:113" ph="..." />
+            <marker date="1558428853400" expanded="true" signature="155:563" ph="{...}" />
+            <marker date="1558428853400" expanded="true" signature="227:248" ph="{...}" />
+            <marker date="1558428853400" expanded="true" signature="306:327" ph="{...}" />
+            <marker date="1558428853400" expanded="true" signature="352:392" ph="{...}" />
+            <marker date="1558428853400" expanded="true" signature="420:481" ph="{...}" />
+            <marker date="1558428853400" expanded="true" signature="507:561" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
