@@ -11,19 +11,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <marker date="1558428853400" expanded="false" signature="6:113" ph="..." />
-                <marker date="1558428853400" expanded="true" signature="155:563" ph="{...}" />
-                <marker date="1558428853400" expanded="true" signature="227:248" ph="{...}" />
-                <marker date="1558428853400" expanded="true" signature="306:327" ph="{...}" />
-                <marker date="1558428853400" expanded="true" signature="352:392" ph="{...}" />
-                <marker date="1558428853400" expanded="true" signature="420:481" ph="{...}" />
-                <marker date="1558428853400" expanded="true" signature="507:561" ph="{...}" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -36,6 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/prototypeAI/mechant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.0/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -117,12 +109,12 @@
       <workItem from="1558096333740" duration="1846000" />
       <workItem from="1558105977025" duration="1201000" />
       <workItem from="1558346096248" duration="602000" />
-      <workItem from="1558427835147" duration="1018000" />
+      <workItem from="1558427835147" duration="2240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4702000" />
+    <option name="totallyTimeSpent" value="5924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -135,7 +127,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2713348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -229,7 +220,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <marker date="1558428853400" expanded="false" signature="6:113" ph="..." />
             <marker date="1558428853400" expanded="true" signature="155:563" ph="{...}" />
@@ -239,6 +230,13 @@
             <marker date="1558428853400" expanded="true" signature="420:481" ph="{...}" />
             <marker date="1558428853400" expanded="true" signature="507:561" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prefabs/Level1.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>

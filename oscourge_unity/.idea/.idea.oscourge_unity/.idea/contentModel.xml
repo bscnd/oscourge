@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="LeverController.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Tilemap" t="Include">
             <e p="Brushes" t="Include">
@@ -139,14 +138,18 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Interactive" t="Include">
-            <e p="Generic" t="Include">
-              <e p="Trigger.cs" t="Include" />
+            <e p="Chain" t="Include">
+              <e p="Chain.cs" t="Include" />
             </e>
             <e p="Lever" t="Include">
               <e p="Lever.cs" t="Include" />
             </e>
+            <e p="Pressure-plate" t="Include">
+              <e p="Pressure_plate.cs" t="Include" />
+            </e>
           </e>
           <e p="Level1" t="Include">
+            <e p="LeverController.cs" t="Include" />
             <e p="PlayerControllerLvl1.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
