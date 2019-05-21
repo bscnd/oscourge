@@ -6,6 +6,7 @@ public class Lever : MonoBehaviour
 {
 	private Animator myAnim;
 	public Chain[] chains;
+	private bool playerIsNear = false;
 	
 	int hashIsTriggered = Animator.StringToHash("isTriggered");
 
@@ -22,9 +23,21 @@ public class Lever : MonoBehaviour
 	}
 
 	void Update(){
-		if(Input.GetButtonDown("ContextualAction")){
+		if(playerIsNear && Input.GetButtonDown("ContextualAction")){
 			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
 			updateInteractiveObjects();
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision){
+		if(collision.tag == "Player"){
+			playerIsNear = false;
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.tag == "Player") {
+			playerIsNear = true;
 		}
 	}
 }

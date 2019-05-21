@@ -12,7 +12,7 @@ public class Chain : MonoBehaviour
 	// Set of currently activated activator's id
 	private SortedSet<int> activators;
 
-	private Collider2D collider;
+	private Collider2D chainCollider;
 
 	int hashIsTriggered = Animator.StringToHash("isTriggered");
 
@@ -20,7 +20,7 @@ public class Chain : MonoBehaviour
 	{
 		myAnim = GetComponent<Animator>();
 		activators = new SortedSet<int>();
-		collider = GetComponent<Collider2D>();
+		chainCollider = GetComponent<Collider2D>();
 	}
 
 	public void trigger(bool isActivate, int objectId){
@@ -35,10 +35,10 @@ public class Chain : MonoBehaviour
 	}
 
 	public void disableCollider(){
-		this.collider.enabled = false;
+		this.chainCollider.enabled = false;
 	}
 	
 	public void enableCollider(){
-		this.collider.enabled = true;
+		this.chainCollider.enabled = true;
 	}
 }
