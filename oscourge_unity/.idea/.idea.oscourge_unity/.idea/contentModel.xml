@@ -138,22 +138,24 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Interactive" t="Include">
-            <e p="Generic" t="Include">
-              <e p="Trigger.cs" t="Include" />
+            <e p="Chain" t="Include">
+              <e p="Chain.cs" t="Include" />
             </e>
             <e p="Lever" t="Include">
               <e p="Lever.cs" t="Include" />
             </e>
+            <e p="Pressure-plate" t="Include">
+              <e p="Pressure_plate.cs" t="Include" />
+            </e>
           </e>
           <e p="Level1" t="Include">
+            <e p="LeverController.cs" t="Include" />
             <e p="PlayerControllerLvl1.cs" t="Include" />
           </e>
-          <e p="menu" t="Include">
+          <e p="Menu" t="Include">
             <e p="explosion.cs" t="Include" />
-            <e p="menu.cs" t="Include" />
-          </e>
-          <e p="NewMenu" t="Include">
             <e p="MainMenu.cs" t="Include" />
+            <e p="menu.cs" t="Include" />
           </e>
           <e p="prototypeAI" t="Include">
             <e p="camerafollow.cs" t="Include" />
@@ -161,6 +163,7 @@
             <e p="mechant.cs" t="Include" />
             <e p="PlayerControllerDorian.cs" t="Include" />
           </e>
+          <e p="SceneLoader.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
