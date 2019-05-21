@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerLvl1 : MonoBehaviour {
+public class PlayerController1 : MonoBehaviour {
 
 	public float moveSpeed;
 	private Rigidbody2D myRigidbody;
@@ -41,7 +41,7 @@ public class PlayerControllerLvl1 : MonoBehaviour {
 		}
 
 
-		public void kill(){
+		public void Kill(){
 			transform.position=spawnLocation;
 		}
 
