@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Interactive
+  - Indicator
   layers:
   - Default
   - TransparentFX

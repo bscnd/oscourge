@@ -7,6 +7,12 @@ oscourge_unity/Assets/AssetStoreTools*
 
 oscourge_unity/Assets/Scenes/Sandbox.unity
 oscourge_unity/Assets/Scenes/Sandbox.unity.meta
+oscourge_unity/Frame.exr
+oscourge_unity/Frame.exr.meta
+oscourge_unity/Frame2.exr
+oscourge_unity/Frame2.exr.meta
+oscourge_unity/Assets/Scenes/Sandbox_Profiles/
+oscourge_unity/Assets/Scenes/Sandbox_Profiles.meta
 
 # Visual Studio cache directory
 oscourge_unity/.vs/
