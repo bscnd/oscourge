@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: c2491d02191293543a2ea2ef949547ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2658879874934940034
+    second: snj72fyn_0
+  - first:
+      213: 1406551878766207402
+    second: snj72fyn_1
+  - first:
+      213: -1733799456609973441
+    second: snj72fyn_2
+  - first:
+      213: -8476254689089591674
+    second: snj72fyn_3
+  - first:
+      213: -8162816854129527220
+    second: snj72fyn_4
+  - first:
+      213: 4044431790237362537
+    second: snj72fyn_5
+  - first:
+      213: 3101154590465879679
+    second: snj72fyn_6
+  - first:
+      213: 8676760994399440410
+    second: snj72fyn_7
+  - first:
+      213: -5373354266470923941
+    second: snj72fyn_8
+  - first:
+      213: -6117568018845194079
+    second: snj72fyn_9
+  - first:
+      213: 2241670361313449782
+    second: snj72fyn_10
+  - first:
+      213: -3257684992420231302
+    second: snj72fyn_11
+  - first:
+      213: 6079818813840944341
+    second: snj72fyn_12
+  - first:
+      213: 3034507680814575022
+    second: snj72fyn_13
+  - first:
+      213: 370642451311669699
+    second: snj72fyn_14
+  - first:
+      213: 8935568033292678275
+    second: snj72fyn_15
+  - first:
+      213: 8264149697912866320
+    second: snj72fyn_16
+  - first:
+      213: -4250949461246643035
+    second: snj72fyn_17
+  - first:
+      213: 7793393756372429320
+    second: snj72fyn_18
+  - first:
+      213: 3117520642920385601
+    second: snj72fyn_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: snj72fyn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2995
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe3e34ea13c5d649a21f14e470d163b
+      internalID: -2658879874934940034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2995
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b32b0f7db989c4479abd6aa6ef0726a
+      internalID: 1406551878766207402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2995
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500699d2a38cdf84bada95ccc2ff7fd6
+      internalID: -1733799456609973441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_3
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 2995
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07566a0fcf87d8e409938075da4ba8ad
+      internalID: -8476254689089591674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98063c8c57c0b00418111b23b9279dc0
+      internalID: -8162816854129527220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dbdd47611db31459b570ff5411d584
+      internalID: 4044431790237362537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3225518fe822c6c408c3a54b59248486
+      internalID: 3101154590465879679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03d51bcb6c66bc4daa6db112b30a5fc
+      internalID: 8676760994399440410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798489a1d2fb6994a8ff9af96943784a
+      internalID: -5373354266470923941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f27c1fe25e7ce4388d02702d66602a
+      internalID: -6117568018845194079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_10
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13089a3421750f4f8ed9bcd13b77b22
+      internalID: 2241670361313449782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_11
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07fb67e992056a4c9569a99c0cad206
+      internalID: -3257684992420231302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_12
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 1599
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4287408cfe67ee74e84c9c851a94cac8
+      internalID: 6079818813840944341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_13
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1599
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5797d59c71ac57c4f8e9adca584c24a1
+      internalID: 3034507680814575022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_14
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1599
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c4f4c62011d6b4982e1b739e5a1ba3
+      internalID: 370642451311669699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_15
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1600
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad7a274ad2d74e47b3b4d24af5694a1
+      internalID: 8935568033292678275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_16
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566f0706417aa3c409104f3db1223bd2
+      internalID: 8264149697912866320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_17
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f52fd74611d0f4287bcfd30b82c1b1
+      internalID: -4250949461246643035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_18
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d6480f32f74894db65d0fdae3167ac
+      internalID: 7793393756372429320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_19
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 4197
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc4778f65e16df4e87bc2340a230c32
+      internalID: 3117520642920385601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d419781f03795964d84c6ee26cac16a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
