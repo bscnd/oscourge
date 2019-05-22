@@ -62,6 +62,18 @@ TextureImporter:
   - first:
       213: 3117520642920385601
     second: snj72fyn_19
+  - first:
+      213: -8175785569801284343
+    second: snj72fyn_20
+  - first:
+      213: -5685506078524593717
+    second: snj72fyn_21
+  - first:
+      213: 6268422201714057087
+    second: snj72fyn_22
+  - first:
+      213: -2576826611515314222
+    second: snj72fyn_23
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -559,6 +571,90 @@ TextureImporter:
       bones: []
       spriteID: bcc4778f65e16df4e87bc2340a230c32
       internalID: 3117520642920385601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072843976bdf1794ebd495bd0f5ca930
+      internalID: -8175785569801284343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_21
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2592
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f309004166af5a24284b33d4d978b971
+      internalID: -5685506078524593717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_22
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2593
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0726ff252bbef54593f90ac8f5eaff1
+      internalID: 6268422201714057087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snj72fyn_23
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2593
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239f2d4f5b2f78141a71f55d50493bae
+      internalID: -2576826611515314222
       vertices: []
       indices: 
       edges: []
