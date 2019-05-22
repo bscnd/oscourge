@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pressure_plate : MonoBehaviour
+public class Pressure_plate : Trigger
 {
 	private Animator myAnim;
-	public Chain[] chains;
 
 	// Count how many players are on the pressure plate
 	private int playerCounter;
@@ -16,6 +15,7 @@ public class Pressure_plate : MonoBehaviour
 	{
 		myAnim = GetComponent<Animator>();
 		playerCounter = 0;
+		initIndicators();
 	}
 
 	// The pressure plate will remain activated if at least one player is on it
