@@ -44,3 +44,4 @@ oscourge_unity/sysinfo.txt
 # Builds
 oscourge_unity/*.apk
 oscourge_unity/*.unitypackage
+/bin/
