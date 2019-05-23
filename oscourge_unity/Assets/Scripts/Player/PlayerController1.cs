@@ -16,6 +16,10 @@ public class PlayerController1 : MonoBehaviour {
 	public bool isGrounded; 
 
 	private Vector3 spawnLocation;
+ 
+
+
+	public Animator animator;
 
 	void Start() {
 		myRigidbody = GetComponent<Rigidbody2D>();
@@ -28,11 +32,16 @@ public class PlayerController1 : MonoBehaviour {
 		if (Input.GetAxisRaw("Horizontal") > 0f) {
 			myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
 			transform.localScale = new Vector3(4f, 4f, 1f);
+			animator.SetFloat("Speed",moveSpeed);
 			} else if (Input.GetAxisRaw("Horizontal") < 0f) {
 				myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
 				transform.localScale = new Vector3(-4f, 4f, 1f);
+
+			animator.SetFloat("Speed",moveSpeed);
 			} else {
 				myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
+
+			animator.SetFloat("Speed",0f);
 			}
 
 			if (Input.GetButtonDown("Jump") && isGrounded) {
