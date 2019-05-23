@@ -49,7 +49,7 @@ public class PlayerController1 : MonoBehaviour {
 
 		void OnTriggerEnter2D(Collider2D col)
 		{
-			if(col.gameObject.name == "checkpoint")
+			if(col.gameObject.CompareTag("Checkpoint"))
 			{
 				spawnLocation=col.transform.position+new Vector3(0.2f,0,0);
 			}

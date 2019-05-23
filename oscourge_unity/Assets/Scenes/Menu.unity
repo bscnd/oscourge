@@ -318,7 +318,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &318563260
@@ -760,7 +760,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &680926982
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1000,7 +1000,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1739,10 +1739,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b638a365e9fc7504289015dcaaec6cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a1: {fileID: 8637351795456827413, guid: 5ad8a9ed03c9b7742b590b59708ddd4f, type: 3}
-  a2: {fileID: 499452528338259168, guid: 82f07ec7f073d824399ab63c27f57390, type: 3}
-  a3: {fileID: 4317919777104834363, guid: b510ff977f188bf458bae014586dd62f, type: 3}
-  a4: {fileID: 8671083210714067021, guid: 1c32ee5132ee40c41924b85a644f8450, type: 3}
+  a1: {fileID: 8637351795456827413, guid: dc574dbefde763747a661e4ec1e6f620, type: 3}
+  a2: {fileID: 499452528338259168, guid: e9da60ccfe96f704c82606a72f65104e, type: 3}
+  a3: {fileID: 4317919777104834363, guid: 755199eb0ccb3654f957c4196c418bf3, type: 3}
+  a4: {fileID: 8671083210714067021, guid: 65dce51d8e40b114abd7a63a49e3cf1d, type: 3}
 --- !u!4 &1013105526
 Transform:
   m_ObjectHideFlags: 0
@@ -2026,7 +2026,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1091618497
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2392,7 +2392,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 180
+  m_fontSize: 19.45
   m_fontSizeBase: 180
   m_fontWeight: 400
   m_enableAutoSizing: 1

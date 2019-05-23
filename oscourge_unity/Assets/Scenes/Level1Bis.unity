@@ -4107,11 +4107,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1710771038762084182, guid: fd02d57fb428a48b799aa9f0d6682dde,
-        type: 3}
-      propertyPath: m_Name
-      value: Lever (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1710771038762084179, guid: fd02d57fb428a48b799aa9f0d6682dde,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4166,6 +4161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710771038762084182, guid: fd02d57fb428a48b799aa9f0d6682dde,
+        type: 3}
+      propertyPath: m_Name
+      value: Lever (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1710771038762084181, guid: fd02d57fb428a48b799aa9f0d6682dde,
         type: 3}
@@ -4821,7 +4821,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4742257148800747434}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4832,7 +4832,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1839735485 &4742257148800747439
 Tilemap:

@@ -16,7 +16,6 @@ public class mechant : MonoBehaviour
 
   private Vector3 spawn;
 
-    // Start is called before the first frame update
   void Start() {
     myRigidbody = GetComponent<Rigidbody2D>();
     seen=false;
@@ -50,13 +49,11 @@ public class mechant : MonoBehaviour
      myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
      transform.localScale = new Vector3(2f, 2f, 1f);
      z++;
-     //Debug.Log("Droite");
    }
    else if (z<60){
 
     myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
     transform.localScale = new Vector3(-2f, 2f, 1f);
-     //Debug.Log("Gauche");
     z++;
   }
   else if (z==60){
@@ -70,10 +67,10 @@ public class mechant : MonoBehaviour
 }
 void OnCollisionEnter2D (Collision2D col)
 {
-  if(col.gameObject.name == "gentil")
+  if(col.gameObject.name == "Player1")
   {
       transform.position=spawn;
-    col.gameObject.GetComponent<PlayerControllerDorian>().kill();
+    //col.gameObject.GetComponent<PlayerController1>().kill();
     seen=false;
   }
 }
