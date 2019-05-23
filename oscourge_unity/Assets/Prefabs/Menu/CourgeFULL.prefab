@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6695810231638041759}
   - component: {fileID: 5172975806982984561}
   m_Layer: 0
-  m_Name: 11
+  m_Name: CourgeFULL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   a1: {fileID: 8637351795456827413}
-  a2: {fileID: 499452528338259168, guid: 9f7bfc67f1c9ab0448ad9e7453236e77, type: 3}
-  a3: {fileID: 4317919777104834363, guid: 6944fb1d255c3974eac323d88a9be8f6, type: 3}
-  a4: {fileID: 8671083210714067021, guid: 4bc08a97d2d95da4191f93224facdca7, type: 3}
+  a2: {fileID: 499452528338259168, guid: e9da60ccfe96f704c82606a72f65104e, type: 3}
+  a3: {fileID: 4317919777104834363, guid: 755199eb0ccb3654f957c4196c418bf3, type: 3}
+  a4: {fileID: 8671083210714067021, guid: 65dce51d8e40b114abd7a63a49e3cf1d, type: 3}
 --- !u!60 &5172975806982984561
 PolygonCollider2D:
   m_ObjectHideFlags: 0

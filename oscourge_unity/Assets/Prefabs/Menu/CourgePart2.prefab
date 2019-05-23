@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4317919777104834500}
   - component: {fileID: 2601746083394012143}
   m_Layer: 0
-  m_Name: 33
+  m_Name: CourgePart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
