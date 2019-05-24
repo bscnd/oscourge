@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
 
 	private Vector3 spawnLocation;
 
-
+public float speed;
 	void Start(){
 
 		spawnLocation=transform.position;
@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 	void Update()
 	{
 
-		transform.position=transform.position+new Vector3(0.1f,0,0);
+		transform.position=transform.position+new Vector3(speed/100,0,0);
 
 
 	}
