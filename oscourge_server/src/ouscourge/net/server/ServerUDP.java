@@ -20,13 +20,14 @@ public class ServerUDP implements Runnable {
 	public static final int P1 = 1;
 	public static final int P2 = 2;
 
-	private final DatagramSocket serverSocket;
 	private boolean gameStarted;
 	private boolean running;
 	private ClientUDP player1;
 	private ClientUDP player2;
 
 	private JTextArea console;
+
+	private final DatagramSocket serverSocket;
 
 	public ServerUDP(int port, JTextArea console) throws IOException {
 		this.serverSocket = new DatagramSocket(port);
@@ -35,6 +36,7 @@ public class ServerUDP implements Runnable {
 		running = false;
 	}
 
+	
 	@Override
 	public void run() {
 		running = true;
@@ -48,6 +50,8 @@ public class ServerUDP implements Runnable {
 					serverSocket.receive(packet);
 
 				handlePacketReceived(packet);
+				
+				
 			} catch (SocketException e) {
 				if (e.getMessage().equals("socket closed"))
 					System.out.println("socket closed");
@@ -68,6 +72,7 @@ public class ServerUDP implements Runnable {
 		MessageUDP message = MessageUDP.valueOf(data);
 
 		try {
+			
 			ClientUDP client = new ClientUDP(clientPacket.getAddress(), clientPacket.getPort());
 
 			if (!gameStarted) {
@@ -101,8 +106,7 @@ public class ServerUDP implements Runnable {
 			}
 
 			if (player1 != null && player2 != null) {
-				gameStarted = true;
-				sendRoles();
+				startGame();
 			} else {
 				sendWaitMessage(client);
 			}
@@ -138,6 +142,12 @@ public class ServerUDP implements Runnable {
 				print("ERROR bad index");
 			}
 		}
+	}
+	
+	private void startGame() throws IOException {
+		gameStarted = true;
+		sendRoles();
+		(new Thread(new HandShake(this))).start();
 	}
 
 	private void sendErrorMessage(ClientUDP client, String errorMsg) throws IOException {
@@ -197,6 +207,29 @@ public class ServerUDP implements Runnable {
 		running = false;
 		serverSocket.close();
 		console.setText("");
+	}
+	
+	class HandShake implements Runnable {
+		private final ServerUDP server;
+
+		HandShake(ServerUDP server) {
+			this.server = server;
+		}
+
+		@Override
+		public void run() {
+			System.out.println("HandShake starts");
+			MessageUDP message;
+			while(server.running) {
+				message = new MessageUDP();
+				try {
+					server.sendTo(server.player1, message);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
 	}
 
 }
