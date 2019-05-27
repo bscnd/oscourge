@@ -1,0 +1,621 @@
+fileFormatVersion: 2
+guid: d8df992a7d5f3f448bbb05540ce0573a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1234739907120869382
+    second: armor_rack
+  - first:
+      213: -5172820836286911114
+    second: bookcase
+  - first:
+      213: -8401219243238889605
+    second: cabinet
+  - first:
+      213: -3008214370931526878
+    second: candle
+  - first:
+      213: 8104226297149226235
+    second: candlestick
+  - first:
+      213: 7799336946059389520
+    second: chair
+  - first:
+      213: -7389808939813710273
+    second: chandelier
+  - first:
+      213: -501034891684453337
+    second: fireplace-export
+  - first:
+      213: -8027088889737256277
+    second: glass_items
+  - first:
+      213: 3937396354249366081
+    second: mirror
+  - first:
+      213: 2462011743645953556
+    second: new_brick
+  - first:
+      213: 5268833505841126456
+    second: pennant
+  - first:
+      213: 5875292596580717728
+    second: pillar
+  - first:
+      213: -8683964179076145735
+    second: pillar_broken
+  - first:
+      213: 8688221215609081647
+    second: pillar_dark
+  - first:
+      213: -4708594459380685765
+    second: stool
+  - first:
+      213: -1779572522790044833
+    second: table
+  - first:
+      213: 6568911301205420292
+    second: table_long
+  - first:
+      213: -6618113448140139185
+    second: table_tablecloth
+  - first:
+      213: -2534828470853977834
+    second: throne
+  - first:
+      213: -2911782002820550858
+    second: weapon_rack_empty
+  - first:
+      213: -4080176979333374349
+    second: carpet
+  - first:
+      213: -1072286700038123539
+    second: torch
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armor_rack
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 563
+        width: 93
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64666665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1bb4e525c8dd74db19444bc0aae043
+      internalID: 1234739907120869382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bookcase
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 809
+        width: 166
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5123457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c84af2e58f2454f95f8fdf74cf5eb8
+      internalID: -5172820836286911114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabinet
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 602
+        width: 102
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8761783e6666c954a838991fc0bbddff
+      internalID: -8401219243238889605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candle
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 618
+        width: 14
+        height: 39
+      alignment: 9
+      pivot: {x: 0.64285713, y: 0.5641026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd6404d46d22ff46b3363802d0c7b4d
+      internalID: -3008214370931526878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candlestick
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 357
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46f940c0285ce14cac60f6ca66a604b
+      internalID: 8104226297149226235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carpet
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 389
+        width: 64
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: 3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67435953a0f6cdb4aaf93b4d869b143c
+      internalID: -4080176979333374349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chair
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 463
+        width: 53
+        height: 98
+      alignment: 9
+      pivot: {x: 0.509434, y: 0.6530612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80082a7f3953fe34489ea7efa1de2b0d
+      internalID: 7799336946059389520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chandelier
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 565
+        width: 177
+        height: 127
+      alignment: 9
+      pivot: {x: 0.4915254, y: 0.24409449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3254289a094856a4b8514744e0112bdc
+      internalID: -7389808939813710273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireplace-export
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 715
+        width: 209
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5885168, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a28abdfd503a68468cda9d371161960
+      internalID: -501034891684453337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_items
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 970
+        width: 128
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4716981}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad4772e0975c7b4aabec62b065c131b
+      internalID: -8027088889737256277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mirror
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 443
+        width: 53
+        height: 128
+      alignment: 9
+      pivot: {x: 0.509434, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3750a47bcad84184e82d16da7f2a1998
+      internalID: 3937396354249366081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pennant
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 800
+        width: 123
+        height: 168
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c63dbf970012f2646946e87e4489921d
+      internalID: 5268833505841126456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 397
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe674d087eb65841953a8b005371d3c
+      internalID: 5875292596580717728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar_broken
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 455
+        width: 64
+        height: 106
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9056604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7b2155d6756f149b5206658c67d3a5
+      internalID: -8683964179076145735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar_dark
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 408
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25b8836310a2f1419f6c57a6ed4bd88
+      internalID: 8688221215609081647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stool
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 428
+        width: 46
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.969697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b389b7209d8f645a349b2243b88406
+      internalID: -4708594459380685765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 747
+        width: 189
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.627451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a517e61a1a2cb64885a69784db3b4b4
+      internalID: -1779572522790044833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table_long
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 973
+        width: 379
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49868074, y: 0.64}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae31e31e38966364cac7a0298094eab9
+      internalID: 6568911301205420292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table_tablecloth
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 694
+        width: 189
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.627451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8ab21f287ac4446a8a28de361caa4d
+      internalID: -6618113448140139185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throne
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 591
+        width: 94
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5106383, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fd65b7c4b44af49b94bc8a37f0caf1
+      internalID: -2534828470853977834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 659
+        width: 16
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.4848485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ab349d05d1c1d498920100ec874c03
+      internalID: -1072286700038123539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_rack_empty
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 573
+        width: 54
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 1.1851852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b553f449c1928e74084f3248c48a8b72
+      internalID: -2911782002820550858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 68ad2a055259555418be58d135077762
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
