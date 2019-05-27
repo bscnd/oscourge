@@ -6,7 +6,7 @@ public class explosion : MonoBehaviour
 {
     // Start is called before the first frame update
 
-	 private GameObject truc;
+	private GameObject truc;
 
 	public GameObject a1,a2,a3,a4;
     void Start()
