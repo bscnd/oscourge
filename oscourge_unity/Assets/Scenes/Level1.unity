@@ -715,7 +715,7 @@ PrefabInstance:
     - target: {fileID: 3429239338373905530, guid: 950127b37d2108845ab00f3d6467e525,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.495
+      value: 0.498
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950127b37d2108845ab00f3d6467e525, type: 3}
@@ -823,7 +823,7 @@ PrefabInstance:
     - target: {fileID: 3945896767573602861, guid: a94ff61c003885a4abf4f284689e39ed,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.505
+      value: 0.502
       objectReference: {fileID: 0}
     - target: {fileID: 3945896767573602861, guid: a94ff61c003885a4abf4f284689e39ed,
         type: 3}
@@ -833,7 +833,7 @@ PrefabInstance:
     - target: {fileID: 3945896767573602861, guid: a94ff61c003885a4abf4f284689e39ed,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.495
+      value: 0.498
       objectReference: {fileID: 0}
     - target: {fileID: 3945896767573602861, guid: a94ff61c003885a4abf4f284689e39ed,
         type: 3}
