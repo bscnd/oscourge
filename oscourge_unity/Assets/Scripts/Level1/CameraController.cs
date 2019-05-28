@@ -11,24 +11,19 @@ public bool scroll;
 	private Vector3 spawnLocation;
 
 	void Start(){
-scroll=false;
+		scroll=false;
 		spawnLocation=transform.position;
 	}
 
 	void Update()
 	{
 		if(scroll){
-		transform.position=transform.position+new Vector3(speed/100,0,0);
-}
-
+			transform.position=transform.position+new Vector3(speed/100,0,0);
+		}
 	}
 
 	public void Respawn(){
-scroll=false;
-			transform.position=spawnLocation;
+		scroll=false;
+		transform.position=spawnLocation;
 	}
-
-
-
-	
 }

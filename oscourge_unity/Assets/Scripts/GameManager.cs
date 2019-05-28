@@ -37,19 +37,25 @@ public class GameManager : MonoBehaviour
 		{
 			if (isPaused == false)
 			{
+				Time.timeScale = 0;
 				PausePanel.SetActive(true);
 				isPaused = true;
+				camera1.gameObject.GetComponent<CameraController>().scroll=false;
+				camera2.gameObject.GetComponent<CameraController>().scroll=false;
 			}
 
 			else
 			{
+				Time.timeScale = 1;
 				PausePanel.SetActive(false);
 				isPaused = false;
+				camera1.gameObject.GetComponent<CameraController>().scroll=true;
+				camera2.gameObject.GetComponent<CameraController>().scroll=true;
 			}
 		}
 
 
-		if(playerMoved()){
+		if(playerMoved() && !isPaused){
 			camera1.gameObject.GetComponent<CameraController>().scroll=true;
 			camera2.gameObject.GetComponent<CameraController>().scroll=true;
 
