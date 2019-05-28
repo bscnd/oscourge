@@ -13,7 +13,11 @@ public class GameManager : MonoBehaviour
 	public GameObject camera2;
 	public GameObject wallBot;
 	public GameObject wallTop;
+
+	public GameObject PausePanel;
 	public int offset;
+	
+	public bool isPaused = false;
 
     void Update()
     {
@@ -27,6 +31,21 @@ public class GameManager : MonoBehaviour
 
 		if(player2.transform.position.x>camera2.transform.position.x+19){
 			player2.transform.position=new Vector3(camera2.transform.position.x+19,player2.transform.position.y,player2.transform.position.z);
+		}
+		
+		if(Input.GetKeyDown("escape"))
+		{
+			if (isPaused == false)
+			{
+				PausePanel.SetActive(true);
+				isPaused = true;
+			}
+
+			else
+			{
+				PausePanel.SetActive(false);
+				isPaused = false;
+			}
 		}
     }
 
