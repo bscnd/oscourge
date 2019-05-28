@@ -8,6 +8,7 @@ TagManager:
   - Interactive
   - Indicator
   - Checkpoint
+  - end
   layers:
   - Default
   - TransparentFX
