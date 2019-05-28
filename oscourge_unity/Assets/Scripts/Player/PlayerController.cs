@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 	private bool jump;
 	private Rigidbody2D myRigidbody;
 
-	public bool myCharacter;
+	public bool isTallSquash;
     private float horizontal;
     private bool jumpPressed;
 
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 			OnLandEvent.Invoke();
 		}
 
-		if(myCharacter){
+		if((isTallSquash && ClientUDP.Instance.playerMode == 2) || (!isTallSquash && ClientUDP.Instance.playerMode == 1) ) {
 
 			horizontal = Input.GetAxisRaw("Horizontal");
 			jumpPressed = Input.GetButtonDown("Jump");
@@ -52,13 +52,14 @@ public class PlayerController : MonoBehaviour {
 			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
 			string dataString = JsonConvert.SerializeObject(data);
 			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
+		    Move(horizontal,jumpPressed);
 		}
 		else{
 			horizontal = ClientUDP.Instance.currentInputs.horizontal;
 			jumpPressed = ClientUDP.Instance.currentInputs.jump;
 			transform.position = ClientUDP.Instance.currentPos;
+		    Move(horizontal,jumpPressed);
 		}
-		Move(horizontal,jumpPressed);
 	}
 
 

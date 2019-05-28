@@ -21,6 +21,7 @@ namespace Scripts.Networking {
         private static UdpClient socketConnection;
         private Thread clientReceiveThread;
         private bool running = false;
+        private bool gameStarted = false;
         private int port;
         #endregion
 
@@ -78,8 +79,14 @@ namespace Scripts.Networking {
 
             while (running) {
 
-                 asyncResult = socketConnection.BeginReceive(null, null);
+                asyncResult = socketConnection.BeginReceive(null, null);
 
+                if (gameStarted) {
+                    timeToWait = TimeSpan.FromSeconds(5);
+                }
+                else { 
+                    timeToWait = TimeSpan.FromMinutes(5);
+                }
                 asyncResult.AsyncWaitHandle.WaitOne(timeToWait);
 
                 if (asyncResult.IsCompleted) {
@@ -97,6 +104,7 @@ namespace Scripts.Networking {
                             case Message.ROLE:
                                 playerMode = int.Parse(message.msg);
                                 waiting = false;
+                                gameStarted = true;
                                 break;
                             case Message.DATA:
                                 currentPos = message.position;

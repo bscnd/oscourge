@@ -204,6 +204,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   animator: {fileID: 3504111133215956227}
+  isTallSquash: 1
 --- !u!1 &3504111134043346136
 GameObject:
   m_ObjectHideFlags: 0
