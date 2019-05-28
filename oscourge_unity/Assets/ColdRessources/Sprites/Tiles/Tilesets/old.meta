@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:oscourge_unity/Assets/Scripts/Wheel.meta
-guid: b4f8ba0874341753fa32cbb418c0f326
-=======
-guid: 4989408723925b64a86397f223af0f86
->>>>>>> 0b41e56a5d95da23736b5a1fadfdb409855f4385:oscourge_unity/Assets/ColdRessources/Sprites/Tiles/Tilesets/old.meta
+guid: 67efd685747fb93c3a3f7b76d1e9f110
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
