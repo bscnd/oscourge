@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
 	
 	public bool isPaused = false;
 
-    void Update()
-    {
-        	if(DetectGO()){
+	void Update()
+	{
+		if(DetectGO()){
 			GameOver();
 		}
 
@@ -37,19 +37,43 @@ public class GameManager : MonoBehaviour
 		{
 			if (isPaused == false)
 			{
+				Time.timeScale = 0;
 				PausePanel.SetActive(true);
 				isPaused = true;
+				camera1.gameObject.GetComponent<CameraController>().scroll=false;
+				camera2.gameObject.GetComponent<CameraController>().scroll=false;
 			}
 
 			else
 			{
+				Time.timeScale = 1;
 				PausePanel.SetActive(false);
 				isPaused = false;
+				camera1.gameObject.GetComponent<CameraController>().scroll=true;
+				camera2.gameObject.GetComponent<CameraController>().scroll=true;
 			}
 		}
-    }
 
-    bool DetectGO(){
+
+		if(playerMoved() && !isPaused){
+			camera1.gameObject.GetComponent<CameraController>().scroll=true;
+			camera2.gameObject.GetComponent<CameraController>().scroll=true;
+
+		}
+	}
+
+
+	bool playerMoved(){
+		if(player1.gameObject.GetComponent<Rigidbody2D>().velocity.x!=0 || 
+			player1.gameObject.GetComponent<Rigidbody2D>().velocity.y!=0 ||
+			player2.gameObject.GetComponent<Rigidbody2D>().velocity.x!=0 ||
+			player2.gameObject.GetComponent<Rigidbody2D>().velocity.y!=0){
+			return true;
+		}
+		return false;
+	}
+
+	bool DetectGO(){
 		if(player1.transform.position.x+ offset<camera1.transform.position.x  || player2.transform.position.x+offset<camera2.transform.position.x){
 			return true;
 		}
