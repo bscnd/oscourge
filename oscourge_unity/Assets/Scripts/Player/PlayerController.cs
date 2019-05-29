@@ -25,14 +25,13 @@ public class PlayerController : MonoBehaviour {
     private float horizontal;
     private bool jumpPressed;
 
-
 	void Start() {
 		myRigidbody = GetComponent<Rigidbody2D>();
 		spawnLocation=transform.position;
-		isGrounded=true;	
+		isGrounded=true;
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		Debug.Log(gameObject.name);
 		wasGrounded=isGrounded;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
@@ -44,7 +43,6 @@ public class PlayerController : MonoBehaviour {
 
 			horizontal = Input.GetAxisRaw("Horizontal");
 			jumpPressed = Input.GetButtonDown("Jump");
-
 
 			InputValues inputs = new InputValues(horizontal, jumpPressed);
 			Vector3 pos = transform.position;
@@ -58,6 +56,7 @@ public class PlayerController : MonoBehaviour {
 			horizontal = ClientUDP.Instance.currentInputs.horizontal;
 			jumpPressed = ClientUDP.Instance.currentInputs.jump;
 			transform.position = ClientUDP.Instance.currentPos;
+
 		    Move(horizontal,jumpPressed);
 		}
 	}

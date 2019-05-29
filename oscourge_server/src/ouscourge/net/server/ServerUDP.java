@@ -133,7 +133,6 @@ public class ServerUDP implements Runnable {
 			switch (ind) {
 			case P1:
 				sendTo(player2, msg);
-				print(new String(msg.toJson().toString()));
 				break;
 			case P2:
 				sendTo(player1, msg);
@@ -147,7 +146,7 @@ public class ServerUDP implements Runnable {
 	private void startGame() throws IOException {
 		gameStarted = true;
 		sendRoles();
-		(new Thread(new HandShake(this))).start();
+//		(new Thread(new HandShake(this))).start();
 	}
 
 	private void sendErrorMessage(ClientUDP client, String errorMsg) throws IOException {

@@ -72,20 +72,23 @@ namespace Scripts.Networking {
             }
 
             Byte[] receiveBytes;
-            var timeToWait = TimeSpan.FromSeconds(5);
             IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
             //IPEndPoint object will allow us to read datagrams sent from any source.
             IAsyncResult asyncResult;
+
+            TimeSpan fiveSecondWait = TimeSpan.FromSeconds(5);
+            TimeSpan fiveMinuteWait = TimeSpan.FromMinutes(5);
+            TimeSpan timeToWait;
 
             while (running) {
 
                 asyncResult = socketConnection.BeginReceive(null, null);
 
                 if (gameStarted) {
-                    timeToWait = TimeSpan.FromSeconds(5);
+                    timeToWait = fiveSecondWait;
                 }
-                else { 
-                    timeToWait = TimeSpan.FromMinutes(5);
+                else {
+                    timeToWait = fiveMinuteWait;
                 }
                 asyncResult.AsyncWaitHandle.WaitOne(timeToWait);
 
@@ -93,7 +96,7 @@ namespace Scripts.Networking {
                     try {
                         receiveBytes = new Byte[1024];
                         receiveBytes = socketConnection.EndReceive(asyncResult, ref RemoteIpEndPoint);
-                        
+
                         Message message = JsonConvert.DeserializeObject<Message>(Encoding.ASCII.GetString(receiveBytes));
 
                         Debug.Log("msg received");
@@ -128,6 +131,36 @@ namespace Scripts.Networking {
                 }
 
             }
+
+            //while (running) {
+            //    receiveBytes = new Byte[1024];
+            //    receiveBytes = socketConnection.Receive(ref RemoteIpEndPoint);
+            //    Message message = JsonConvert.DeserializeObject<Message>(Encoding.ASCII.GetString(receiveBytes));
+            //    try {
+            //        Debug.Log("changing pos");
+            //        Debug.Log(message.name + "> " + message.msg); // TODO change here to correspond to the ui
+
+            //        switch (message.type) {
+            //            case Message.WAIT:
+            //                waiting = true;
+            //                break;
+            //            case Message.ROLE:
+            //                playerMode = int.Parse(message.msg);
+            //                waiting = false;
+            //                gameStarted = true;
+            //                break;
+            //            case Message.DATA:
+            //                currentPos = message.position;
+            //                currentInputs = message.inputValues;
+            //                break;
+            //        }
+
+            //    }
+            //    catch (Exception e) {
+            //        Console.WriteLine(e.ToString());
+            //    }
+
+            //}
 
             socketConnection.Close();
 
