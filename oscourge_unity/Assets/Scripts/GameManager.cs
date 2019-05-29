@@ -72,6 +72,11 @@ public class GameManager : MonoBehaviour
 		camera2.GetComponent<CameraController>().Respawn();
 		wallBot.GetComponent<Parallax>().Reset();
 		wallTop.GetComponent<Parallax>().Reset();	
+
+		Lever[] levers = (Lever[]) Object.FindObjectsOfType<Lever>();
+		foreach(Lever lever in levers){
+			lever.OnGameOver();
+		}
 	}
 	
 	
