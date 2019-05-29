@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import ouscourge.net.client.ClientUDP;
 import ouscourge.net.data.MessageUDP;
+import ouscourge.net.util.Consts;
 
 public class ServerUDP implements Runnable {
 
@@ -20,11 +21,21 @@ public class ServerUDP implements Runnable {
 	public static final int P1 = 1;
 	public static final int P2 = 2;
 
-	private boolean gameStarted;
+	private int gameState;
+	public static final int INIT = 1;
+	public static final int PLAYING = 2;
+	public static final int WAITING = 3;
+	public static final int PAUSE = 4;
+	public static final int CONNECTION_ERROR = 5;
+
 	private boolean running;
 	private ClientUDP player1;
+	private int hdShkReceivedP1;
 	private ClientUDP player2;
+	private int hdShkReceivedP2;
 
+	private HandShake pauseHandShake; 
+	
 	private JTextArea console;
 
 	private final DatagramSocket serverSocket;
@@ -32,11 +43,10 @@ public class ServerUDP implements Runnable {
 	public ServerUDP(int port, JTextArea console) throws IOException {
 		this.serverSocket = new DatagramSocket(port);
 		this.console = console;
-		gameStarted = false;
+		gameState = INIT;
 		running = false;
 	}
 
-	
 	@Override
 	public void run() {
 		running = true;
@@ -50,8 +60,7 @@ public class ServerUDP implements Runnable {
 					serverSocket.receive(packet);
 
 				handlePacketReceived(packet);
-				
-				
+
 			} catch (SocketException e) {
 				if (e.getMessage().equals("socket closed"))
 					System.out.println("socket closed");
@@ -72,13 +81,18 @@ public class ServerUDP implements Runnable {
 		MessageUDP message = MessageUDP.valueOf(data);
 
 		try {
-			
+
 			ClientUDP client = new ClientUDP(clientPacket.getAddress(), clientPacket.getPort());
 
-			if (!gameStarted) {
+			switch (gameState) {
+			case INIT:
 				beforeStart(client, message);
-			} else {
+				break;
+			case PLAYING:
 				duringGame(client, message);
+				break;
+			case CONNECTION_ERROR:
+				break;
 			}
 
 		} catch (SocketException e) {
@@ -95,10 +109,10 @@ public class ServerUDP implements Runnable {
 
 				if (player1 == null) {
 					player1 = client;
-					print("New client connected : " + msg.getName());
+					print(Consts.newClient + msg.getName());
 				} else if (player2 == null) {
 					player2 = client;
-					print("New client connected : " + msg.getName());
+					print(Consts.newClient + msg.getName());
 				} else {
 					print("ERROR : this should not happen (game should have started)");
 				}
@@ -108,15 +122,15 @@ public class ServerUDP implements Runnable {
 			if (player1 != null && player2 != null) {
 				startGame();
 			} else {
-				sendWaitMessage(client);
+				sendTo(client,MessageUDP.WAIT);
 			}
 
 		} else {
-			if (ind != -1)
-				sendWaitMessage(client);
+			if (ind != -1) // It's the connected client
+				sendTo(client,MessageUDP.WAIT);
 			else
-				sendErrorMessage(client, "wrong type of message");
-			print("Received a wrong type of message");
+				sendErrorMessage(client, Consts.wrongMsgType);
+			print(Consts.wrongMsgType);
 		}
 	}
 
@@ -124,43 +138,63 @@ public class ServerUDP implements Runnable {
 		int ind = isConnected(client);
 
 		if (ind == -1) {
-			print("too many clients");
-			sendErrorMessage(client, "this game is full");
-		}
+			print(Consts.tooManyClients);
+			sendErrorMessage(client, Consts.gameFullMsg);
+		} else if (ind != P1 && ind != P2)
+			print(Consts.badIndex);
 
-		if (msg.getType() == MessageUDP.DATA) {
+		switch (msg.getType()) {
 
-			switch (ind) {
-			case P1:
+		case MessageUDP.DATA:
+			if (ind == P1)
 				sendTo(player2, msg);
-				break;
-			case P2:
+			else
 				sendTo(player1, msg);
-				break;
-			default:
-				print("ERROR bad index");
+
+		case MessageUDP.CONNECTION_ERROR:
+			gameState =  CONNECTION_ERROR;
+			if (ind == P1) {
+
+			} else {
+
 			}
+			break;
+		case MessageUDP.PAUSE:
+			pauseGame();
+			break;
+		case MessageUDP.HANDSHAKE:
+			if(ind==P1) hdShkReceivedP1++; else hdShkReceivedP2++;
+		break;
+		case MessageUDP.RESUME:
+			resumeGame();
+			break;
 		}
+	}
+
+	private void resumeGame() throws IOException {
+		gameState = PLAYING;
+		if(pauseHandShake != null)
+			pauseHandShake.stopHandShake();
+		sendTo(player1,MessageUDP.RESUME);
+		sendTo(player2,MessageUDP.RESUME);
 	}
 	
 	private void startGame() throws IOException {
-		gameStarted = true;
+		gameState = PLAYING;
 		sendRoles();
-//		(new Thread(new HandShake(this))).start();
 	}
 
-	private void sendErrorMessage(ClientUDP client, String errorMsg) throws IOException {
-		MessageUDP m = new MessageUDP();
-		m.setType(MessageUDP.ERROR);
-		m.setMsg(errorMsg);
-		sendTo(client, m);
+	private void pauseGame() throws IOException {
+		gameState = PAUSE;
+		sendTo(player1,MessageUDP.PAUSE);
+		sendTo(player2,MessageUDP.PAUSE);
+		hdShkReceivedP1 = 0;
+		hdShkReceivedP2 = 0;
+		pauseHandShake = new HandShake(this);
+		(new Thread(pauseHandShake)).start();
 	}
 
-	private void sendWaitMessage(ClientUDP client) throws IOException {
-		MessageUDP m = new MessageUDP();
-		m.setType(MessageUDP.WAIT);
-		sendTo(client, m);
-	}
+	
 
 	private void sendRoles() throws IOException {
 		MessageUDP m = new MessageUDP();
@@ -188,6 +222,12 @@ public class ServerUDP implements Runnable {
 		DatagramPacket p = new DatagramPacket(data, data.length, client.getAddress(), client.getPort());
 		serverSocket.send(p);
 	}
+	
+	public void sendTo(ClientUDP client, int type) throws IOException {
+		MessageUDP m = new MessageUDP();
+		m.setType(type);
+		sendTo(client, m);
+	}
 
 	private int isConnected(ClientUDP client) {
 		if (player1 != null && player1.getAddress().equals(client.getAddress())
@@ -198,6 +238,37 @@ public class ServerUDP implements Runnable {
 			return 2;
 		return -1;
 	}
+	
+	private void sendErrorMessage(ClientUDP client, String errorMsg) throws IOException {
+		MessageUDP m = new MessageUDP();
+		m.setType(MessageUDP.ERROR);
+		m.setMsg(errorMsg);
+		sendTo(client, m);
+	}
+
+//	private void sendWaitMessage(ClientUDP client) throws IOException {
+//		MessageUDP m = new MessageUDP();
+//		m.setType(MessageUDP.WAIT);
+//		sendTo(client, m);
+//	}
+//
+//	private void sendPauseMessage(ClientUDP client) throws IOException {
+//		MessageUDP m = new MessageUDP();
+//		m.setType(MessageUDP.PAUSE);
+//		sendTo(client, m);
+//	}
+//	
+//	private void sendResumeMessage(ClientUDP client) throws IOException {
+//		MessageUDP m = new MessageUDP();
+//		m.setType(MessageUDP.RESUME);
+//		sendTo(client, m);
+//	}
+//	
+//	private void sendHandShakeMessage(ClientUDP client) throws IOException {
+//		MessageUDP m = new MessageUDP();
+//		m.setType(MessageUDP.HANDSHAKE);
+//		sendTo(client, m);
+//	}
 
 	/**
 	 * Shuts down the server
@@ -207,26 +278,44 @@ public class ServerUDP implements Runnable {
 		serverSocket.close();
 		console.setText("");
 	}
-	
+
 	class HandShake implements Runnable {
 		private final ServerUDP server;
+		private boolean running;
 
 		HandShake(ServerUDP server) {
 			this.server = server;
+			this.running=true;
 		}
 
 		@Override
 		public void run() {
 			System.out.println("HandShake starts");
-			MessageUDP message;
-			while(server.running) {
-				message = new MessageUDP();
+			int handShakeSent=0;
+			while (running) {
 				try {
-					server.sendTo(server.player1, message);
-				} catch (IOException e) {
+					if(server.gameState == PAUSE) {
+						int ratioP1 = handShakeSent - server.hdShkReceivedP1;
+						int ratioP2 = handShakeSent - server.hdShkReceivedP2;
+						
+						if(ratioP1 > 10 || ratioP2 > 10) {
+							// HandShake failed
+							print("handshake failed");
+						}
+					
+						server.sendTo(server.player1,MessageUDP.HANDSHAKE);
+						server.sendTo(server.player2,MessageUDP.HANDSHAKE);
+						handShakeSent++;
+					}
+					Thread.sleep(500);
+				} catch (IOException | InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
+		}
+		
+		public void stopHandShake() {
+			this.running=false;
 		}
 
 	}
