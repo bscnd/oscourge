@@ -12,6 +12,7 @@ public class PlayerController1 : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public UnityEvent OnLandEvent;
 	public Animator animator;
+	public GameObject SFX;
 	private bool isGrounded; 
 	private Vector3 spawnLocation;
 	private bool wasGrounded;
@@ -41,17 +42,22 @@ public class PlayerController1 : MonoBehaviour {
 			myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
 			transform.localScale = new Vector3(4f, 4f, 1f);
 			animator.SetFloat("Speed",moveSpeed);
+			SFX.gameObject.GetComponent<SFX>().RunSound();
 		} 
 		else if (Input.GetAxisRaw("Horizontal") < 0f) {
 			myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
 			transform.localScale = new Vector3(-4f, 4f, 1f);
 			animator.SetFloat("Speed",moveSpeed);
+			SFX.gameObject.GetComponent<SFX>().RunSound();
 		} 
 		else {
 			myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
 			animator.SetFloat("Speed",0f);
+			SFX.gameObject.GetComponent<SFX>().RunStop();
 		}
 		if (Input.GetButtonDown("Jump") && isGrounded && !jump) {
+			SFX.gameObject.GetComponent<SFX>().RunStop();
+			SFX.gameObject.GetComponent<SFX>().JumpSound();
 			jump=true;
 			animator.SetBool("isJumping",true);
 			myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
