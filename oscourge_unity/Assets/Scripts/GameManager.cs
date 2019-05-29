@@ -35,23 +35,7 @@ public class GameManager : MonoBehaviour
 		
 		if(Input.GetKeyDown("escape"))
 		{
-			if (isPaused == false)
-			{
-				Time.timeScale = 0;
-				PausePanel.SetActive(true);
-				isPaused = true;
-				camera1.gameObject.GetComponent<CameraController>().scroll=false;
-				camera2.gameObject.GetComponent<CameraController>().scroll=false;
-			}
-
-			else
-			{
-				Time.timeScale = 1;
-				PausePanel.SetActive(false);
-				isPaused = false;
-				camera1.gameObject.GetComponent<CameraController>().scroll=true;
-				camera2.gameObject.GetComponent<CameraController>().scroll=true;
-			}
+			PauseToggle();
 		}
 
 
@@ -92,6 +76,31 @@ public class GameManager : MonoBehaviour
 		Lever[] levers = (Lever[]) Object.FindObjectsOfType<Lever>();
 		foreach(Lever lever in levers){
 			lever.OnGameOver();
+		}
+	}
+	
+	
+	
+	public void PauseToggle()
+	{
+		
+		if (!isPaused)
+		{
+			Time.timeScale = 0.0f;
+			PausePanel.SetActive(true);
+			isPaused = true;
+			camera1.gameObject.GetComponent<CameraController>().scroll=false;
+			camera2.gameObject.GetComponent<CameraController>().scroll=false;
+			Debug.Log("Pause");
+		}
+
+		else
+		{
+			Time.timeScale = 1.0f;
+			PausePanel.SetActive(false);
+			isPaused = false;
+			camera1.gameObject.GetComponent<CameraController>().scroll=true;
+			camera2.gameObject.GetComponent<CameraController>().scroll=true;
 		}
 	}
 }
