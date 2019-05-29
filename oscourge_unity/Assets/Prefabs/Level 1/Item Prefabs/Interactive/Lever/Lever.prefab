@@ -97,8 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chains:
   - {fileID: 0}
-  prefabTriggerIndicator: {fileID: 1146875231286740767, guid: f6baecd4170d46b64a10ab7e1ca762a1,
-    type: 3}
 --- !u!61 &1710771038762084180
 BoxCollider2D:
   m_ObjectHideFlags: 0

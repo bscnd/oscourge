@@ -3,11 +3,11 @@ package ouscourge.net.data;
 import org.json.JSONObject;
 
 public class InputValues {
-	private float horizontal;
 	private boolean jump;
+	private float horizontal;
 	
-	public final static String HORIZONTAL = "horizontal";
 	public final static String JUMP = "jump";
+	public final static String HORIZONTAL = "horizontal";
 	
 	public static InputValues valueOf(JSONObject obj) {
 		InputValues newObj = new InputValues();

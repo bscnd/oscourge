@@ -5,29 +5,25 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
+public float speed;
+public bool scroll;
 
 	private Vector3 spawnLocation;
 
-public float speed;
 	void Start(){
-
+		scroll=false;
 		spawnLocation=transform.position;
 	}
 
 	void Update()
 	{
-
-		transform.position=transform.position+new Vector3(speed/100,0,0);
-
-
+		if(scroll){
+			transform.position=transform.position+new Vector3(speed/100,0,0);
+		}
 	}
 
 	public void Respawn(){
-
-			transform.position=spawnLocation;
+		scroll=false;
+		transform.position=spawnLocation;
 	}
-
-
-
-	
 }
