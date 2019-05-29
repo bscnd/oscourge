@@ -1617,6 +1617,11 @@ PrefabInstance:
       propertyPath: SFX
       value: 
       objectReference: {fileID: 1052756154}
+    - target: {fileID: 3837105830658992642, guid: 5cacfa4411fa73748a308c5ef6596749,
+        type: 3}
+      propertyPath: SFX
+      value: 
+      objectReference: {fileID: 1052756154}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cacfa4411fa73748a308c5ef6596749, type: 3}
 --- !u!1 &4742257147505304128
@@ -1900,6 +1905,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1408677336670615314, guid: 8cf4bc3c48e041d448617bce187502b3,
+        type: 3}
+      propertyPath: SFX
+      value: 
+      objectReference: {fileID: 1052756154}
+    - target: {fileID: 4450945945226919726, guid: 8cf4bc3c48e041d448617bce187502b3,
         type: 3}
       propertyPath: SFX
       value: 
