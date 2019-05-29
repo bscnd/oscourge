@@ -163,7 +163,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ea176fad51732f7418c5fa8e16bb30d8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.622
+  m_Volume: 0.126
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1080,7 +1080,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 27be64b9284700848acf1dbd4de9716b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.455
+  m_Volume: 0.168
   m_Pitch: 1.66
   Loop: 1
   Mute: 0
@@ -1213,7 +1213,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 09973f0404c070f49b8ed564675424b5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.238
   m_Pitch: 1.28
   Loop: 0
   Mute: 0
@@ -1627,6 +1627,11 @@ PrefabInstance:
       propertyPath: localMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3837105830658992642, guid: 5cacfa4411fa73748a308c5ef6596749,
+        type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cacfa4411fa73748a308c5ef6596749, type: 3}
 --- !u!1 &4742257147505304128
@@ -1919,6 +1924,11 @@ PrefabInstance:
       propertyPath: SFX
       value: 
       objectReference: {fileID: 1052756154}
+    - target: {fileID: 4450945945226919726, guid: 8cf4bc3c48e041d448617bce187502b3,
+        type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf4bc3c48e041d448617bce187502b3, type: 3}
 --- !u!4 &6107644656092019719 stripped
