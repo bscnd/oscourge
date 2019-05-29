@@ -1622,6 +1622,11 @@ PrefabInstance:
       propertyPath: SFX
       value: 
       objectReference: {fileID: 1052756154}
+    - target: {fileID: 3837105830658992642, guid: 5cacfa4411fa73748a308c5ef6596749,
+        type: 3}
+      propertyPath: localMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cacfa4411fa73748a308c5ef6596749, type: 3}
 --- !u!1 &4742257147505304128
