@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		Debug.Log(gameObject.name);
 		wasGrounded=isGrounded;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 		if(isGrounded&& !wasGrounded  && myRigidbody.velocity.y<0){
