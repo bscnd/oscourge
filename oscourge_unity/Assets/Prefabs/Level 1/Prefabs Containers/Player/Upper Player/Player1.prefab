@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5184555210336836002}
   - component: {fileID: 5184555210336836001}
   - component: {fileID: 5184555210336836000}
-  - component: {fileID: 5184555210336836003}
   - component: {fileID: 5184555210336836015}
+  - component: {fileID: 7618808732668203423}
   m_Layer: 9
   m_Name: Player1
   m_TagString: Player
@@ -149,7 +149,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.22}
   serializedVersion: 2
   m_Radius: 0.04
---- !u!114 &5184555210336836003
+--- !u!95 &5184555210336836015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5184555210336836006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3cd5340fd5732e45b4a438c1c7e7ac6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7618808732668203423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +190,7 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5184555210336836003}
+      - m_Target: {fileID: 7618808732668203423}
         m_MethodName: onLanding
         m_Mode: 1
         m_Arguments:
@@ -185,25 +204,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   animator: {fileID: 5184555210336836015}
---- !u!95 &5184555210336836015
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5184555210336836006}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3cd5340fd5732e45b4a438c1c7e7ac6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5184555210788433213
 GameObject:
   m_ObjectHideFlags: 0
