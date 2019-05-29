@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	public UnityEvent OnLandEvent;
 	public Animator animator;
 	public GameObject SFX;
+	public bool localMode;
 	private bool isGrounded; 
 	private Vector3 spawnLocation;
 	private bool wasGrounded;
@@ -43,6 +44,18 @@ public class PlayerController : MonoBehaviour {
 
 			horizontal = Input.GetAxisRaw("Horizontal");
 			jumpPressed = Input.GetButtonDown("Jump");
+
+			InputValues inputs = new InputValues(horizontal, jumpPressed);
+			Vector3 pos = transform.position;
+
+			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
+			string dataString = JsonConvert.SerializeObject(data);
+			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
+		    Move(horizontal,jumpPressed);
+		}
+		else if(localMode){
+			horizontal = Input.GetAxisRaw("Horizontal2");
+			jumpPressed = Input.GetButtonDown("Jump2");
 
 			InputValues inputs = new InputValues(horizontal, jumpPressed);
 			Vector3 pos = transform.position;
