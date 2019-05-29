@@ -33,16 +33,4 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
-
-    public void PauseToggle()
-    {
-        if (Time.timeScale == 1.0f)
-        {
-            Time.timeScale = 0.0f;
-            Debug.Log("allo");
-        }
-            
-        else
-            Time.timeScale = 1.0f;
-    }
 }
