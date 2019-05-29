@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Scripts.Networking;
+using Newtonsoft.Json;
+using System.Text;
 
-public class PlayerController1 : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
 	public float jumpSpeed;
@@ -19,32 +22,56 @@ public class PlayerController1 : MonoBehaviour {
 	private bool jump;
 	private Rigidbody2D myRigidbody;
 
+	public bool isTallSquash;
+    private float horizontal;
+    private bool jumpPressed;
+
 	void Start() {
 		myRigidbody = GetComponent<Rigidbody2D>();
 		spawnLocation=transform.position;
-		isGrounded=true;	
+		isGrounded=true;
 	}
 
-	void Update() {
+	void FixedUpdate() {
+		Debug.Log(gameObject.name);
 		wasGrounded=isGrounded;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 		if(isGrounded&& !wasGrounded  && myRigidbody.velocity.y<0){
 			OnLandEvent.Invoke();
 		}
 
-		Move();
+		if((isTallSquash && ClientUDP.Instance.playerMode == 2) || (!isTallSquash && ClientUDP.Instance.playerMode == 1) ) {
+
+			horizontal = Input.GetAxisRaw("Horizontal");
+			jumpPressed = Input.GetButtonDown("Jump");
+
+			InputValues inputs = new InputValues(horizontal, jumpPressed);
+			Vector3 pos = transform.position;
+
+			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
+			string dataString = JsonConvert.SerializeObject(data);
+			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
+		    Move(horizontal,jumpPressed);
+		}
+		else{
+			horizontal = ClientUDP.Instance.currentInputs.horizontal;
+			jumpPressed = ClientUDP.Instance.currentInputs.jump;
+			transform.position = ClientUDP.Instance.currentPos;
+
+		    Move(horizontal,jumpPressed);
+		}
 	}
 
 
 
-	private void Move(){
-		if (Input.GetAxisRaw("Horizontal") > 0f) {
+	private void Move(float horizontal,bool jumpPressed){
+		if (horizontal > 0f) {
 			myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
 			transform.localScale = new Vector3(4f, 4f, 1f);
 			animator.SetFloat("Speed",moveSpeed);
 			SFX.gameObject.GetComponent<SFX>().RunSound();
 		} 
-		else if (Input.GetAxisRaw("Horizontal") < 0f) {
+		else if (horizontal < 0f) {
 			myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
 			transform.localScale = new Vector3(-4f, 4f, 1f);
 			animator.SetFloat("Speed",moveSpeed);
@@ -55,7 +82,7 @@ public class PlayerController1 : MonoBehaviour {
 			animator.SetFloat("Speed",0f);
 			SFX.gameObject.GetComponent<SFX>().RunStop();
 		}
-		if (Input.GetButtonDown("Jump") && isGrounded && !jump) {
+		if (jumpPressed && isGrounded && !jump) {
 			SFX.gameObject.GetComponent<SFX>().RunStop();
 			SFX.gameObject.GetComponent<SFX>().JumpSound();
 			jump=true;

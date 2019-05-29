@@ -2,13 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+using Scripts.Networking;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public TMP_InputField ipInput;
+    public TMP_InputField portInput;
+
     public void PlayGame()
     {
-        Debug.Log("Loading Scene ...");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        string ip = ipInput.text;
+        int port = int.Parse(portInput.text);
+
+        Debug.Log("ip : " + ip + " / port : " + port);
+        ClientUDP.Instance.ConnectToServer(ip, port);
     }
 
     public void QuitGame()
