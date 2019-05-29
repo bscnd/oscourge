@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 			isPaused = true;
 			camera1.gameObject.GetComponent<CameraController>().scroll=false;
 			camera2.gameObject.GetComponent<CameraController>().scroll=false;
-			Debug.Log("Pause");
+			//Debug.Log("Pause");
 		}
 
 		else
