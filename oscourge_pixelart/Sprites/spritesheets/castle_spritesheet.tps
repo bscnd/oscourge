@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>../../../oscourge_unity/Assets/ColdRessources/Sprites/Static/castle_spritesheet.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -420,9 +420,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>32,32,64,64</rect>
+                <rect>51,51,101,101</rect>
                 <key>scale9Paddings</key>
-                <rect>32,32,64,64</rect>
+                <rect>51,51,101,101</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -466,7 +466,6 @@
             <filename>../furnitures/table/table_right.png</filename>
             <filename>../furnitures/carpet.png</filename>
             <filename>../furnitures/chair.png</filename>
-            <filename>../furnitures/fireplace.png</filename>
             <filename>../furnitures/mirror.png</filename>
             <filename>../furnitures/stool.png</filename>
             <filename>../furnitures/table_tablecloth.png</filename>
@@ -558,6 +557,7 @@
             <filename>../interactive/pressure_plate/pressure_plate4.png</filename>
             <filename>../interactive/pressure_plate/pressure_plate5.png</filename>
             <filename>../interactive/pressure_plate/pressure_plate6.png</filename>
+            <filename>../furnitures/fireplace.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

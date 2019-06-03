@@ -72,6 +72,11 @@ public class GameManager : MonoBehaviour
 		camera2.GetComponent<CameraController>().Respawn();
 		wallBot.GetComponent<Parallax>().Reset();
 		wallTop.GetComponent<Parallax>().Reset();	
+
+		Lever[] levers = (Lever[]) Object.FindObjectsOfType<Lever>();
+		foreach(Lever lever in levers){
+			lever.OnGameOver();
+		}
 	}
 	
 	
@@ -86,7 +91,7 @@ public class GameManager : MonoBehaviour
 			isPaused = true;
 			camera1.gameObject.GetComponent<CameraController>().scroll=false;
 			camera2.gameObject.GetComponent<CameraController>().scroll=false;
-			Debug.Log("Pause");
+			//Debug.Log("Pause");
 		}
 
 		else
