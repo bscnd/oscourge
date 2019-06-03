@@ -10,12 +10,9 @@ import java.util.Scanner;
 import org.json.JSONObject;
 
 import ouscourge.net.data.MessageUDP;
+import ouscourge.util.Constants;
 
 public class ClientUDP {
-
-	public static int MAX_CLIENTS = 2;
-	public static int BUFFER_SIZE = 8156;
-	public static int PORT = 1331;
 
 	private InetAddress address;
 	private String name;
@@ -68,8 +65,8 @@ public class ClientUDP {
 				public void run() {
 					try {
 						while (running) {
-							byte[] buff = new byte[BUFFER_SIZE];
-							DatagramPacket pck = new DatagramPacket(buff, buff.length, adress, PORT);
+							byte[] buff = new byte[Constants.BUFFER_SIZE];
+							DatagramPacket pck = new DatagramPacket(buff, buff.length, adress, Constants.PORT);
 							client.receive(pck);
 							System.out.println("data received : " + new String(pck.getData()));
 							JSONObject message = new JSONObject(new String(pck.getData()));
@@ -92,7 +89,7 @@ public class ClientUDP {
 			message.put("msg", msg);
 			message.put("type", MessageUDP.CONNECTION);
 
-			byte[] buff2 = new byte[BUFFER_SIZE];
+			byte[] buff2 = new byte[Constants.BUFFER_SIZE];
 
 			System.out.println("Hey " + msg + ", you can now send messages");
 			while (running) {
@@ -102,7 +99,7 @@ public class ClientUDP {
 				message.put("msg", msg);
 
 				buff2 = message.toString().getBytes();
-				DatagramPacket dp = new DatagramPacket(buff2, buff2.length, adress, PORT);
+				DatagramPacket dp = new DatagramPacket(buff2, buff2.length, adress, Constants.PORT);
 				message.put("type", MessageUDP.DATA);
 				client.send(dp);
 			}

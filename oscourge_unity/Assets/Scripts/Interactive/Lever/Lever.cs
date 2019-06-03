@@ -17,12 +17,6 @@ public class Lever : Trigger
 		initIndicators();
 	}
 
-	// This method must be called in the game manager game over method !
-	public void OnGameOver(){
-		myAnim.SetBool(hashIsTriggered, false);
-		updateInteractiveObjects();
-	}
-
 	public void updateInteractiveObjects(){
 		foreach(Chain chain in chains){
 			chain.trigger(myAnim.GetBool(hashIsTriggered), this.GetInstanceID());

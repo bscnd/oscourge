@@ -18,7 +18,7 @@ public class Chain : MonoBehaviour
 	private Collider2D chainCollider;
 
 	int hashIsTriggered = Animator.StringToHash("isTriggered");
-	
+
 	void Start()
 	{
 		this.myAnim = GetComponent<Animator>();

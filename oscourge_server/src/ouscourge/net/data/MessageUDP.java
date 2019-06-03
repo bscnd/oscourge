@@ -4,17 +4,16 @@ import org.json.JSONObject;
 
 public class MessageUDP {
 
+	public final static int CONNECTION = 4;
 	public final static int DATA = 1;
-	public final static int WAIT = 2;
-	public final static int ROLE = 3;
 	public final static int ERROR = 4;
-	public final static int CONNECTION = 5;
-	
+	public final static String INPUTVALUES = "inputValues";
 	public final static String MSG = "msg";
-	public final static String TYPE = "type";
 	public final static String NAME = "name";
 	public final static String POSITION = "position";
-	public final static String INPUTVALUES = "inputValues";
+	public final static int ROLE = 3;
+	public final static String TYPE = "type";
+	public final static int WAIT = 2;
 
 	public static MessageUDP valueOf(JSONObject obj) {
 		MessageUDP newObj = new MessageUDP();
@@ -31,15 +30,14 @@ public class MessageUDP {
 		return newObj;
 	}
 
-	private int type;
+	private InputValues inputValues;
 
 	private String msg;
 
 	private String name;
-
 	private Vector3 position;
 
-	private InputValues inputValues;
+	private int type;
 
 	public InputValues getInputValues() {
 		return inputValues;

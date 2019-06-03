@@ -49,6 +49,4 @@ MonoBehaviour:
   camera2: {fileID: 0}
   wallBot: {fileID: 0}
   wallTop: {fileID: 0}
-  PausePanel: {fileID: 0}
-  offset: 20
-  isPaused: 0
+  offset: 23
