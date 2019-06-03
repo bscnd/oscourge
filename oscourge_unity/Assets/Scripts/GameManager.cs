@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-
-
 	public GameObject player1;
 	public GameObject player2;
 	public GameObject camera1;
@@ -15,9 +12,11 @@ public class GameManager : MonoBehaviour
 	public GameObject wallTop;
 
 	public GameObject PausePanel;
+	public GameObject DisconnectedPanel;
 	public int offset;
 	
 	public bool isPaused = false;
+	public bool isDisconnected = false;
 
 	void Update()
 	{
@@ -79,18 +78,31 @@ public class GameManager : MonoBehaviour
 		}
 	}
 	
-	
+	public void DisconnectedToggle(){
+		isDisconnected = !isDisconnected;
+
+		if(isDisconnected){
+			Time.timeScale = 0.0f;
+			DisconnectedPanel.SetActive(true);
+			setScrolling(false);
+			Debug.Log("Disconnected");
+		}
+		else{
+			Time.timeScale = 1.0f;
+			DisconnectedPanel.SetActive(false);
+			setScrolling(true);
+		}
+	}
 	
 	public void PauseToggle()
 	{
-		
-		if (!isPaused)
+		isPaused = !isPaused;
+
+		if (isPaused)
 		{
 			Time.timeScale = 0.0f;
 			PausePanel.SetActive(true);
-			isPaused = true;
-			camera1.gameObject.GetComponent<CameraController>().scroll=false;
-			camera2.gameObject.GetComponent<CameraController>().scroll=false;
+			setScrolling(false);
 			Debug.Log("Pause");
 		}
 
@@ -98,9 +110,12 @@ public class GameManager : MonoBehaviour
 		{
 			Time.timeScale = 1.0f;
 			PausePanel.SetActive(false);
-			isPaused = false;
-			camera1.gameObject.GetComponent<CameraController>().scroll=true;
-			camera2.gameObject.GetComponent<CameraController>().scroll=true;
+			setScrolling(true);
 		}
+	}
+
+	private void setScrolling(bool isScroll){
+		camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
+		camera2.gameObject.GetComponent<CameraController>().scroll = isScroll;
 	}
 }

@@ -8,10 +8,8 @@ using System.Text;
 using UnityEngine;
 using Newtonsoft.Json;
 
-
 namespace Scripts.Networking {
     public class ClientUDP {
-
         public int playerMode=1;
         public bool waiting = true;
         public Vector3 currentPos;
@@ -123,12 +121,23 @@ namespace Scripts.Networking {
                         // EndReceive failed and we ended up here
                     }
                 }
-                else {
+		else {
 
-                    // Handle the timeout (pause the game)
+			// Handle the timeout (pause the game)
 
-                    // The operation wasn't completed before the timeout and we're off the hook
-                }
+			GameManager[] gameManager = UnityEngine.Object.FindObjectsOfType<GameManager>();
+			if(gameManager.Length == 0){
+				Debug.Log("No game manager found !");
+			}
+			if(gameManager.Length != 1){
+				Debug.Log("Multiple game manager found !");
+			}
+			else{
+				gameManager[0].DisconnectedToggle();	
+			}
+
+			// The operation wasn't completed before the timeout and we're off the hook
+		}
 
             }
 
