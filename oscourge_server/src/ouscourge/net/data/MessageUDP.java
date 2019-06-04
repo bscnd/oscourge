@@ -14,7 +14,7 @@ public class MessageUDP {
 	public final static int HANDSHAKE = 8;
 	public final static int RESUME = 9;
 	public final static int RECONNECTION = 10;
-	public final static int ENDGAME = 10;
+	public final static int ENDGAME = 11;
 	
 	public final static String MSG = "msg";
 	public final static String TYPE = "type";

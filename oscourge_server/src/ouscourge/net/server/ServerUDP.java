@@ -18,29 +18,32 @@ import ouscourge.net.util.Consts;
 
 public class ServerUDP implements Runnable {
 
-	public static final String TYPE = "type";
-	public static final String NAME = "name";
+	// Player 1
+	private ClientUDP player1;
+	private int hdShkReceivedP1;
 	public static final int P1 = 1;
+	
+	// Player 2
+	private ClientUDP player2;
+	private int hdShkReceivedP2;
 	public static final int P2 = 2;
 
+	// All states for the protocol
 	private int gameState;
 	public static final int INIT = 1;
 	public static final int PLAYING = 2;
-	public static final int WAITING = 3;
-	public static final int PAUSE = 4;
-	public static final int CONNECTION_ERROR = 5;
+	public static final int PAUSE = 3;
+	public static final int CONNECTION_ERROR = 4;
 
-	private boolean running;
-	private ClientUDP player1;
-	private int hdShkReceivedP1;
-	private ClientUDP player2;
-	private int hdShkReceivedP2;
-
+	// Threads
+	private boolean running; // boolean for the main thread
 	private HandShake pauseHandShake;
-
+	
+	// Graphical interaction
 	private JTextArea console;
 	private JLabel lblState;
 
+	// Server socket
 	private final DatagramSocket serverSocket;
 
 	public ServerUDP(int port, JTextArea console, JLabel lblState) throws IOException {
@@ -60,7 +63,7 @@ public class ServerUDP implements Runnable {
 			try {
 
 				DatagramPacket packet = new DatagramPacket(data, data.length);
-				if(gameState==CONNECTION_ERROR)
+				if (gameState == CONNECTION_ERROR)
 					serverSocket.setSoTimeout(60000);
 				else {
 					serverSocket.setSoTimeout(0);
@@ -314,6 +317,7 @@ public class ServerUDP implements Runnable {
 		data = message.toJson().toString().getBytes();
 		DatagramPacket p = new DatagramPacket(data, data.length, client.getAddress(), client.getPort());
 		serverSocket.send(p);
+		print("message sent type : "+message.getType());
 	}
 
 	public void sendTo(ClientUDP client, int type) throws IOException {
@@ -339,6 +343,10 @@ public class ServerUDP implements Runnable {
 		sendTo(client, m);
 	}
 
+	/**
+	 * Changes the state of the game and updates the graphical indication
+	 * @param state 
+	 */
 	private void changeState(int state) {
 		switch (state) {
 		case INIT:
@@ -346,9 +354,6 @@ public class ServerUDP implements Runnable {
 			break;
 		case PLAYING:
 			lblState.setText("PLAYING");
-			break;
-		case WAITING:
-			lblState.setText("WAITING");
 			break;
 		case PAUSE:
 			lblState.setText("PAUSE");
@@ -363,40 +368,22 @@ public class ServerUDP implements Runnable {
 		gameState = state;
 	}
 
-//	private void sendWaitMessage(ClientUDP client) throws IOException {
-//		MessageUDP m = new MessageUDP();
-//		m.setType(MessageUDP.WAIT);
-//		sendTo(client, m);
-//	}
-//
-//	private void sendPauseMessage(ClientUDP client) throws IOException {
-//		MessageUDP m = new MessageUDP();
-//		m.setType(MessageUDP.PAUSE);
-//		sendTo(client, m);
-//	}
-//	
-//	private void sendResumeMessage(ClientUDP client) throws IOException {
-//		MessageUDP m = new MessageUDP();
-//		m.setType(MessageUDP.RESUME);
-//		sendTo(client, m);
-//	}
-//	
-//	private void sendHandShakeMessage(ClientUDP client) throws IOException {
-//		MessageUDP m = new MessageUDP();
-//		m.setType(MessageUDP.HANDSHAKE);
-//		sendTo(client, m);
-//	}
-
 	/**
-	 * Shuts down the server
+	 * Shuts the server down
 	 */
 	public void shutdown() {
 		running = false;
-		if(pauseHandShake != null) pauseHandShake.stopHandShake();
+		if (pauseHandShake != null)
+			pauseHandShake.stopHandShake();
 		serverSocket.close();
 		console.setText("");
 	}
 
+	/**
+	 * 
+	 * @author Nils_Richard
+	 *
+	 */
 	class HandShake implements Runnable {
 		private final ServerUDP server;
 		private boolean running;
