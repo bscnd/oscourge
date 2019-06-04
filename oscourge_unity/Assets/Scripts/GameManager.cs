@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
 	public GameObject wallTop;
 
 	public GameObject PausePanel;
+	public GameObject BlackBar;
 	public int offset;
+	
 	
 	public bool isPaused = false;
 
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour
 		{
 			Time.timeScale = 0.0f;
 			PausePanel.SetActive(true);
+			BlackBar.SetActive(false);
 			isPaused = true;
 			camera1.gameObject.GetComponent<CameraController>().scroll=false;
 			camera2.gameObject.GetComponent<CameraController>().scroll=false;
@@ -98,6 +101,7 @@ public class GameManager : MonoBehaviour
 		{
 			Time.timeScale = 1.0f;
 			PausePanel.SetActive(false);
+			BlackBar.SetActive(true);
 			isPaused = false;
 			camera1.gameObject.GetComponent<CameraController>().scroll=true;
 			camera2.gameObject.GetComponent<CameraController>().scroll=true;
