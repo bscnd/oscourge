@@ -41,13 +41,16 @@ public class GameManager : MonoBehaviour
 		}
 
 
-		if(playerMoved() && !isPaused){
+		
+	}
+
+void FixedUpdate(){
+	if(playerMoved() && !isPaused){
 			camera1.gameObject.GetComponent<CameraController>().scroll=true;
 			camera2.gameObject.GetComponent<CameraController>().scroll=true;
 
 		}
-	}
-
+}
 
 	bool playerMoved(){
 		if(player1.gameObject.GetComponent<Rigidbody2D>().velocity.x!=0 || 
@@ -92,8 +95,6 @@ public class GameManager : MonoBehaviour
 			PausePanel.SetActive(true);
 			BlackBar.SetActive(false);
 			isPaused = true;
-			camera1.gameObject.GetComponent<CameraController>().scroll=false;
-			camera2.gameObject.GetComponent<CameraController>().scroll=false;
 			//Debug.Log("Pause");
 		}
 
@@ -103,8 +104,6 @@ public class GameManager : MonoBehaviour
 			PausePanel.SetActive(false);
 			BlackBar.SetActive(true);
 			isPaused = false;
-			camera1.gameObject.GetComponent<CameraController>().scroll=true;
-			camera2.gameObject.GetComponent<CameraController>().scroll=true;
 		}
 	}
 }
