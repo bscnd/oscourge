@@ -24,7 +24,8 @@ public class Trigger : MonoBehaviour
 					Vector3 position = new Vector3(Mathf.Cos(angle[index] * Mathf.Deg2Rad), Mathf.Sin(angle[index] * Mathf.Deg2Rad), 0);
 					position += this.transform.position;
 
-					GameObject.Instantiate(chainIndicator, position, Quaternion.identity);
+					GameObject obj = GameObject.Instantiate(chainIndicator, position, Quaternion.identity);
+					obj.transform.SetParent(this.transform);
 					index++;
 				}
 			}
