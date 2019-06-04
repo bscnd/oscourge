@@ -82,22 +82,26 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void DisconnectedToggle() {
-        isDisconnected = !isDisconnected;
+    public void DisconnectedToggle(){
+  		if(DisconnectedPanel != null){
+  			isDisconnected = !isDisconnected;
 
-        if (isDisconnected) {
-            Time.timeScale = 0.0f;
-            DisconnectedPanel.SetActive(true);
-            setScrolling(false);
-            Debug.Log("Disconnected");
-        }
-        else {
-            Time.timeScale = 1.0f;
-            DisconnectedPanel.SetActive(false);
-            if (playerMoved)
-                setScrolling(true);
-        }
-    }
+  			if(isDisconnected){
+  				Time.timeScale = 0.0f;
+  				DisconnectedPanel.SetActive(true);
+  				setScrolling(false);
+  				Debug.Log("Disconnected");
+  			}
+  			else{
+  				Time.timeScale = 1.0f;
+  				DisconnectedPanel.SetActive(false);
+  				setScrolling(true);
+  			}
+  		}
+  		else{
+  			Debug.Log("DisconnectedPanel is null in the GameManager");
+  		}
+  	}
 
     public void PauseToggle() {
         ClientUDP.Instance.sendTypedMessage(Message.PAUSE);
