@@ -38,13 +38,13 @@ public class GameManager : MonoBehaviour
 		{
 			PauseToggle();
 		}
-
-
-		if(playerMoved() && !isPaused){
-			setScrolling(true);
-		}
 	}
 
+void FixedUpdate(){
+	if(playerMoved() && !isPaused){
+			setScrolling(true);
+		}
+}
 
 	bool playerMoved(){
 		if(player1.gameObject.GetComponent<Rigidbody2D>().velocity.x!=0 ||
@@ -104,7 +104,6 @@ public class GameManager : MonoBehaviour
 			PausePanel.SetActive(true);
 			BlackBar.SetActive(false);
 			isPaused = true;
-			setScrolling(false);
 			Debug.Log("Pause");
 		}
 
@@ -114,7 +113,6 @@ public class GameManager : MonoBehaviour
 			PausePanel.SetActive(false);
 			BlackBar.SetActive(true);
 			isPaused = false;
-			setScrolling(true);
 		}
 	}
 

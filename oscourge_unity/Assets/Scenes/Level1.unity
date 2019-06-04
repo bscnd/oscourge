@@ -220,6 +220,12 @@ Transform:
   m_Father: {fileID: 4742257148712941259}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &142024573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1892359897, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &244149563
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +545,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 948605505}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 2142044669}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: camera1
+      value: 
+      objectReference: {fileID: 1839450796}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: camera2
+      value: 
+      objectReference: {fileID: 1357182014}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: wallBot
+      value: 
+      objectReference: {fileID: 1641874021}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: wallTop
+      value: 
+      objectReference: {fileID: 597484645}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: PausePanel
+      value: 
+      objectReference: {fileID: 1119583479}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: BlackBar
+      value: 
+      objectReference: {fileID: 142024573}
     - target: {fileID: 8522149274857746086, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -594,41 +640,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 948605505}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 2142044669}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: camera1
-      value: 
-      objectReference: {fileID: 1839450796}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: camera2
-      value: 
-      objectReference: {fileID: 1357182014}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: wallBot
-      value: 
-      objectReference: {fileID: 1641874021}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: wallTop
-      value: 
-      objectReference: {fileID: 597484645}
-    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: PausePanel
-      value: 
-      objectReference: {fileID: 1119583479}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
 --- !u!1001 &744670567
