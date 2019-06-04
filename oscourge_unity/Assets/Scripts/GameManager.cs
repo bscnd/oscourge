@@ -79,18 +79,23 @@ public class GameManager : MonoBehaviour
 	}
 
 	public void DisconnectedToggle(){
-		isDisconnected = !isDisconnected;
+		if(DisconnectedPanel != null){
+			isDisconnected = !isDisconnected;
 
-		if(isDisconnected){
-			Time.timeScale = 0.0f;
-			DisconnectedPanel.SetActive(true);
-			setScrolling(false);
-			Debug.Log("Disconnected");
+			if(isDisconnected){
+				Time.timeScale = 0.0f;
+				DisconnectedPanel.SetActive(true);
+				setScrolling(false);
+				Debug.Log("Disconnected");
+			}
+			else{
+				Time.timeScale = 1.0f;
+				DisconnectedPanel.SetActive(false);
+				setScrolling(true);
+			}
 		}
 		else{
-			Time.timeScale = 1.0f;
-			DisconnectedPanel.SetActive(false);
-			setScrolling(true);
+			Debug.Log("DisconnectedPanel is null in the GameManager");
 		}
 	}
 
