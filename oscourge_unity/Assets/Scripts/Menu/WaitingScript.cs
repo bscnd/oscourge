@@ -15,7 +15,6 @@ public class WaitingScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(ClientUDP.Instance.gameState);
         if (ClientUDP.Instance.gameState == ClientUDP.PLAYING) {
             Debug.Log("Loading Scene ...");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
