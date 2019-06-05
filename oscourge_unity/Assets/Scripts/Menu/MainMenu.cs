@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using Scripts.Networking;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
@@ -14,11 +15,16 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        string ip = ipInput.text;
-        int port = int.Parse(portInput.text);
-
-        Debug.Log("ip : " + ip + " / port : " + port);
-        ClientUDP.Instance.ConnectToServer(ip, port);
+        try {
+            //string ip = ipInput.text;
+            //int port = int.Parse(portInput.text);
+            //Debug.Log("ip : " + ip + " / port : " + port);
+            //ClientUDP.Instance.ConnectToServer(ip, port);
+            ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
+            Debug.LogError("RESET THESES LIGNES !");
+        } catch(Exception e) {
+            Debug.LogError(e);
+        }
     }
 
     public void QuitGame()

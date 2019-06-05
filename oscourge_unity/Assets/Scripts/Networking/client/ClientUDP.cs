@@ -12,20 +12,9 @@ namespace Scripts.Networking {
     public class ClientUDP {
 
         #region game state
-        //public delegate void OnVariableChangeDelegate(int newVal);
-        //public event OnVariableChangeDelegate OnGameStateChange;
-
-        //public int gameState {
-        //    get { return gameState; }
-        //    set {
-        //        if (gameState == value) return;
-        //        gameState = value;
-        //        OnGameStateChange?.Invoke(gameState); // equivalent to if ongameStateChange != null then OnGameStateChange(gameState)
-        //    }
-        //}
-
-        public int gameState;
-        public const int OFFLINE = -1;
+        public int gameState; // Positive corresponds to server states / Negative simple states client sided
+        public const int RESTART = -2; // Happens during playing (short period of time)
+        public const int OFFLINE = -1; // When the game is locally played
         public const int INIT = 1;
         public const int PLAYING = 2;
         public const int PAUSE = 3;
@@ -113,10 +102,8 @@ namespace Scripts.Networking {
                 if (asyncResult.IsCompleted) {
                     try {
                         receiveBytes = new Byte[1024];
-                        Debug.Log("before reception");
                         receiveBytes = socketConnection.EndReceive(asyncResult, ref RemoteIpEndPoint);
 
-                        Debug.Log("msg received");
                         Message message = JsonConvert.DeserializeObject<Message>(Encoding.ASCII.GetString(receiveBytes));
 
                         switch (message.type) {
@@ -146,8 +133,12 @@ namespace Scripts.Networking {
                                 break;
                             case Message.CONNECTION_ERROR:
                                 Debug.Log("type : connection_error");
-                                changeGameState(Message.CONNECTION_ERROR);
+                                changeGameState(CONNECTION_ERROR);
                                 sendTypedMessage(Message.RECONNECTION);
+                                break;
+                            case Message.RESTART:
+                                Debug.Log("type : restart");
+                                changeGameState(RESTART);
                                 break;
                             default:
                                 Debug.LogError("wrong type of message");
@@ -168,16 +159,16 @@ namespace Scripts.Networking {
                     changeGameState(CONNECTION_ERROR);
                     sendTypedMessage(Message.CONNECTION_ERROR);
 
-                    GameManager[] gameManager = UnityEngine.Object.FindObjectsOfType<GameManager>();
-                    if (gameManager.Length == 0) {
-                        Debug.Log("No game manager found !");
-                    }
-                    if (gameManager.Length != 1) {
-                        Debug.Log("Multiple game manager found !");
-                    }
-                    else {
-                        gameManager[0].DisconnectedToggle();
-                    }
+                    //GameManager[] gameManager = UnityEngine.Object.FindObjectsOfType<GameManager>();
+                    //if (gameManager.Length == 0) {
+                    //    Debug.Log("No game manager found !");
+                    //}
+                    //if (gameManager.Length != 1) {
+                    //    Debug.Log("Multiple game manager found !");
+                    //}
+                    //else {
+                    //    gameManager[0].DisconnectedToggle();
+                    //}
 
                     // The operation wasn't completed before the timeout and we're off the hook
                 }
@@ -203,7 +194,6 @@ namespace Scripts.Networking {
 
             try {
                 socketConnection.Send(data, data.Length);
-                Debug.Log("Message sent");
             }
             catch (SocketException socketException) {
                 Debug.Log("Socket exception: " + socketException);

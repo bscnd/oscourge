@@ -22,7 +22,7 @@ public class ServerUDP implements Runnable {
 	private ClientUDP player1;
 	private int hdShkReceivedP1;
 	public static final int P1 = 1;
-	
+
 	// Player 2
 	private ClientUDP player2;
 	private int hdShkReceivedP2;
@@ -38,7 +38,7 @@ public class ServerUDP implements Runnable {
 	// Threads
 	private boolean running; // boolean for the main thread
 	private HandShake pauseHandShake;
-	
+
 	// Graphical interaction
 	private JTextArea console;
 	private JLabel lblState;
@@ -192,6 +192,21 @@ public class ServerUDP implements Runnable {
 		}
 	}
 
+	private void restartGame(ClientUDP client, MessageUDP msg) throws IOException {
+		int ind = isConnected(client);
+		if (ind == -1) {
+			print(Consts.tooManyClients);
+			sendErrorMessage(client, Consts.gameFullMsg);
+		} else if (ind != P1 && ind != P2) {
+			print(Consts.badIndex);
+		} else {
+			if (ind == P1)
+				sendTo(player2, MessageUDP.RESTART);
+			else
+				sendTo(player1, MessageUDP.RESTART);
+		}
+	}
+
 	private void pausedGame(ClientUDP client, MessageUDP msg) throws IOException {
 		int ind = isConnected(client);
 
@@ -210,6 +225,15 @@ public class ServerUDP implements Runnable {
 					hdShkReceivedP2++;
 				break;
 			case MessageUDP.RESUME:
+				resumeGame();
+				break;
+			case MessageUDP.RESTART:
+				restartGame(client,msg);
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				resumeGame();
 				break;
 			default:
@@ -317,7 +341,7 @@ public class ServerUDP implements Runnable {
 		data = message.toJson().toString().getBytes();
 		DatagramPacket p = new DatagramPacket(data, data.length, client.getAddress(), client.getPort());
 		serverSocket.send(p);
-		print("message sent type : "+message.getType());
+		print("message sent type : " + message.getType());
 	}
 
 	public void sendTo(ClientUDP client, int type) throws IOException {
@@ -345,7 +369,8 @@ public class ServerUDP implements Runnable {
 
 	/**
 	 * Changes the state of the game and updates the graphical indication
-	 * @param state 
+	 * 
+	 * @param state
 	 */
 	private void changeState(int state) {
 		switch (state) {

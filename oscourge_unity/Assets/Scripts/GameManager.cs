@@ -12,15 +12,18 @@ public class GameManager : MonoBehaviour {
     public GameObject wallTop;
 
     public GameObject PausePanel;
+    public GameObject OptionsPanel;
     public GameObject BlackBar;
     public GameObject DisconnectedPanel;
     public int offset;
 
-    public bool isPaused = false;
-    public bool isDisconnected = false;
+    private bool isPaused = false;
+    private bool isDisconnected = false;
 
     // used to force the camera to stay still after respawn
-    public bool playerMoved = false;
+    private bool playerMoved = false;
+
+    private int currentGameState = ClientUDP.Instance.gameState;
 
     void Update() {
         if (DetectGO()) {
@@ -35,12 +38,38 @@ public class GameManager : MonoBehaviour {
             player2.transform.position = new Vector3(camera2.transform.position.x + 19, player2.transform.position.y, player2.transform.position.z);
         }
 
-        if (Input.GetKeyDown("escape")) {
-            PauseToggle();
+        if (!isDisconnected && Input.GetKeyDown("escape")) {
+            if (OptionsPanel.activeSelf) {
+                OptionsPanel.SetActive(false);
+                PausePanel.SetActive(true);
+            }
+            else
+                PauseToggle();
         }
+
+        if (ClientUDP.Instance.gameState != currentGameState) {
+            currentGameState = ClientUDP.Instance.gameState;
+
+            switch (currentGameState) {
+                case ClientUDP.CONNECTION_ERROR:
+                    if (isPaused) Debug.LogError("game manager fixedupdate : this should not happen pause means no data");
+                    setOnDisconnected();
+                    break;
+                case ClientUDP.PAUSE:
+                    if (!isPaused)
+                        setOnPause();
+                    break;
+                case ClientUDP.PLAYING:
+                    Debug.Log("Lets play again !");
+                    setOffDisconnected();
+                    setOffPause();
+                    break;
+            }
+        }
+
     }
 
-    void FixedUpdate() {
+    void FixedUpdate() { // stops during the pause (depends on the timescale ?)
         if (playersHaveMoved() && !isPaused) {
             setScrolling(true);
         }
@@ -75,6 +104,7 @@ public class GameManager : MonoBehaviour {
         camera2.GetComponent<CameraController>().Respawn();
         wallBot.GetComponent<Parallax>().Reset();
         wallTop.GetComponent<Parallax>().Reset();
+        playerMoved = false;
 
         Lever[] levers = (Lever[])Object.FindObjectsOfType<Lever>();
         foreach (Lever lever in levers) {
@@ -82,47 +112,66 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void DisconnectedToggle(){
-  		if(DisconnectedPanel != null){
-  			isDisconnected = !isDisconnected;
+    private void setOnDisconnected() {
+        isDisconnected = true;
+        Time.timeScale = 0.0f;
+        if (DisconnectedPanel != null)
+            DisconnectedPanel.SetActive(true);
+        else Debug.LogError("Disconnected panel is null");
+        setScrolling(false);
+        Debug.Log("Disconnected");
+    }
 
-  			if(isDisconnected){
-  				Time.timeScale = 0.0f;
-  				DisconnectedPanel.SetActive(true);
-  				setScrolling(false);
-  				Debug.Log("Disconnected");
-  			}
-  			else{
-  				Time.timeScale = 1.0f;
-  				DisconnectedPanel.SetActive(false);
-  				setScrolling(true);
-  			}
-  		}
-  		else{
-  			Debug.Log("DisconnectedPanel is null in the GameManager");
-  		}
-  	}
+    private void setOffDisconnected() {
+        isDisconnected = false;
+        Time.timeScale = 1.0f;
+        if (DisconnectedPanel != null)
+            DisconnectedPanel.SetActive(false);
+        else Debug.LogError("Disconnected panel is null");
+        if (playerMoved)
+            setScrolling(true);
+    }
 
     public void PauseToggle() {
-        ClientUDP.Instance.sendTypedMessage(Message.PAUSE);
-        isPaused = !isPaused;
+        if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
+            if (!isPaused)
+                ClientUDP.Instance.sendTypedMessage(Message.PAUSE);
+            else
+                ClientUDP.Instance.sendTypedMessage(Message.RESUME);
+        }
+        if (!isPaused)
+            setOnPause();
+        else
+            setOffPause();
 
-        if (isPaused) {
-            Time.timeScale = 0.0f;
+
+    }
+
+    private void setOnPause() {
+        isPaused = true;
+        Time.timeScale = 0.0f;
+        if (PausePanel != null)
             PausePanel.SetActive(true);
+        else Debug.LogError("PausePanel is null");
+        if (BlackBar != null)
             BlackBar.SetActive(false);
-            Debug.Log("Pause");
-            setScrolling(false);
-        }
+        else Debug.LogError("BlackBar is null");
+        setScrolling(false);
+    }
 
-        else {
-            Time.timeScale = 1.0f;
+    private void setOffPause() {
+        isPaused = false;
+        Time.timeScale = 1.0f;
+        if (PausePanel != null)
             PausePanel.SetActive(false);
+        if (OptionsPanel != null)
+            OptionsPanel.SetActive(false);
+        else Debug.LogError("PausePanel is null");
+        if (BlackBar != null)
             BlackBar.SetActive(true);
-            if(playerMoved)
-                setScrolling(true);
-        }
-
+        else Debug.LogError("BlackBar is null");
+        if (playerMoved)
+            setScrolling(true);
     }
 
     private void setScrolling(bool isScroll) {

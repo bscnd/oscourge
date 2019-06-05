@@ -15,6 +15,7 @@ public class Message {
     public const int RESUME = 9;
     public const int RECONNECTION = 10;
     public const int ENDGAME = 11;
+    public const int RESTART = 12;
 
     public string name;
     public string msg;
