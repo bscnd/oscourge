@@ -8,29 +8,39 @@ using System.Text;
 using UnityEngine;
 using Newtonsoft.Json;
 
-
 namespace Scripts.Networking {
     public class ClientUDP {
 
-        public int playerMode=1;
-        public bool waiting = true;
+        #region game state
+        public int gameState; // Positive corresponds to server states / Negative simple states client sided
+        public const int RESTART = -2; // Happens during playing (short period of time)
+        public const int OFFLINE = -1; // When the game is locally played
+        public const int INIT = 1;
+        public const int PLAYING = 2;
+        public const int PAUSE = 3;
+        public const int CONNECTION_ERROR = 4;
+        #endregion
+
+        #region current values
+        public int playerMode;
         public Vector3 currentPos;
         public InputValues currentInputs;
+        #endregion
 
         #region private members 	
-        private static UdpClient socketConnection;
+        private static UdpClient socketConnection; // socket to send/receive messages
         private Thread clientReceiveThread;
-        private bool running = false;
-        private bool gameStarted = false;
-        private int port;
+        private bool running;
         #endregion
 
         #region singleton
         private static ClientUDP instance = null;
 
         private ClientUDP() {
-            this.playerMode = 1;
-            this.currentInputs = new InputValues();
+            playerMode = 1;
+            running = false;
+            gameState = OFFLINE;
+            currentInputs = new InputValues();
         }
 
         public static ClientUDP Instance {
@@ -45,46 +55,43 @@ namespace Scripts.Networking {
 
         public void ConnectToServer(string ip, int port) {
             try {
-                Debug.LogError("Before connecting");
-                socketConnection = new UdpClient(ip, port);
-                Debug.LogError("2 connecting");
-                Message connectMe = new Message("Player", "Connect me", Message.CONNECTION,null,new Vector3());
-                Debug.LogError("3 connecting");
-                string msg = JsonConvert.SerializeObject(connectMe);
-                Debug.LogError("4 connecting");
+                changeGameState(INIT);
 
-                SendData(Encoding.ASCII.GetBytes(msg));
-                Debug.LogError("After connecting");
+                socketConnection = new UdpClient(ip, port); // creation of the socket
+                sendTypedMessage(Message.CONNECTION);
 
+                // Creation of the receiving thread
                 running = true;
                 clientReceiveThread = new Thread(new ThreadStart(ListenForData));
                 clientReceiveThread.IsBackground = true;
                 clientReceiveThread.Start();
             }
             catch (Exception e) {
-                Debug.Log("On client connect exception " + e);
+                Debug.LogError("On client connect exception " + e);
             }
         }
 
         private void ListenForData() {
-            if (socketConnection == null) {
-                return;
-            }
+            if (socketConnection == null) return;
 
             Byte[] receiveBytes;
+
+            // IPEndPoint object will allow us to read datagrams sent from any source.
             IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
-            //IPEndPoint object will allow us to read datagrams sent from any source.
+
+            // permits the implementation of the timeout
             IAsyncResult asyncResult;
 
             TimeSpan fiveSecondWait = TimeSpan.FromSeconds(5);
             TimeSpan fiveMinuteWait = TimeSpan.FromMinutes(5);
             TimeSpan timeToWait;
 
+            Debug.Log("Starting receiving thread");
             while (running) {
 
                 asyncResult = socketConnection.BeginReceive(null, null);
 
-                if (gameStarted) {
+                if (gameState == PLAYING) {
                     timeToWait = fiveSecondWait;
                 }
                 else {
@@ -99,22 +106,44 @@ namespace Scripts.Networking {
 
                         Message message = JsonConvert.DeserializeObject<Message>(Encoding.ASCII.GetString(receiveBytes));
 
-                        Debug.Log("msg received");
                         switch (message.type) {
                             case Message.WAIT:
-                                waiting = true;
+                                Debug.Log("type : waiting");
                                 break;
                             case Message.ROLE:
+                                Debug.Log("type : role");
                                 playerMode = int.Parse(message.msg);
-                                waiting = false;
-                                gameStarted = true;
+                                changeGameState(PLAYING);
                                 break;
                             case Message.DATA:
                                 currentPos = message.position;
                                 currentInputs = message.inputValues;
                                 break;
+                            case Message.PAUSE:
+                                Debug.Log("type : pause");
+                                changeGameState(PAUSE);
+                                break;
+                            case Message.RESUME:
+                                Debug.Log("type : resume");
+                                changeGameState(PLAYING);
+                                break;
+                            case Message.HANDSHAKE:
+                                Debug.Log("type : handshake");
+                                sendTypedMessage(Message.HANDSHAKE);
+                                break;
+                            case Message.CONNECTION_ERROR:
+                                Debug.Log("type : connection_error");
+                                changeGameState(CONNECTION_ERROR);
+                                sendTypedMessage(Message.RECONNECTION);
+                                break;
+                            case Message.RESTART:
+                                Debug.Log("type : restart");
+                                changeGameState(RESTART);
+                                break;
+                            default:
+                                Debug.LogError("wrong type of message");
+                                break;
                         }
-                        Debug.Log(message.name + "> " + message.msg + " type :" + message.type); // TODO change here to correspond to the ui
 
                         // EndReceive worked and we have received data and remote endpoint
                     }
@@ -127,43 +156,36 @@ namespace Scripts.Networking {
 
                     // Handle the timeout (pause the game)
 
+                    changeGameState(CONNECTION_ERROR);
+                    sendTypedMessage(Message.CONNECTION_ERROR);
+
+                    //GameManager[] gameManager = UnityEngine.Object.FindObjectsOfType<GameManager>();
+                    //if (gameManager.Length == 0) {
+                    //    Debug.Log("No game manager found !");
+                    //}
+                    //if (gameManager.Length != 1) {
+                    //    Debug.Log("Multiple game manager found !");
+                    //}
+                    //else {
+                    //    gameManager[0].DisconnectedToggle();
+                    //}
+
                     // The operation wasn't completed before the timeout and we're off the hook
                 }
 
             }
 
-            //while (running) {
-            //    receiveBytes = new Byte[1024];
-            //    receiveBytes = socketConnection.Receive(ref RemoteIpEndPoint);
-            //    Message message = JsonConvert.DeserializeObject<Message>(Encoding.ASCII.GetString(receiveBytes));
-            //    try {
-            //        Debug.Log("changing pos");
-            //        Debug.Log(message.name + "> " + message.msg); // TODO change here to correspond to the ui
-
-            //        switch (message.type) {
-            //            case Message.WAIT:
-            //                waiting = true;
-            //                break;
-            //            case Message.ROLE:
-            //                playerMode = int.Parse(message.msg);
-            //                waiting = false;
-            //                gameStarted = true;
-            //                break;
-            //            case Message.DATA:
-            //                currentPos = message.position;
-            //                currentInputs = message.inputValues;
-            //                break;
-            //        }
-
-            //    }
-            //    catch (Exception e) {
-            //        Console.WriteLine(e.ToString());
-            //    }
-
-            //}
-
             socketConnection.Close();
 
+        }
+
+        public void changeGameState(int state) {
+            gameState = state;
+        }
+
+        public void sendTypedMessage(int type) {
+            string msg = JsonConvert.SerializeObject(new Message(type));
+            SendData(Encoding.ASCII.GetBytes(msg));
         }
 
         public void SendData(Byte[] data) {
@@ -171,49 +193,12 @@ namespace Scripts.Networking {
             if (data.Length == 0) return;
 
             try {
-                Debug.LogError("Before sending");
                 socketConnection.Send(data, data.Length);
-                Debug.LogError("after sending");
-
-                Debug.Log("Client sent his message - should be received by server");
             }
             catch (SocketException socketException) {
                 Debug.Log("Socket exception: " + socketException);
             }
         }
-
-
-        //void Start() {
-        //    try {
-        //        socketConnection = new UdpClient("localhost", port);
-        //        Debug.Log("client created");
-        //        running = true;
-
-        //        // Receive thread
-        //        clientReceiveThread = new Thread(new ThreadStart(ListenForData));
-        //        clientReceiveThread.IsBackground = true;
-        //        clientReceiveThread.Start();
-
-        //        // Send thread
-
-        //        // Make a name request before sending messages
-        //        string name = "Zerkit";
-        //        //
-
-        //        Message message = new Message(name, "msg");
-        //        int i = 0;
-        //        while (i<3) { // TODO change this to correspond to the ui
-        //            message.msg = "new message";
-        //            string msg = JsonConvert.SerializeObject(message);
-
-        //            SendData(Encoding.ASCII.GetBytes(msg));
-        //            i++;
-        //        }
-        //    }
-        //    catch (Exception e) {
-        //        Debug.Log("On client connect exception " + e);
-        //    }
-        //}
 
     }
 }

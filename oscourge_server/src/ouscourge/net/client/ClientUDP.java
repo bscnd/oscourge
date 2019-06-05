@@ -7,6 +7,8 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.Scanner;
 
+import javax.swing.JTextArea;
+
 import org.json.JSONObject;
 
 import ouscourge.net.data.MessageUDP;
@@ -20,6 +22,19 @@ public class ClientUDP {
 	private InetAddress address;
 	private String name;
 	private int port;
+	private boolean isConnected;
+
+	private JTextArea console;
+	private DatagramSocket clientSocket;
+	private boolean sendingData;
+
+	public boolean isConnected() {
+		return isConnected;
+	}
+
+	public void setConnected(boolean isConnected) {
+		this.isConnected = isConnected;
+	}
 
 	public ClientUDP(InetAddress address, int port, String name) throws SocketException {
 		this.address = address;
@@ -30,6 +45,12 @@ public class ClientUDP {
 	public ClientUDP(InetAddress address, int port) throws SocketException {
 		this.address = address;
 		this.port = port;
+	}
+
+	public ClientUDP(InetAddress address, int port, JTextArea console) throws SocketException {
+		this.address = address;
+		this.port = port;
+		this.console = console;
 	}
 
 	public InetAddress getAddress() {
@@ -56,6 +77,117 @@ public class ClientUDP {
 		this.port = port;
 	}
 
+	private void print(String mess) {
+		console.append(mess);
+		console.append("\n");
+		System.out.println(mess);
+	}
+
+	public void connect() {
+
+		try {
+			clientSocket = new DatagramSocket();
+
+			boolean listening = true;
+
+			// Receive thread
+			Thread t = new Thread(new Runnable() {
+				public void run() {
+					try {
+						while (listening) {
+							byte[] buff = new byte[BUFFER_SIZE];
+							DatagramPacket pck = new DatagramPacket(buff, buff.length, address, PORT);
+							clientSocket.receive(pck);
+							print("data received : " + new String(pck.getData()));
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			});
+			t.start();
+			
+			MessageUDP msg = new MessageUDP();
+			msg.setType(MessageUDP.CONNECTION);
+			sendMsg(msg);
+			
+			print("connecting");
+
+		} catch (SocketException e1) {
+			e1.printStackTrace();
+		}
+	}
+
+	public void startData() {
+		sendingData = true;
+		Thread t = new Thread(new Runnable() {
+			public void run() {
+				try {
+					MessageUDP msg = new MessageUDP();
+					msg.setMsg("data");
+					msg.setType(MessageUDP.DATA);
+					while (sendingData) {
+						sendMsg(msg);
+						Thread.sleep(2000);
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		t.start();
+	}
+
+	public void stopData() {
+		sendingData = false;
+	}
+
+	public void sendPause() {
+		MessageUDP msg = new MessageUDP();
+		msg.setType(MessageUDP.PAUSE);
+		sendMsg(msg);
+	}
+
+	public void sendResume() {
+		MessageUDP msg = new MessageUDP();
+		msg.setType(MessageUDP.RESUME);
+		sendMsg(msg);
+	}
+
+	public void sendHandShake() {
+		MessageUDP msg = new MessageUDP();
+		msg.setType(MessageUDP.HANDSHAKE);
+		sendMsg(msg);
+	}
+
+	public void sendConnectionError() {
+		MessageUDP msg = new MessageUDP();
+		msg.setType(MessageUDP.CONNECTION_ERROR);
+		sendMsg(msg);
+	}
+
+	public void sendReConnection() {
+		MessageUDP msg = new MessageUDP();
+		msg.setType(MessageUDP.RECONNECTION);
+		sendMsg(msg);
+	}
+
+	public void sendMsg(MessageUDP msg) {
+		try {
+			byte[] buff = new byte[BUFFER_SIZE];
+			buff = msg.toJson().toString().getBytes();
+			DatagramPacket dp = new DatagramPacket(buff, buff.length, address, PORT);
+			clientSocket.send(dp);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Old (Talkative)
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
 			DatagramSocket client = new DatagramSocket();

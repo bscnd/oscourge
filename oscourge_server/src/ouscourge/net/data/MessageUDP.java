@@ -9,6 +9,13 @@ public class MessageUDP {
 	public final static int ROLE = 3;
 	public final static int ERROR = 4;
 	public final static int CONNECTION = 5;
+	public final static int CONNECTION_ERROR = 6;
+	public final static int PAUSE = 7;
+	public final static int HANDSHAKE = 8;
+	public final static int RESUME = 9;
+	public final static int RECONNECTION = 10;
+	public final static int ENDGAME = 11;
+	public final static int RESTART = 12;
 	
 	public final static String MSG = "msg";
 	public final static String TYPE = "type";

@@ -28,15 +28,17 @@ import javax.swing.border.EmptyBorder;
 
 import ouscourge.net.server.ServerUDP;
 
-public class MainFrame extends JFrame {
+public class ServerUI extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private static final String version = "3.2";
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private JLabel lblState;
 	public Thread serverThread;
 	public ServerUDP server;
 	public int port;
@@ -48,7 +50,7 @@ public class MainFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrame frame = new MainFrame();
+					ServerUI frame = new ServerUI();
 					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 					frame.setTitle("DotS - Server");
@@ -62,7 +64,7 @@ public class MainFrame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainFrame() {
+	public ServerUI() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 300);
@@ -73,9 +75,9 @@ public class MainFrame extends JFrame {
 		JMenu mnOptions = new JMenu("Options");
 		menuBar.add(mnOptions);
 
-		JMenuItem mntmInformations = new JMenuItem("Stop");
+		JMenuItem mntmStop = new JMenuItem("Stop");
 
-		mnOptions.add(mntmInformations);
+		mnOptions.add(mntmStop);
 
 		JMenuItem mntmRestart = new JMenuItem("Restart");
 
@@ -153,9 +155,9 @@ public class MainFrame extends JFrame {
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		panel_4.add(scrollPane, BorderLayout.CENTER);
 
-		JLabel lblNewLabel = new JLabel("v2.2");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		contentPane.add(lblNewLabel, BorderLayout.SOUTH);
+		lblState = new JLabel(version);
+		lblState.setHorizontalAlignment(SwingConstants.RIGHT);
+		contentPane.add(lblState, BorderLayout.SOUTH);
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -165,7 +167,7 @@ public class MainFrame extends JFrame {
 					if (port < 1024 || port > 8191)
 						throw new NumberFormatException();
 
-					server = new ServerUDP(port, textArea);
+					server = new ServerUDP(port, textArea, lblState);
 					serverThread = new Thread(server);
 					serverThread.start();
 
@@ -182,20 +184,22 @@ public class MainFrame extends JFrame {
 			}
 		});
 
-		mntmInformations.addActionListener(new ActionListener() {
+		mntmStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (serverThread != null && serverThread.isAlive() && server != null)
 					server.shutdown();
 				cl.show(panel_2, "pan3");
+				lblState.setText(version);
 			}
 		});
 
 		mntmRestart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (serverThread != null && serverThread.isAlive() && server != null)
+				if (serverThread != null && serverThread.isAlive() && server != null) {
 					server.shutdown();
+				}
 				try {
-					server = new ServerUDP(port, textArea);
+					server = new ServerUDP(port, textArea, lblState);
 
 					serverThread = new Thread(server);
 					serverThread.start();

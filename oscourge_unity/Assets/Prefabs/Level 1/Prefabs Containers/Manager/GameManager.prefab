@@ -50,5 +50,7 @@ MonoBehaviour:
   wallBot: {fileID: 0}
   wallTop: {fileID: 0}
   PausePanel: {fileID: 0}
+  OptionsPanel: {fileID: 0}
+  BlackBar: {fileID: 0}
+  DisconnectedPanel: {fileID: 0}
   offset: 20
-  isPaused: 0

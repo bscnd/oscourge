@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
 		    Move(horizontal,jumpPressed);
 		}
-		else if(localMode){
+		else if(ClientUDP.Instance.gameState == ClientUDP.OFFLINE){
 			horizontal = Input.GetAxisRaw("Horizontal2");
 			jumpPressed = Input.GetButtonDown("Jump2");
 
