@@ -12,9 +12,7 @@ public class SceneLoader : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (ClientUDP.Instance.gameState == ClientUDP.RESTART) {
-            Replay();
-        }
+        
     }
 
 
@@ -28,7 +26,6 @@ public class SceneLoader : MonoBehaviour {
     }
 
     public void Replay() {
-        if (ClientUDP.Instance.gameState != ClientUDP.RESTART) ClientUDP.Instance.sendTypedMessage(Message.RESTART);
-        SceneManager.LoadScene("Level1");
+            
     }
 }

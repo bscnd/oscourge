@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Scripts.Networking;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public GameObject player1;
@@ -64,6 +65,9 @@ public class GameManager : MonoBehaviour {
                     setOffDisconnected();
                     setOffPause();
                     break;
+                case ClientUDP.RESTART:
+                    Replay();
+                    break;
             }
         }
 
@@ -96,6 +100,15 @@ public class GameManager : MonoBehaviour {
         return false;
     }
 
+    public void Replay() {
+        SceneManager.LoadScene("Level1"); // change to current scene is multiple levels
+        if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
+            if (ClientUDP.Instance.gameState != ClientUDP.RESTART) ClientUDP.Instance.sendTypedMessage(Message.RESTART);
+        }
+        else {
+            setOffPause();
+        }
+    }
 
     void GameOver() {
         player1.GetComponent<PlayerController>().Kill();
