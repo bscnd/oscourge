@@ -184,6 +184,10 @@ public class ClientUDP {
 		}
 	}
 
+	/**
+	 * Old (Talkative)
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
 			DatagramSocket client = new DatagramSocket();

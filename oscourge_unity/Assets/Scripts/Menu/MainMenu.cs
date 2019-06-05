@@ -16,12 +16,12 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         try {
-            //string ip = ipInput.text;
-            //int port = int.Parse(portInput.text);
-            //Debug.Log("ip : " + ip + " / port : " + port);
-            //ClientUDP.Instance.ConnectToServer(ip, port);
-            ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
-            Debug.LogError("RESET THESES LIGNES !");
+            string ip = ipInput.text;
+            int port = int.Parse(portInput.text);
+            Debug.Log("ip : " + ip + " / port : " + port);
+            ClientUDP.Instance.ConnectToServer(ip, port);
+            //ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
+            //Debug.LogError("RESET THESES LIGNES !");
         } catch(Exception e) {
             Debug.LogError(e);
         }
