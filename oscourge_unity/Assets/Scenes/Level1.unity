@@ -1666,6 +1666,16 @@ PrefabInstance:
       propertyPath: SFX
       value: 
       objectReference: {fileID: 1052756154}
+    - target: {fileID: 775669696474962167, guid: 5cacfa4411fa73748a308c5ef6596749,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1404080349
+      objectReference: {fileID: 0}
+    - target: {fileID: 775669696474962167, guid: 5cacfa4411fa73748a308c5ef6596749,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cacfa4411fa73748a308c5ef6596749, type: 3}
 --- !u!1 &4742257147505304128
@@ -1955,6 +1965,16 @@ PrefabInstance:
       propertyPath: SFX
       value: 
       objectReference: {fileID: 1052756154}
+    - target: {fileID: 1408677336670615316, guid: 8cf4bc3c48e041d448617bce187502b3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1404080349
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408677336670615316, guid: 8cf4bc3c48e041d448617bce187502b3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf4bc3c48e041d448617bce187502b3, type: 3}
 --- !u!4 &6107644656092019719 stripped

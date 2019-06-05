@@ -114,7 +114,12 @@ public class PlayerController : MonoBehaviour {
 		jump=false;
 	}
 
-
+IEnumerator Example()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(5);
+        print(Time.time);
+    }
 
 	void OnTriggerEnter2D(Collider2D col)
 	{

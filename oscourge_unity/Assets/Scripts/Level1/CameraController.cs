@@ -22,8 +22,13 @@ public bool scroll;
 		}
 	}
 
+
+	public void Stop(){
+scroll=false;
+
+	}
+
 	public void Respawn(){
-		scroll=false;
 		transform.position=spawnLocation;
 	}
 }
