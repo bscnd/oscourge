@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour {
         }
 
         if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
-            Debug.LogError("pause !");
             if (OptionsPanel.activeSelf) {
                 OptionsPanel.SetActive(false);
                 PausePanel.SetActive(true);

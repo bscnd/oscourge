@@ -482,7 +482,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 195895587}
+      - m_Target: {fileID: 3459536629106136170}
         m_MethodName: resetColorPortInput
         m_Mode: 1
         m_Arguments:
@@ -1129,6 +1129,7 @@ RectTransform:
   - {fileID: 1914781898}
   - {fileID: 8890864889672656753}
   - {fileID: 5853174962758782523}
+  - {fileID: 6124642105319186975}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2660,7 +2661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3459536629106136170}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -4275,7 +4276,6 @@ GameObject:
   - component: {fileID: 749846566803950603}
   - component: {fileID: 3646573447569383997}
   - component: {fileID: 6379101334823634130}
-  - component: {fileID: 6002095505410901265}
   m_Layer: 5
   m_Name: LocalBtn
   m_TagString: Untagged
@@ -4383,7 +4383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6002095505410901265}
+      - m_Target: {fileID: 3459536629106136170}
         m_MethodName: PlayGame
         m_Mode: 6
         m_Arguments:
@@ -4396,24 +4396,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &6002095505410901265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3272144748308339423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16f4325459e72d4886cbcedf87ab7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ipInput: {fileID: 0}
-  portInput: {fileID: 0}
-  ErrorBox: {fileID: 0}
-  ErrorTxt: {fileID: 0}
-  waitingPanel: {fileID: 0}
-  onlinePanel: {fileID: 0}
 --- !u!1 &4032567689673594504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,7 +4767,6 @@ GameObject:
   - component: {fileID: 3218484851086961}
   - component: {fileID: 7568466815589988741}
   - component: {fileID: 9131937618482809177}
-  - component: {fileID: 195895587}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -4893,7 +4874,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 195895587}
+      - m_Target: {fileID: 3459536629106136170}
         m_MethodName: PlayGame
         m_Mode: 6
         m_Arguments:
@@ -4906,24 +4887,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &195895587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4960368722064107286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16f4325459e72d4886cbcedf87ab7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ipInput: {fileID: 4960497982807137479}
-  portInput: {fileID: 1032309068}
-  ErrorBox: {fileID: 673260552093260505}
-  ErrorTxt: {fileID: 4274509600399177763}
-  waitingPanel: {fileID: 1914781897}
-  onlinePanel: {fileID: 5436609272940610440}
 --- !u!1 &5222974574072379136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5899,6 +5862,60 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6691434791896116153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6124642105319186975}
+  - component: {fileID: 3459536629106136170}
+  m_Layer: 5
+  m_Name: MainMenuFonctions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6124642105319186975
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691434791896116153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 532479007341620754}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3459536629106136170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691434791896116153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16f4325459e72d4886cbcedf87ab7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ipInput: {fileID: 4960497982807137479}
+  portInput: {fileID: 1032309068}
+  ErrorBox: {fileID: 673260552093260505}
+  ErrorTxt: {fileID: 4274509600399177763}
+  waitingPanel: {fileID: 1914781897}
+  onlinePanel: {fileID: 5436609272940610440}
 --- !u!1 &6765005197739528201
 GameObject:
   m_ObjectHideFlags: 0
@@ -6490,7 +6507,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 195895587}
+      - m_Target: {fileID: 3459536629106136170}
         m_MethodName: resetColorIpInput
         m_Mode: 1
         m_Arguments:
@@ -7268,20 +7285,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4960497982807137479}
-        m_MethodName: set_text
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1032309068}
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 3459536629106136170}
+        m_MethodName: resetInputs
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

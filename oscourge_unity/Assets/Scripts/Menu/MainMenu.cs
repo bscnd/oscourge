@@ -56,6 +56,13 @@ public class MainMenu : MonoBehaviour {
         portInput.image.color = Color.white;
     }
 
+    public void resetInputs() {
+        resetColorIpInput();
+        resetColorPortInput();
+        ipInput.text = "";
+        portInput.text = "";
+    }
+
     private void EmptyInputFieldError() {
         if (string.IsNullOrEmpty(ipInput.text))
             ipInput.image.color = Color.red;
