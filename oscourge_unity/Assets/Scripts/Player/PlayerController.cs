@@ -50,7 +50,8 @@ public class PlayerController : MonoBehaviour {
 
 			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
 			string dataString = JsonConvert.SerializeObject(data);
-			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
+            if(ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
+			    ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
 		    Move(horizontal,jumpPressed);
 		}
 		else if(ClientUDP.Instance.gameState == ClientUDP.OFFLINE){
@@ -60,9 +61,6 @@ public class PlayerController : MonoBehaviour {
 			InputValues inputs = new InputValues(horizontal, jumpPressed);
 			Vector3 pos = transform.position;
 
-			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
-			string dataString = JsonConvert.SerializeObject(data);
-			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
 		    Move(horizontal,jumpPressed);
 		}
 		else{

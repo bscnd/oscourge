@@ -87,7 +87,7 @@ namespace Scripts.Networking {
             TimeSpan timeToWait;
 
             Debug.Log("Starting receiving thread");
-            while (running) {
+            while (gameState != OFFLINE) {
 
                 asyncResult = socketConnection.BeginReceive(null, null);
 
@@ -177,6 +177,12 @@ namespace Scripts.Networking {
 
             socketConnection.Close();
 
+        }
+
+        public void GiveUp() {
+            changeGameState(OFFLINE);
+            sendTypedMessage(Message.ENDGAME);
+            socketConnection.Close();
         }
 
         public void changeGameState(int state) {

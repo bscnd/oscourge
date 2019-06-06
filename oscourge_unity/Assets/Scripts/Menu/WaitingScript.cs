@@ -20,4 +20,10 @@ public class WaitingScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
+    public void GiveUp() {
+        // You said you were never gonna give me up, meh
+        if(ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
+            ClientUDP.Instance.GiveUp();
+    }
 }
