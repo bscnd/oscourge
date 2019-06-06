@@ -11,6 +11,7 @@ public class Parallax : MonoBehaviour
 	public GameObject a1;
 	public GameObject a2;
 	public GameObject a3;
+	public int Speed;
 
 
 	private Transform cameraTransform;
@@ -41,6 +42,7 @@ public class Parallax : MonoBehaviour
 
 	private void Update(){
 
+		transform.position+=Vector3.left*Speed/1000;
 
 		if(cameraTransform.position.x >  (layers[leftIndex].transform.position.x+viewZone)){
 			ScrollRight();

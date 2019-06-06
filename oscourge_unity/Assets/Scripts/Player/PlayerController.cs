@@ -99,7 +99,12 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (jumpPressed && isGrounded && !jump) {
 			SFX.gameObject.GetComponent<SFX>().RunStop();
-			SFX.gameObject.GetComponent<SFX>().JumpSound();
+			if(gameObject.name=="Player1"){
+				SFX.gameObject.GetComponent<SFX>().JumpSound2();
+			}
+			else{
+				SFX.gameObject.GetComponent<SFX>().JumpSound1();
+			}
 			jump=true;
 			animator.SetBool("isJumping",true);
 			myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
@@ -114,6 +119,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	public void Kill(){
+		SFX.gameObject.GetComponent<SFX>().HurtSound();
 		myRigidbody.velocity = new Vector3(0f, 0f, 0f);
 		isDead=true;
 		animator.SetBool("isDead",true);
