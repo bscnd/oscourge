@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
     public GameObject camera2;
     public GameObject wallBot;
     public GameObject wallTop;
+    public GameObject fade;
 
     public GameObject PausePanel;
     public GameObject OptionsPanel;
@@ -25,6 +26,10 @@ public class GameManager : MonoBehaviour {
     private bool playerMoved = false;
 
     private int currentGameState = ClientUDP.Instance.gameState;
+
+    void Start() {
+        fade.SetActive(false);
+    }
 
     void Update() {
         if (DetectGO()) {
@@ -110,16 +115,23 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+
+    private bool gameIsOver = false;
+
     void GameOver() {
-        StartCoroutine(GO());
+        if (!gameIsOver) {
+            StartCoroutine(GO());
+        }
     }
 
     IEnumerator GO() {
+        gameIsOver = true;
         camera1.GetComponent<CameraController>().Stop();
         camera2.GetComponent<CameraController>().Stop();
-        yield return new WaitForSeconds(4);
+        fade.SetActive(true);
         player1.GetComponent<PlayerController>().Kill();
         player2.GetComponent<PlayerController>().Kill();
+        yield return new WaitForSeconds(4);
         camera1.GetComponent<CameraController>().Respawn();
         camera2.GetComponent<CameraController>().Respawn();
         wallBot.GetComponent<Parallax>().Reset();
@@ -130,6 +142,11 @@ public class GameManager : MonoBehaviour {
         foreach (Lever lever in levers) {
             lever.OnGameOver();
         }
+
+        player1.GetComponent<PlayerController>().Respawn();
+        player2.GetComponent<PlayerController>().Respawn();
+        gameIsOver = false;
+        fade.SetActive(false);
     }
 
 
