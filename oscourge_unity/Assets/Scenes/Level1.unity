@@ -515,6 +515,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 534058000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2095257019928166861, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 554522678657347493, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &552346698 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
@@ -582,9 +594,19 @@ PrefabInstance:
       objectReference: {fileID: 1119583479}
     - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
         type: 3}
+      propertyPath: OptionsPanel
+      value: 
+      objectReference: {fileID: 534058003}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
       propertyPath: BlackBar
       value: 
       objectReference: {fileID: 142024573}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: DisconnectedPanel
+      value: 
+      objectReference: {fileID: 534058002}
     - target: {fileID: 8522149274857746086, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
