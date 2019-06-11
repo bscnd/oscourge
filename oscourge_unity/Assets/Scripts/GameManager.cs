@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour {
     public GameObject player2;
     public GameObject camera1;
     public GameObject camera2;
-    public GameObject wallBot;
-    public GameObject wallTop;
+    public GameObject mountainsTop;
+    public GameObject mountainsBot;
     public GameObject fade;
 
     public GameObject PausePanel;
@@ -134,8 +134,8 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(4);
         camera1.GetComponent<CameraController>().Respawn();
         camera2.GetComponent<CameraController>().Respawn();
-        wallBot.GetComponent<Parallax>().Reset();
-        wallTop.GetComponent<Parallax>().Reset();
+        mountainsTop.GetComponent<Parallax>().Reset();
+        mountainsBot.GetComponent<Parallax>().Reset();
         playerMoved = false;
 
         Lever[] levers = (Lever[])Object.FindObjectsOfType<Lever>();
@@ -145,7 +145,6 @@ public class GameManager : MonoBehaviour {
 
         player1.GetComponent<PlayerController>().Respawn();
         player2.GetComponent<PlayerController>().Respawn();
-        gameIsOver = false;
         fade.SetActive(false);
     }
 

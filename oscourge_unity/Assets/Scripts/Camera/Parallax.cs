@@ -11,18 +11,20 @@ public class Parallax : MonoBehaviour
 	public GameObject a1;
 	public GameObject a2;
 	public GameObject a3;
-	public int Speed;
+	public float Speed;
 
 
 	private Transform cameraTransform;
 	private Transform[] layers;
 	private int leftIndex;
 	private int rightIndex;
-
-	Vector3 aa1,aa2,aa3;
+	private bool move=false;
+	Vector3 aa1,aa2,aa3,startPos;
 
 
 	private void Start(){
+
+		startPos = transform.position;
 
 		cameraTransform=cam.transform;
 		layers =new Transform[3];
@@ -34,20 +36,30 @@ public class Parallax : MonoBehaviour
 
 
 		
-		 aa1=a1.transform.position;
-		 aa2=a2.transform.position;
-		 aa3=a3.transform.position;
+		aa1=a1.transform.position;
+		aa2=a2.transform.position;
+		aa3=a3.transform.position;
 		
 	}
 
 	private void Update(){
 
-		transform.position+=Vector3.left*Speed/1000;
+		if(!move){
+			float speed2=cameraTransform.gameObject.GetComponent<CameraController>().speed/100;
+			transform.position=transform.position-new Vector3(speed2/100,0,0);
 
-		if(cameraTransform.position.x >  (layers[leftIndex].transform.position.x+viewZone)){
-			ScrollRight();
+			
+		}
+		else{
+
+			float speed2=cameraTransform.gameObject.GetComponent<CameraController>().speed/100;
+			transform.position=transform.position-new Vector3((speed2+Speed)/100 ,0,0);
+			//transform.position=transform.position+new Vector3(speed2/150,0,0);
 		}
 
+		if(cameraTransform.position.x >  (layers[leftIndex].position.x+viewZone)){
+			ScrollRight();
+		}
 	}
 
 	private void ScrollRight(){
@@ -68,6 +80,12 @@ public class Parallax : MonoBehaviour
 		a1.transform.position=aa1;
 		a2.transform.position=aa2;
 		a3.transform.position=aa3;
+	}
+
+	public void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.CompareTag("Player")){
+			move=true;
+		}
 	}
 
 }
