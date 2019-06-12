@@ -119,6 +119,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	public void Kill(){
+		myRigidbody.isKinematic = true;
 		SFX.gameObject.GetComponent<SFX>().HurtSound();
 		myRigidbody.velocity = new Vector3(0f, 0f, 0f);
 		isDead=true;
@@ -126,6 +127,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void Respawn(){
+		myRigidbody.isKinematic = false;
 		isDead=false;
 		animator.SetBool("isDead",false);
 		transform.position=spawnLocation;
