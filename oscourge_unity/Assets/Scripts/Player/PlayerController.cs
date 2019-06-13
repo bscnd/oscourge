@@ -24,13 +24,15 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D myRigidbody;
 
 	public bool isTallSquash;
-    private float horizontal;
-    private bool jumpPressed;
+	private float horizontal;
+	private bool jumpPressed;
+	private bool isDead;
 
 	void Start() {
 		myRigidbody = GetComponent<Rigidbody2D>();
 		spawnLocation=transform.position;
 		isGrounded=true;
+		isDead=false;
 	}
 
 	void FixedUpdate() {
@@ -50,8 +52,11 @@ public class PlayerController : MonoBehaviour {
 
 			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
 			string dataString = JsonConvert.SerializeObject(data);
+			if(ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
 			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
-		    Move(horizontal,jumpPressed);
+			if(!isDead){
+				Move(horizontal,jumpPressed);
+			}
 		}
 		else if(ClientUDP.Instance.gameState == ClientUDP.OFFLINE){
 			horizontal = Input.GetAxisRaw("Horizontal2");
@@ -59,18 +64,16 @@ public class PlayerController : MonoBehaviour {
 
 			InputValues inputs = new InputValues(horizontal, jumpPressed);
 			Vector3 pos = transform.position;
-
-			Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
-			string dataString = JsonConvert.SerializeObject(data);
-			ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
-		    Move(horizontal,jumpPressed);
+			if(!isDead){
+				Move(horizontal,jumpPressed);
+			}
 		}
 		else{
 			horizontal = ClientUDP.Instance.currentInputs.horizontal;
 			jumpPressed = ClientUDP.Instance.currentInputs.jump;
 			transform.position = ClientUDP.Instance.currentPos;
 
-		    Move(horizontal,jumpPressed);
+			Move(horizontal,jumpPressed);
 		}
 	}
 
@@ -96,7 +99,12 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (jumpPressed && isGrounded && !jump) {
 			SFX.gameObject.GetComponent<SFX>().RunStop();
-			SFX.gameObject.GetComponent<SFX>().JumpSound();
+			if(gameObject.name=="Player1"){
+				SFX.gameObject.GetComponent<SFX>().JumpSound2();
+			}
+			else{
+				SFX.gameObject.GetComponent<SFX>().JumpSound1();
+			}
 			jump=true;
 			animator.SetBool("isJumping",true);
 			myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
@@ -109,11 +117,22 @@ public class PlayerController : MonoBehaviour {
 		jump=false;
 	}
 
+
 	public void Kill(){
+		myRigidbody.isKinematic = true;
+		SFX.gameObject.GetComponent<SFX>().HurtSound();
+		myRigidbody.velocity = new Vector3(0f, 0f, 0f);
+		isDead=true;
+		animator.SetBool("isDead",true);
+	}
+
+	public void Respawn(){
+		myRigidbody.isKinematic = false;
+		isDead=false;
+		animator.SetBool("isDead",false);
 		transform.position=spawnLocation;
 		jump=false;
 	}
-
 
 
 	void OnTriggerEnter2D(Collider2D col)
