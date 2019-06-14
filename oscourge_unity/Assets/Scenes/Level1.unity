@@ -1225,7 +1225,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0234375, y: 0.1875}
@@ -1489,6 +1489,16 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 699664891}
+    - target: {fileID: 5586722147970574076, guid: 950127b37d2108845ab00f3d6467e525,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.08610496
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586722147970574076, guid: 950127b37d2108845ab00f3d6467e525,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.27779007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950127b37d2108845ab00f3d6467e525, type: 3}
 --- !u!4 &1056300917 stripped
@@ -1834,7 +1844,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0234375, y: 0.1875}
@@ -2079,6 +2089,16 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 699664891}
+    - target: {fileID: 5586722149482142376, guid: a94ff61c003885a4abf4f284689e39ed,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.08716309
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586722149482142376, guid: a94ff61c003885a4abf4f284689e39ed,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.2756738
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a94ff61c003885a4abf4f284689e39ed, type: 3}
 --- !u!4 &1451759765 stripped

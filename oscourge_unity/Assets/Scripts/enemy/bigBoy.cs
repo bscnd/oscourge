@@ -25,7 +25,7 @@ public class bigBoy : MonoBehaviour
 
 	void Start(){
 
-		values.Add("Tilemap");
+		values.Add(tilemap.name);
 		values.Add("BlockTemp");
 		values.Add("Player1");
 		values.Add("Player2");
@@ -47,6 +47,11 @@ public class bigBoy : MonoBehaviour
 
 
 	void OnTriggerEnter2D(Collider2D col){
+
+		if(col.gameObject.CompareTag("Player")){
+			gameManager.GetComponent<GameManager>().GameOver();
+		}
+
 		if(!values.Contains(col.transform.name)){
 			Renderer r=	col.GetComponent<Renderer>();
 			if(r!= null){
