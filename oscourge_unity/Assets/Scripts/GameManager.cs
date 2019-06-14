@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Scripts.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour {
 	public GameObject player1;
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour {
 	public GameObject mountainsTop;
 	public GameObject mountainsBot;
 	public GameObject fade;
+	  public GameObject gridPrefab;
+	  public GameObject currentGrid;
 
 	public GameObject PausePanel;
 	public GameObject OptionsPanel;
@@ -27,8 +30,15 @@ public class GameManager : MonoBehaviour {
 
 	private int currentGameState = ClientUDP.Instance.gameState;
 
+
+
+	public List<Renderer> renderers = new List<Renderer>();
+
+	private Vector3 gridPos;
+
 	void Start() {
-		fade.SetActive(false);
+		fade.SetActive(false);	
+gridPos=gridPrefab.transform.position;
 	}
 
 	void Update() {
@@ -141,7 +151,7 @@ public class GameManager : MonoBehaviour {
 
     private bool gameIsOver = false;
 
-    void GameOver() {
+    public void GameOver() {
     	if (!gameIsOver) {
     		StartCoroutine(GO());
     	}
@@ -168,7 +178,14 @@ public class GameManager : MonoBehaviour {
 
     	player1.GetComponent<PlayerController>().Respawn();
     	player2.GetComponent<PlayerController>().Respawn();
+    	resetRenderers();
+    	GameObject temp=Instantiate(gridPrefab, gridPos, Quaternion.identity);
+    	temp.transform.SetParent(currentGrid.transform.parent);
+    	GameObject toDestroy=currentGrid;
+    	currentGrid=temp;
+    	Destroy(toDestroy);
     	fade.SetActive(false);
+    	gameIsOver=false;
     }
 
 
@@ -237,5 +254,16 @@ public class GameManager : MonoBehaviour {
     private void setScrolling(bool isScroll) {
     	camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
     	camera2.gameObject.GetComponent<CameraController>().scroll = isScroll;
+    }
+
+    public void addRenderer(Renderer r){
+    	renderers.Add(r);
+    }
+
+    public void resetRenderers(){
+    	foreach(Renderer r in renderers)
+    	{
+    		r.enabled = true;
+    	}
     }
 }
