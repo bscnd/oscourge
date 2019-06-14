@@ -76,7 +76,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3574804624957692302}
   - component: {fileID: 3574804624957692303}
   m_Layer: 0
-  m_Name: candle_flame_1 2
+  m_Name: flame1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
