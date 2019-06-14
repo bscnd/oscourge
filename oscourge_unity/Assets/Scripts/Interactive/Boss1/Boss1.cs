@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Boss1 : MonoBehaviour
 {
-	// TODO Move update boss control here
-
 	private Boss1Control[] boss;
 	public Chain chain;
 

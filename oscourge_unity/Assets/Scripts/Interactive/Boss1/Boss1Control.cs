@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Boss1Control : MonoBehaviour
 {
 	private Boss1Movement movementScript;
@@ -67,6 +68,7 @@ public class Boss1Control : MonoBehaviour
 		}
 		
 		activePlatformScript.spawnPlate();
+		this.cumulatedTime = 0;
 	}
 
 	void Update(){
