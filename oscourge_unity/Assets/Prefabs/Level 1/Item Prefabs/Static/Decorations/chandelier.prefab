@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: candle_flame_1 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -183,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: candle_flame_1 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,6 +277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: candle_flame_1 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
@@ -418,6 +433,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7977079988023838198, guid: 44a0737017130e0489f254182ec235c9,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a0737017130e0489f254182ec235c9, type: 3}
 --- !u!4 &1730893254281507408 stripped
@@ -503,6 +523,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7977079988023838198, guid: 44a0737017130e0489f254182ec235c9,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a0737017130e0489f254182ec235c9, type: 3}
 --- !u!4 &4387881463588526 stripped
@@ -522,6 +547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: flame1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
