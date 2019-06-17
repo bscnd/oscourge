@@ -1,13 +1,13 @@
 # Oscourge
 
-Oscourge is a 2D platformer made with unity. The two main characters are marrows. 
+Oscourge is a 2D platformer made with Unity. The two main characters are squash. 
 ![Oscourge splashscreen](https://github.com/bscnd/oscourge/blob/master/oscourge_documents/SplashScreen.png)
 
 ## Story :
-The two marrows inadvertently stole a time travelling machine to a very powerful character. After that, they have to flee him, but accidentally messed up the time travelling machine, that teleports all of them at the Middle Ages.
+The two squash inadvertently stole a time machine from a very powerful character.Therefore, they have to flee him, but they accidentally messed up the time machine, which teleports all of them to the Middle Ages.
 
 ## Gameplay :
-In the first stage of each level, your goal is to run away to the right of the level fast enough in order not to be strike by the enemy. At this stage the screen is split in two, one for you, another for your partner. You will have to help the latter to pass some obstacles. After that, in the second stage, you will have to solve a puzzle that takes some gameplay elements already seen in the level. In this stage the screen is not split anymore.
+In the first stage of each level, your goal is to run away fast enough to avoid being hit by the enemy. At this stage the screen is split in two, one for you, another for your partner. You will have to help the latter to pass some obstacles, and vice versa. After that, in the second stage, you will have to solve a puzzle that takes some gameplay elements already seen in the level. In this stage the screen is not split anymore.
 
 ## Getting Started
 
@@ -21,18 +21,21 @@ Then you need Unity version 2019.1.1f1 available here :
 
 <https://unity3d.com/get-unity/download/archive>
 
-To launch the server, you will also need Java jdk, available here :
+To launch the server, you will also need Java JDK, available here :
 
 <https://www.oracle.com/technetwork/java/javase/downloads/index.html>
 
 ### Open the project in Unity
-You need to open oscourge_unity from unity hub in order to modify the levels
+
+You need to open oscourge_unity from Unity Hub in order to edit the levels.
 
 ## Used technologies :
 
 Unity <https://unity.com/>
 
 Aseprite <https://www.aseprite.org/>
+
+Audacity <https://www.audacityteam.org/>
 
 ## Authors
 * **Dorian Bescon**
@@ -44,4 +47,4 @@ Aseprite <https://www.aseprite.org/>
 
 ## License
 
-This project doesn't have any license yet
+This project does not have any license yet.
