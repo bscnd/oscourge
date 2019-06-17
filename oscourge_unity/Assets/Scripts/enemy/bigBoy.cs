@@ -13,7 +13,7 @@ public class bigBoy : MonoBehaviour
 	public Tilemap tilemap;
 	public GameObject gameManager;
 
-	  public GameObject tilemapPrefab;
+	public GameObject tilemapPrefab;
 
 
 
@@ -29,6 +29,18 @@ public class bigBoy : MonoBehaviour
 		values.Add("BlockTemp");
 		values.Add("Player1");
 		values.Add("Player2");
+		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();	
+		pos2=transform.position;
+		for(int i=-15;i<15;i++){
+
+		for(int j=-15;j<1;j++){
+			pos.x= (int)pos2.x+j;
+			pos.y= (int)pos2.y-i;
+			pos.z= (int)pos2.z;
+
+			tilemap.SetTile(pos, null);
+			}
+		}
 	}
 
 	void Update(){

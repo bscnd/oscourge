@@ -7,6 +7,7 @@ using TMPro;
 using System.Net;
 using Scripts.Networking;
 using System;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour {
 
@@ -14,9 +15,12 @@ public class MainMenu : MonoBehaviour {
     public TMP_InputField portInput;
     public GameObject ErrorBox;
     public TextMeshProUGUI ErrorTxt;
-
+    public GameObject SFX;
     public GameObject waitingPanel;
     public GameObject onlinePanel;
+
+
+    public AudioMixer mixer;
 
     public void PlayGame(bool modeOnline) {
         if (modeOnline) {
@@ -65,9 +69,9 @@ public class MainMenu : MonoBehaviour {
 
     private void EmptyInputFieldError() {
         if (string.IsNullOrEmpty(ipInput.text))
-            ipInput.image.color = Color.red;
+        ipInput.image.color = Color.red;
         if (string.IsNullOrEmpty(portInput.text))
-            portInput.image.color = Color.red;
+        portInput.image.color = Color.red;
     }
 
     private void changePanel() {
@@ -82,6 +86,14 @@ public class MainMenu : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        float   sliderValue = PlayerPrefs.GetFloat("Master", 0.75f);
+        mixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
+        sliderValue = PlayerPrefs.GetFloat("Music", 0.75f);
+        mixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
+        sliderValue = PlayerPrefs.GetFloat("SFX", 0.75f);
+        mixer.SetFloat("SFX", Mathf.Log10(sliderValue) * 20);
+
+        SFX.gameObject.GetComponent<SFX>().MenuMusic();
 
     }
 

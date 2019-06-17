@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Splash : MonoBehaviour
 {
 
-	float timer = 5f;
+	float timer = 3.5f;
 
 	void Update()
 	{

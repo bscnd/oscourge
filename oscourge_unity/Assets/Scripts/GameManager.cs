@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject fade;
 	  public GameObject gridPrefab;
 	  public GameObject currentGrid;
+    public GameObject SFX;
 
 	public GameObject PausePanel;
 	public GameObject OptionsPanel;
@@ -39,6 +40,8 @@ public class GameManager : MonoBehaviour {
 	void Start() {
 		fade.SetActive(false);	
 gridPos=gridPrefab.transform.position;
+            SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
+            SFX.gameObject.GetComponent<SFX>().Music();
 	}
 
 	void Update() {
