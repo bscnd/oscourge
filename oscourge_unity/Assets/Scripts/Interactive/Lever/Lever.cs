@@ -24,8 +24,22 @@ public class Lever : Trigger
 	}
 
 	public void updateInteractiveObjects(){
+		bool isLeverActivated = myAnim.GetBool(hashIsTriggered);
+
 		foreach(Chain chain in chains){
-			chain.trigger(myAnim.GetBool(hashIsTriggered), this.GetInstanceID());
+			chain.trigger(isLeverActivated, this.GetInstanceID());
+		}
+
+		foreach(Chain chain in deactivateChains){
+			chain.trigger(!isLeverActivated, this.GetInstanceID());
+		}
+
+		foreach(BlinkPlatform platform in activatePlatform){
+			platform.trigger(isLeverActivated, this.GetInstanceID());
+		}
+
+		foreach(BlinkPlatform platform in deactivatePlatform){
+			platform.trigger(!isLeverActivated, this.GetInstanceID());
 		}
 	}
 

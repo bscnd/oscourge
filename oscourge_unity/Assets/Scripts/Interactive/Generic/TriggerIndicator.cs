@@ -6,6 +6,8 @@ public class TriggerIndicator
 {
 	public static GameObject prefabTriggerIndicator = Resources.Load<GameObject>("TriggerIndicator");
 
+	private static List<Color> colors;
+	/*
 	private static Color[] colors =
 	{
 		 new Color(0.0F, 5.0F, 5.0F, 0.5F) // Cyan
@@ -18,15 +20,70 @@ public class TriggerIndicator
 		,new Color(5.0F, 5.0F, 0.0F, 0.5F) // Yellow
 		,new Color(5.0F, 0.0F, 1.0F, 0.5F) // Magenta
 		,new Color(5.0F, 5.0F, 5.0F, 0.5F) // Grey 
-	};
+		,new Color(0.5F, 5.0F, 1.0F, 0.5F) // Light green
+		,new Color(2.5F, 2.0F, 1.0F, 0.5F) // Light red
+		,new Color(0.5F, 2.0F, 5.0F, 0.5F) // Light blue
+		,new Color(2.5F, 0.4F, 0.0F, 0.5F) // Red 
+		,new Color(2.5F, 5.0F, 0.0F, 0.5F) // Yellow
+		,new Color(2.5F, 0.4F, 1.0F, 0.5F) // Magenta
+		,new Color(2.5F, 5.0F, 5.0F, 0.5F) // Grey 
 
+	};
+	*/
+	
 	private static int colorIndex = 0;
 
+	private static Color getNewColor(string htmlString){
+		Color res = new Color(0F, 0F, 0F, 0F);
+
+		ColorUtility.TryParseHtmlString(htmlString, out res);
+		res.a = 0.5F;
+
+		return res;
+	}
+	
 	private static Color nextColor(){
-		if(colorIndex >= colors.Length){
-			Debug.Log("Your scene is using too much mecanisms, like levers or pressure plates, for the number of colors present in the script TriggerIndicator.cs, please add more colors !");
+		if(colors == null){
+			colors = new List<Color>();
+
+			colors.Add(getNewColor("#B0171F")); // Indian red
+			colors.Add(getNewColor("#FF1493")); // Deeppink
+			colors.Add(getNewColor("#8B008B")); // Magenta
+			colors.Add(getNewColor("#4B0082")); // Indigo
+			colors.Add(getNewColor("#6A5ACD")); // Slateblue
+			colors.Add(getNewColor("#0000FF")); // Blue
+			colors.Add(getNewColor("#436EEE")); // Royal blue
+			colors.Add(getNewColor("#87CEEB")); // Deep sky blue
+			colors.Add(getNewColor("#00E5EE")); // Turquoise
+			colors.Add(getNewColor("#008B8B")); // Dark cyan
+			colors.Add(getNewColor("#008B45")); // Springgreen
+			colors.Add(getNewColor("#006400")); // Dark green
+			colors.Add(getNewColor("#FFFF00")); // Yellow
+			colors.Add(getNewColor("#FFA500")); // Orange
+			colors.Add(getNewColor("#8B5A2B")); // Tan
+			colors.Add(getNewColor("#FF0000")); // Red
+			colors.Add(getNewColor("#515151")); // Grey
 		}
-		return colors[colorIndex++];
+
+		/*
+		float red = Random.Range(0.1F, 1F);
+		float blue = Random.Range(0.1F, 1F);
+		float green = Random.Range(0.1F, 1F);
+
+		Color color = new Color(red, blue, green, 0.5F);
+		colors.Add(color);
+
+		return color;
+		*/
+		if(colorIndex == colors.Count){
+			Debug.Log("Your scene is using too much mecanisms, like levers or pressure plates, for the number of colors present in the script TriggerIndicator.cs, please add more colors !");
+			colorIndex = 0;
+		}
+		
+		int resIndex = colorIndex;
+		colorIndex++;
+
+		return colors[resIndex];
 	}
 
 	public static GameObject spawn(Vector3 position, Vector3 delta){
@@ -34,7 +91,8 @@ public class TriggerIndicator
 
 		GameObject indicator = GameObject.Instantiate(prefabTriggerIndicator, newPosition, Quaternion.identity);
 		SpriteRenderer renderer = indicator.GetComponent<SpriteRenderer>();
-		Material mat = new Material(Shader.Find("Sprites/Diffuse"));
+		//Material mat = new Material(Shader.Find("Sprites/Diffuse"));
+		Material mat = new Material(Shader.Find("Standard"));
 		mat.color = TriggerIndicator.nextColor();
 		renderer.material = mat;
 

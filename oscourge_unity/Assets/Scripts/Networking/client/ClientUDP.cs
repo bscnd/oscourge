@@ -32,7 +32,6 @@ namespace Scripts.Networking {
         #region private members 	
         private static UdpClient socketConnection; // socket to send/receive messages
         private Thread clientReceiveThread;
-        private bool running;
         #endregion
 
         #region singleton
@@ -40,7 +39,6 @@ namespace Scripts.Networking {
 
         private ClientUDP() {
             playerMode = 1;
-            running = false;
             gameState = OFFLINE;
             currentInputs = new InputValues();
         }
@@ -63,7 +61,6 @@ namespace Scripts.Networking {
                 sendTypedMessage(Message.CONNECTION);
 
                 // Creation of the receiving thread
-                running = true;
                 clientReceiveThread = new Thread(new ThreadStart(ListenForData));
                 clientReceiveThread.IsBackground = true;
                 clientReceiveThread.Start();

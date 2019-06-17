@@ -19,10 +19,14 @@ public class MovingPlatform : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		collision.collider.transform.SetParent(this.transform);
+		if(collision.gameObject.CompareTag("Player")){
+			collision.collider.transform.SetParent(this.transform);
+		}
 	}
 
 	void OnCollisionExit2D(Collision2D collision){
-		collision.collider.transform.SetParent(null);
+		if(collision.gameObject.CompareTag("Player")){
+			collision.collider.transform.SetParent(null);
+		}
 	}
 }
