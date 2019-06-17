@@ -6,6 +6,13 @@ using Scripts.Networking;
 
 public class WaitingScript : MonoBehaviour
 {
+
+
+    public GameObject loadingScene;
+
+    private bool sceneIsLoading=false;
+    private AsyncOperation currentLoadingOperation=null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +23,22 @@ public class WaitingScript : MonoBehaviour
     void FixedUpdate()
     {
         if (ClientUDP.Instance.gameState == ClientUDP.PLAYING) {
-            Debug.Log("Loading Scene ...");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log("Loading Scene ..."); 
+             currentLoadingOperation=SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneIsLoading=true;
         }
     }
 
+   void Update() {
+        if (sceneIsLoading){
+            loadingScene.SetActive(true);
+            if (currentLoadingOperation.isDone){
+                loadingScene.SetActive(false);
+                sceneIsLoading = false;
+            }
+        }
+
+    }
     public void GiveUp() {
         // You said you were never gonna give me up, meh
         if(ClientUDP.Instance.gameState != ClientUDP.OFFLINE)

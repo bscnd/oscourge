@@ -18,9 +18,12 @@ public class MainMenu : MonoBehaviour {
     public GameObject SFX;
     public GameObject waitingPanel;
     public GameObject onlinePanel;
-
-
+    public GameObject playPanel;
     public AudioMixer mixer;
+    public GameObject loadingScene;
+
+    private bool sceneIsLoading=false;
+    private AsyncOperation currentLoadingOperation=null;
 
     public void PlayGame(bool modeOnline) {
         if (modeOnline) {
@@ -49,7 +52,8 @@ public class MainMenu : MonoBehaviour {
         else {
             // Starting the game in local (offline mode)
             Debug.Log("Loading Scene ...");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            currentLoadingOperation=SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneIsLoading=true;
         }
     }
 
@@ -99,6 +103,14 @@ public class MainMenu : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (sceneIsLoading){
+            playPanel.SetActive(false);
+            loadingScene.SetActive(true);
+            if (currentLoadingOperation.isDone){
+                loadingScene.SetActive(false);
+                sceneIsLoading = false;
+            }
+        }
 
     }
 }
