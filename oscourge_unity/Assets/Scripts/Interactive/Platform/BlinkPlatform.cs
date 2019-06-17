@@ -9,8 +9,7 @@ public class BlinkPlatform : Mechanism
 	
 	public int activatorNumber = 1;
 
-
-	public void Start(){
+	public BlinkPlatform(){
 		this.activators = new SortedSet<int>();
 		this.deactivators = new SortedSet<int>();
 	}
