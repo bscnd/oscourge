@@ -12,30 +12,35 @@ In the first stage of each level, your goal is to run away to the right of the l
 ## Getting Started
 
 In order to build Oscourge, you have to clone this repository with this command :
+
 git clone https://github.com/bscnd/oscourge
 
 ### Prerequisites
 
 Then you need Unity version 2019.1.1f1 available here : 
+
 <https://unity3d.com/get-unity/download/archive>
 
 To launch the server, you will also need Java jdk, available here :
+
 <https://www.oracle.com/technetwork/java/javase/downloads/index.html>
 
 ### Open the project in Unity
 You need to open oscourge_unity from unity hub in order to modify the levels
 
 ## Used technologies :
+
 Unity <https://unity.com/>
+
 Aseprite <https://www.aseprite.org/>
 
 ## Authors
-* ** Dorian Bescon **
-* ** Nils Richard **
-* ** Léo Cauvin **
-* ** Dorian Bouillet **
-* ** Alexandre De Rycke **
-* ** Sattler Donatien **
+* **Dorian Bescon**
+* **Nils Richard**
+* **Léo Cauvin**
+* **Dorian Bouillet**
+* **Alexandre De Rycke**
+* **Sattler Donatien**
 
 ## License
 
