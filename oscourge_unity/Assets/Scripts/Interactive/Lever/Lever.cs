@@ -15,12 +15,12 @@ public class Lever : Trigger
 	{
 		myAnim = GetComponent<Animator>();
 		initIndicators();
+		updateInteractiveObjects();
 	}
 
 	// This method must be called in the game manager game over method !
 	public void OnGameOver(){
 		myAnim.SetBool(hashIsTriggered, false);
-		updateInteractiveObjects();
 	}
 
 	public void updateInteractiveObjects(){
@@ -46,8 +46,8 @@ public class Lever : Trigger
 	void Update(){
 		if(playerIsNear && Input.GetButtonDown("ContextualAction")){
 			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
-			updateInteractiveObjects();
 		}
+		updateInteractiveObjects();
 	}
 
 	private void OnTriggerExit2D(Collider2D collision){

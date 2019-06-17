@@ -37,7 +37,11 @@ public class TriggerIndicator
 		Color res = new Color(0F, 0F, 0F, 0F);
 
 		ColorUtility.TryParseHtmlString(htmlString, out res);
-		res.a = 0.5F;
+		res = res * new Color(1F, 1F, 1F, 1F);
+		res.a = 0.50F;
+		res.r += res.r; 
+		res.g += res.g;
+		res.b += res.b;
 
 		return res;
 	}
@@ -46,6 +50,7 @@ public class TriggerIndicator
 		if(colors == null){
 			colors = new List<Color>();
 
+			/*
 			colors.Add(getNewColor("#B0171F")); // Indian red
 			colors.Add(getNewColor("#FF1493")); // Deeppink
 			colors.Add(getNewColor("#8B008B")); // Magenta
@@ -63,6 +68,26 @@ public class TriggerIndicator
 			colors.Add(getNewColor("#8B5A2B")); // Tan
 			colors.Add(getNewColor("#FF0000")); // Red
 			colors.Add(getNewColor("#515151")); // Grey
+			*/
+			
+			colors.Add(getNewColor("#0000FF")); // Blue
+			colors.Add(getNewColor("#00FF00")); // Green
+			colors.Add(getNewColor("#FF0000")); // Red
+			colors.Add(getNewColor("#FF00FF")); // Magenta
+			colors.Add(getNewColor("#FFFF00")); // Yellow
+			colors.Add(getNewColor("#00FFFF")); // Cyan
+			colors.Add(getNewColor("#FFFAF0")); // White
+			colors.Add(getNewColor("#808080")); // White
+			colors.Add(getNewColor("#8B4513")); // Brown
+			colors.Add(getNewColor("#800080")); // Purple
+			colors.Add(getNewColor("#FFA500")); // Orange
+			colors.Add(getNewColor("#87CEFA")); // Light blue
+			colors.Add(getNewColor("#90EE90")); // Light green
+			colors.Add(getNewColor("#FFB6C1")); // Light pink
+			colors.Add(getNewColor("#B22222")); // Light red
+			colors.Add(getNewColor("#008080")); // Teal
+			colors.Add(getNewColor("#800000")); // Maroon
+			colors.Add(getNewColor("#2F4F4F")); // Gray
 		}
 
 		/*
@@ -92,7 +117,7 @@ public class TriggerIndicator
 		GameObject indicator = GameObject.Instantiate(prefabTriggerIndicator, newPosition, Quaternion.identity);
 		SpriteRenderer renderer = indicator.GetComponent<SpriteRenderer>();
 		//Material mat = new Material(Shader.Find("Sprites/Diffuse"));
-		Material mat = new Material(Shader.Find("Standard"));
+		Material mat = new Material(Shader.Find("Sprites/Default"));
 		mat.color = TriggerIndicator.nextColor();
 		renderer.material = mat;
 

@@ -7,14 +7,9 @@ public class torch_control : MonoBehaviour {
     int i = 0;
 
     void Update() {
-        if (i < 200) {
-            i++;
-        }
-        else {
-            float r = Random.Range(0f, 3f);
-            Debug.Log(r);
-            animator.SetFloat("num_anim", r);
-            i = 0;
-        }
+        int r = Random.Range(0, 3);
+        Debug.Log(r);
+        animator.SetInteger("num_anim", r);
+        i = 0;
     }
 }

@@ -11,6 +11,7 @@ public class Chain : Mechanism
 
 	// Set of currently activated activator's id
 	private SortedSet<int> activators;
+	private SortedSet<int> deactivators;
 
 	private Collider2D chainCollider;
 
@@ -19,25 +20,33 @@ public class Chain : Mechanism
 
 	public Chain(){
 		this.activators = new SortedSet<int>();
+		this.deactivators = new SortedSet<int>();
 	}
 	
 	void Start()
 	{
 		this.myAnim = GetComponent<Animator>();
 		this.chainCollider = GetComponent<Collider2D>();
-		myAnim.SetBool(hashIsTriggered, activators.Count >= activatorNumber);
+		updateChain();
+	}
+
+	public void updateChain(){
+		int currentNumberActivator = activators.Count - deactivators.Count;
+		myAnim.SetBool(hashIsTriggered, currentNumberActivator >= activatorNumber);
 	}
 
 	public void trigger(bool isActivate, int objectId){
 		if(isActivate){
 			activators.Add(objectId);
+			deactivators.Remove(objectId);
 		}
 		else{
+			deactivators.Add(objectId);
 			activators.Remove(objectId);
 		}
 
 		if(myAnim != null){
-			myAnim.SetBool(hashIsTriggered, activators.Count >= activatorNumber);
+			updateChain();
 		}
 	}
 

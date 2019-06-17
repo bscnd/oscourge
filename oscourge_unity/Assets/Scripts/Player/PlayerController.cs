@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 		isDead=false;
 	}
 
-	void FixedUpdate() {
+	void Update() {
 		wasGrounded=isGrounded;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 		if(isGrounded&& !wasGrounded){
