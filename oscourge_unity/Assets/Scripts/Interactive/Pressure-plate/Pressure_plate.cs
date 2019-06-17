@@ -14,6 +14,11 @@ public class Pressure_plate : Trigger
 	void Start()
 	{
 		myAnim = GetComponent<Animator>();
+		if(myAnim == null){
+			Debug.Log("The associated animator is not attached to the object !");
+			this.enabled = false;
+		}
+
 		playerCounter = 0;
 		initIndicators();
 	}
@@ -39,5 +44,9 @@ public class Pressure_plate : Trigger
 		foreach(Chain chain in chains){
 			chain.trigger(playerCounter > 0, this.GetInstanceID());
 		}
+	}
+
+	public bool isActivated(){
+		return playerCounter >= 1;
 	}
 }

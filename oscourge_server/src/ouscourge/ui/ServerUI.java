@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.Box;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -53,7 +54,7 @@ public class ServerUI extends JFrame {
 					ServerUI frame = new ServerUI();
 					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
-					frame.setTitle("DotS - Server");
+					frame.setTitle("Oscourge - Server");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -65,6 +66,7 @@ public class ServerUI extends JFrame {
 	 * Create the frame.
 	 */
 	public ServerUI() {
+		setIconImage(new ImageIcon(getClass().getClassLoader().getResource("serverIcon.png")).getImage());
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 300);
