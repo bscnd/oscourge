@@ -44,7 +44,15 @@ public class Pressure_plate : Trigger
 		foreach(Chain chain in chains){
 			chain.trigger(playerCounter > 0, this.GetInstanceID());
 		}
-	}
+
+        foreach (Spikes spikes in activateSpikes) {
+            spikes.trigger(playerCounter > 0, this.GetInstanceID());
+        }
+
+        foreach (Spikes spikes in deactivateSpikes) {
+            spikes.trigger(playerCounter > 0, this.GetInstanceID());
+        }
+    }
 
 	public bool isActivated(){
 		return playerCounter >= 1;

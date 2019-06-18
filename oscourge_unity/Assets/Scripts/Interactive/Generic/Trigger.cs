@@ -8,6 +8,8 @@ public class Trigger : MonoBehaviour
 	public List<Chain> deactivateChains;
 	public List<BlinkPlatform> deactivatePlatform;
 	public List<BlinkPlatform> activatePlatform;
+	public List<Spikes> activateSpikes;
+	public List<Spikes> deactivateSpikes;
 
 	protected void initIndicators(){
 		GameObject prefabTriggerIndicator = TriggerIndicator.prefabTriggerIndicator;
@@ -25,6 +27,8 @@ public class Trigger : MonoBehaviour
 			mechanisms.AddRange(deactivateChains);
 			mechanisms.AddRange(deactivatePlatform);
 			mechanisms.AddRange(activatePlatform);
+			mechanisms.AddRange(activateSpikes);
+			mechanisms.AddRange(deactivateSpikes);
 
 			if(mechanisms.Count > 0){
 				int index = 0;
