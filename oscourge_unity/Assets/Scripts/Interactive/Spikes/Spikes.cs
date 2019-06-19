@@ -72,7 +72,9 @@ public class Spikes : Mechanism
     public void OnTriggerEnter2D(Collider2D col) {
 
         if (col.gameObject.CompareTag("Player") && spikesCollider.enabled) {
-            gameManager.GameOver();
+            if (gameManager != null)
+                gameManager.GameOver();
+            else Debug.LogError("The game manager has not been defined on this spike");
         }
 
     }
