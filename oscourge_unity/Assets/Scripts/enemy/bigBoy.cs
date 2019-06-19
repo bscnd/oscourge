@@ -12,47 +12,104 @@ public class bigBoy : MonoBehaviour
 
 	public Tilemap tilemap;
 	public GameObject gameManager;
+	public GameObject cam;
 
+	public Animator anim;
 
 
 	List<string> values = new List<string>();
+
+	Vector3 spawnPos;
 
 	Vector3Int pos;
 
 	Vector3 pos2;
 
+
+	private bool isDead;
+
 	void Start(){
+
+		spawnPos=this.transform.position;
 
 		values.Add(tilemap.name);
 		values.Add("BlockTemp");
 		values.Add("Player1");
 		values.Add("Player2");
+		values.Add("bigBoy");
+
+
 		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();	
+
+
 		pos2=transform.position;
-		for(int i=-15;i<15;i++){
 
-		for(int j=-15;j<1;j++){
-			pos.x= (int)pos2.x+j;
-			pos.y= (int)pos2.y-i;
-			pos.z= (int)pos2.z;
 
-			tilemap.SetTile(pos, null);
+		for(int i=-50;i<50;i++){
+
+			for(int j=-20;j<6;j++){
+				pos.x= (int)pos2.x+j;
+				pos.y= (int)pos2.y+i;
+				pos.z= 0;
+
+				tilemap.SetTile(pos, null);
 			}
 		}
+
 	}
 
 	void Update(){
-		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();	
+		bool scroll=cam.GetComponent<CameraController>().scroll;
+		float speed=cam.GetComponent<CameraController>().speed;
+
+		if(scroll&& !isDead){
+			anim.SetBool("Run",true);
+
+			transform.position=transform.position+new Vector3(speed/100,0,0);
+		}
+
+
+		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
 		pos2=transform.position;
 
 
-		for(int i=-15;i<15;i++){
-			pos.x= (int)pos2.x+1;
-			pos.y= (int)pos2.y-i;
-			pos.z= (int)pos2.z;
+		for(int i=-50;i<50;i++){
+			pos.x= (int)pos2.x+5;
+			pos.y= (int)pos2.y+i;
+			pos.z= 0;
 
 			tilemap.SetTile(pos, null);
+
 		}
+
+
+	}
+
+
+	public void Kill(){
+		anim.SetBool("Run",false);
+		isDead=true;
+
+	}
+
+	public void Respawn(){
+		isDead=false;
+		this.transform.position=spawnPos;
+	pos2=transform.position;
+
+
+		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
+		for(int i=-50;i<50;i++){
+
+			for(int j=-20;j<6;j++){
+				pos.x= (int)pos2.x+j;
+				pos.y= (int)pos2.y+i;
+				pos.z= 0;
+
+				tilemap.SetTile(pos, null);
+			}
+		}
+
 	}
 
 
@@ -62,7 +119,7 @@ public class bigBoy : MonoBehaviour
 			gameManager.GetComponent<GameManager>().GameOver();
 		}
 
-		if(!values.Contains(col.transform.name)){
+		else if(!values.Contains(col.transform.name)){
 			Renderer r=	col.GetComponent<Renderer>();
 			if(r!= null){
 				r.enabled = false;

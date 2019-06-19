@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2045355403
-  m_SortingLayer: -1
+  m_SortingLayerID: 316877877
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7389808939813710273, guid: d8df992a7d5f3f448bbb05540ce0573a,
     type: 3}
@@ -97,11 +97,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: candle_flame_1 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
@@ -168,6 +163,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 459198c4eb802e4499e3a30bb0675199, type: 3}
 --- !u!4 &2817097340635407227 stripped
@@ -187,11 +187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: candle_flame_1 2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
@@ -258,6 +253,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 459198c4eb802e4499e3a30bb0675199, type: 3}
 --- !u!4 &3039591260230578186 stripped
@@ -277,11 +277,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: candle_flame_1 2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
@@ -347,6 +342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 459198c4eb802e4499e3a30bb0675199, type: 3}
@@ -548,11 +548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: flame1
       objectReference: {fileID: 0}
-    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3574804624957692273, guid: 459198c4eb802e4499e3a30bb0675199,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,6 +612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198975902299737168, guid: 459198c4eb802e4499e3a30bb0675199,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 459198c4eb802e4499e3a30bb0675199, type: 3}

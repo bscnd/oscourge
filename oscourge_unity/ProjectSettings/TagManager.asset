@@ -46,15 +46,27 @@ TagManager:
   - name: Background
     uniqueID: 2249611893
     locked: 0
+  - name: Mountains
+    uniqueID: 4235354485
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Courges
     uniqueID: 758958045
     locked: 0
-  - name: UI
-    uniqueID: 3740662355
+  - name: Ground
+    uniqueID: 737453553
+    locked: 0
+  - name: Objects
+    uniqueID: 316877877
     locked: 0
   - name: Player
     uniqueID: 1404080349
+    locked: 0
+  - name: Ennemy
+    uniqueID: 188413197
+    locked: 0
+  - name: UI
+    uniqueID: 3740662355
     locked: 0
