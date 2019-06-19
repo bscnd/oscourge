@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spikes : Mechanism
 {
-    private Animator myAnim;
+    public Animator myAnim;
 
     // The number of pressurePlates/levers/... that has to be activated to trigger this gameobject
     public int activatorNumber = 1;
@@ -25,7 +25,11 @@ public class Spikes : Mechanism
     }
 
     void Start() {
-        this.myAnim = GetComponent<Animator>();
+        
+        if(myAnim == null)
+        {
+            this.myAnim = GetComponent<Animator>();
+        }
         this.spikesCollider = GetComponent<Collider2D>();
         updateSpikes();
     }
@@ -72,9 +76,7 @@ public class Spikes : Mechanism
     public void OnTriggerEnter2D(Collider2D col) {
 
         if (col.gameObject.CompareTag("Player") && spikesCollider.enabled) {
-            if (gameManager != null)
-                gameManager.GameOver();
-            else Debug.LogError("The game manager has not been defined on this spike");
+            gameManager.GameOver();
         }
 
     }
