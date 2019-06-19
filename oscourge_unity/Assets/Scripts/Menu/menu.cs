@@ -22,18 +22,18 @@ public class menu : MonoBehaviour
 	{
 
 
- var dist = (transform.position - Camera.main.transform.position).z;
+		var dist = (transform.position - Camera.main.transform.position).z;
 
- var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
- var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
- var botBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).y;
+		var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
+		var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
+		var botBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).y;
 
-Vector3 newL= new Vector3(leftBorder,borderLeft.transform.position.y,borderLeft.transform.position.z);
-  borderLeft.transform.position =newL;
-Vector3 newR= new Vector3(rightBorder,borderRight.transform.position.y,borderRight.transform.position.z);
-  borderRight.transform.position = newR;
-Vector3 newB= new Vector3(borderBot.transform.position.x,botBorder,borderBot.transform.position.z);
-  borderBot.transform.position = newB;
+		Vector3 newL= new Vector3(leftBorder,borderLeft.transform.position.y,borderLeft.transform.position.z);
+		borderLeft.transform.position =newL;
+		Vector3 newR= new Vector3(rightBorder,borderRight.transform.position.y,borderRight.transform.position.z);
+		borderRight.transform.position = newR;
+		Vector3 newB= new Vector3(borderBot.transform.position.x,botBorder,borderBot.transform.position.z);
+		borderBot.transform.position = newB;
 
 
 

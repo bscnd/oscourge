@@ -10,84 +10,81 @@ public class GameManager : MonoBehaviour {
 	public GameObject player2;
 	public GameObject camera1;
 	public GameObject camera2;
-	public GameObject mountainsTop;
-	public GameObject mountainsBot;
+	public GameObject mountains;
 	public GameObject fade;
-   public GameObject gridPrefab;
-   public GameObject currentGrid;
-   public GameObject SFX;
-   public GameObject winPanel;
-   public GameObject loadingScene;
+ public GameObject gridPrefab;
+ public GameObject currentGrid;
+ public GameObject SFX;
+ public GameObject winPanel;
+ public GameObject loadingScene;
 
-   public GameObject PausePanel;
-   public GameObject OptionsPanel;
-   public GameObject BlackBar;
-   public GameObject DisconnectedPanel;
-   public int offset;
+ public GameObject PausePanel;
+ public GameObject OptionsPanel;
+ public GameObject BlackBar;
+ public GameObject DisconnectedPanel;   
 
-   private bool isPaused = false;
-   private bool isDisconnected = false;
+ private bool isPaused = false;
+ private bool isDisconnected = false;
 
     // used to force the camera to stay still after respawn
-   private bool playerMoved = false;
+ private bool playerMoved = false;
 
-   private int currentGameState = ClientUDP.Instance.gameState;
+ private int currentGameState = ClientUDP.Instance.gameState;
 
-   private bool sceneIsLoading=false;
-   private AsyncOperation currentLoadingOperation=null;
-
-
-
-   public List<Renderer> renderers = new List<Renderer>();
-
-   private Vector3 gridPos;
-
-   void Start() {
-      fade.SetActive(false);	
-      gridPos=gridPrefab.transform.position;
-      SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
-      SFX.gameObject.GetComponent<SFX>().Music();
-  }
-
-  void Update() {
+ private bool sceneIsLoading=false;
+ private AsyncOperation currentLoadingOperation=null;
 
 
-      if (sceneIsLoading){
-        winPanel.SetActive(false);
-        loadingScene.SetActive(true);
-        if (currentLoadingOperation.isDone){
-            loadingScene.SetActive(false);
-            sceneIsLoading = false;
-        }
+
+ public GameObject boy1,boy2;
+
+
+ public List<Renderer> renderers = new List<Renderer>();
+
+ private Vector3 gridPos;
+
+ void Start() {
+  fade.SetActive(false);	
+  gridPos=gridPrefab.transform.position;
+  SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
+  SFX.gameObject.GetComponent<SFX>().Music();
+}
+
+void Update() {
+
+
+  if (sceneIsLoading){
+    winPanel.SetActive(false);
+    loadingScene.SetActive(true);
+    if (currentLoadingOperation.isDone){
+        loadingScene.SetActive(false);
+        sceneIsLoading = false;
     }
+}
 
 
 
-    if (DetectGO()) {
-       GameOver();
-   }
+if (player1.transform.position.x > camera1.transform.position.x + 18) {
+ player1.transform.position = new Vector3(camera1.transform.position.x + 18, player1.transform.position.y, player1.transform.position.z);
+}
 
-   if (player1.transform.position.x > camera1.transform.position.x + 18) {
-       player1.transform.position = new Vector3(camera1.transform.position.x + 18, player1.transform.position.y, player1.transform.position.z);
-   }
+if (player2.transform.position.x > camera2.transform.position.x + 18) {
+ player2.transform.position = new Vector3(camera2.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
+}
 
-   if (player2.transform.position.x > camera2.transform.position.x + 18) {
-       player2.transform.position = new Vector3(camera2.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
-   }
-
-   if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
-       if (OptionsPanel.activeSelf) {
-        OptionsPanel.SetActive(false);
-        PausePanel.SetActive(true);
-    }
-    else
-    PauseToggle();
+if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
+ if (OptionsPanel.activeSelf) {
+    OptionsPanel.SetActive(false);
+    PausePanel.SetActive(true);
+}
+else
+PauseToggle();
 }
 
 if (ClientUDP.Instance.gameState != currentGameState) {
-   currentGameState = ClientUDP.Instance.gameState;
+ currentGameState = ClientUDP.Instance.gameState;
 
-   switch (currentGameState) {
+ switch (currentGameState) {
     case ClientUDP.CONNECTION_ERROR:
     if (isPaused) Debug.LogError("game manager fixedupdate : this should not happen pause means no data");
     setOnDisconnected();
@@ -129,13 +126,6 @@ if (ClientUDP.Instance.gameState != currentGameState) {
     	else return false;
     }
 
-    bool DetectGO() {
-    	if (player1.transform.position.x + offset < camera1.transform.position.x || player2.transform.position.x + offset < camera2.transform.position.x) {
-    		return true;
-    	}
-    	return false;
-    }
-
     public void Replay() {
         SceneManager.LoadScene("Level1"); // change to current scene is multiple levels
         if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
@@ -163,137 +153,145 @@ if (ClientUDP.Instance.gameState != currentGameState) {
     	camera2.GetComponent<CameraController>().Stop();
     	player1.GetComponent<PlayerController>().Kill();
     	player2.GetComponent<PlayerController>().Kill();
-    	yield return new WaitForSeconds(0.3f);
-        winPanel.SetActive(true);
-    }
+     boy1.GetComponent<bigBoy>().Kill();
+     boy2.GetComponent<bigBoy>().Kill();
+     yield return new WaitForSeconds(0.3f);
+     winPanel.SetActive(true);
+ }
 
-    public void nextLevel(){
-        gameIsWon = false;
-        if(SceneManager.GetActiveScene().name=="Level2"){
-          currentLoadingOperation=SceneManager.LoadSceneAsync("Menu");
-      }
-      else{
-          currentLoadingOperation=SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-          sceneIsLoading=true;
-      }
+ public void nextLevel(){
+    gameIsWon = false;
+    if(SceneManager.GetActiveScene().name=="Level2"){
+      currentLoadingOperation=SceneManager.LoadSceneAsync("Menu");
   }
-
-
-  private bool gameIsOver = false;
-
-  public void GameOver() {
-   if (!gameIsOver) {
-      StartCoroutine(GO());
+  else{
+      currentLoadingOperation=SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+      sceneIsLoading=true;
   }
 }
 
+
+private bool gameIsOver = false;
+
+public void GameOver() {
+ if (!gameIsOver) {
+  StartCoroutine(GO());
+}
+}
+
 IEnumerator GO() {
-   gameIsOver = true;
-   camera1.GetComponent<CameraController>().Stop();
-   camera2.GetComponent<CameraController>().Stop();
-   fade.SetActive(true);
-   player1.GetComponent<PlayerController>().Kill();
-   player2.GetComponent<PlayerController>().Kill();
-   yield return new WaitForSeconds(4);
-   camera1.GetComponent<CameraController>().Respawn();
-   camera2.GetComponent<CameraController>().Respawn();
-   mountainsTop.GetComponent<Parallax>().Reset();
-   mountainsBot.GetComponent<Parallax>().Reset();
-   playerMoved = false;
+ gameIsOver = true;
+ camera1.GetComponent<CameraController>().Stop();
+ camera2.GetComponent<CameraController>().Stop();
+ boy1.GetComponent<bigBoy>().Kill();
+ boy2.GetComponent<bigBoy>().Kill();
+ fade.SetActive(true);
+ player1.GetComponent<PlayerController>().Kill();
+ player2.GetComponent<PlayerController>().Kill();
+ yield return new WaitForSeconds(4);
+ camera1.GetComponent<CameraController>().Respawn();
+ camera2.GetComponent<CameraController>().Respawn();
+ mountains.GetComponent<Parallax>().Reset();
+ playerMoved = false;
 
-   Lever[] levers = (Lever[])Object.FindObjectsOfType<Lever>();
-   foreach (Lever lever in levers) {
-      lever.OnGameOver();
-  }
+ Lever[] levers = (Lever[])Object.FindObjectsOfType<Lever>();
+ foreach (Lever lever in levers) {
+  lever.OnGameOver();
+}
 
-  player1.GetComponent<PlayerController>().Respawn();
-  player2.GetComponent<PlayerController>().Respawn();
-  resetRenderers();
-  GameObject temp=Instantiate(gridPrefab, gridPos, Quaternion.identity);
-  temp.transform.SetParent(currentGrid.transform.parent);
-  GameObject toDestroy=currentGrid;
-  currentGrid=temp;
-  Destroy(toDestroy);
-  fade.SetActive(false);
-  gameIsOver=false;
+player1.GetComponent<PlayerController>().Respawn();
+player2.GetComponent<PlayerController>().Respawn();
+resetRenderers();
+GameObject temp=Instantiate(gridPrefab, gridPos, Quaternion.identity);
+temp.transform.SetParent(currentGrid.transform.parent);
+GameObject toDestroy=currentGrid;
+currentGrid=temp;
+Destroy(toDestroy);
+GameObject tm=currentGrid.gameObject.transform.GetChild(0).gameObject;
+TilemapRenderer  sprite = tm.GetComponent<TilemapRenderer>();
+sprite.sortingLayerName = "Ground";
+ boy1.GetComponent<bigBoy>().Respawn();
+ boy2.GetComponent<bigBoy>().Respawn();
+fade.SetActive(false);
+gameIsOver=false;
 }
 
 
 private void setOnDisconnected() {
-   isDisconnected = true;
-   Time.timeScale = 0.0f;
-   if (DisconnectedPanel != null)
-   DisconnectedPanel.SetActive(true);
-   else Debug.LogError("Disconnected panel is null");
-   setScrolling(false);
-   Debug.Log("Disconnected");
+ isDisconnected = true;
+ Time.timeScale = 0.0f;
+ if (DisconnectedPanel != null)
+ DisconnectedPanel.SetActive(true);
+ else Debug.LogError("Disconnected panel is null");
+ setScrolling(false);
+ Debug.Log("Disconnected");
 }
 
 private void setOffDisconnected() {
-   isDisconnected = false;
-   Time.timeScale = 1.0f;
-   if (DisconnectedPanel != null)
-   DisconnectedPanel.SetActive(false);
-   else Debug.LogError("Disconnected panel is null");
-   if (playerMoved)
-   setScrolling(true);
+ isDisconnected = false;
+ Time.timeScale = 1.0f;
+ if (DisconnectedPanel != null)
+ DisconnectedPanel.SetActive(false);
+ else Debug.LogError("Disconnected panel is null");
+ if (playerMoved)
+ setScrolling(true);
 }
 
 public void PauseToggle() {
-   if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
-      if (!isPaused)
-      ClientUDP.Instance.sendTypedMessage(Message.PAUSE);
-      else
-      ClientUDP.Instance.sendTypedMessage(Message.RESUME);
-  }
+ if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
   if (!isPaused)
-  setOnPause();
+  ClientUDP.Instance.sendTypedMessage(Message.PAUSE);
   else
-  setOffPause();
+  ClientUDP.Instance.sendTypedMessage(Message.RESUME);
+}
+if (!isPaused)
+setOnPause();
+else
+setOffPause();
 
 
 }
 
 private void setOnPause() {
-   isPaused = true;
-   Time.timeScale = 0.0f;
-   if (PausePanel != null)
-   PausePanel.SetActive(true);
-   else Debug.LogError("PausePanel is null");
-   if (BlackBar != null)
-   BlackBar.SetActive(false);
-   else Debug.LogError("BlackBar is null");
-   setScrolling(false);
+ isPaused = true;
+ Time.timeScale = 0.0f;
+ if (PausePanel != null)
+ PausePanel.SetActive(true);
+ else Debug.LogError("PausePanel is null");
+ if (BlackBar != null)
+ BlackBar.SetActive(false);
+ else Debug.LogError("BlackBar is null");
+ setScrolling(false);
 }
 
 private void setOffPause() {
-   isPaused = false;
-   Time.timeScale = 1.0f;
-   if (PausePanel != null)
-   PausePanel.SetActive(false);
-   if (OptionsPanel != null)
-   OptionsPanel.SetActive(false);
-   else Debug.LogError("PausePanel is null");
-   if (BlackBar != null)
-   BlackBar.SetActive(true);
-   else Debug.LogError("BlackBar is null");
-   if (playerMoved)
-   setScrolling(true);
+ isPaused = false;
+ Time.timeScale = 1.0f;
+ if (PausePanel != null)
+ PausePanel.SetActive(false);
+ if (OptionsPanel != null)
+ OptionsPanel.SetActive(false);
+ else Debug.LogError("PausePanel is null");
+ if (BlackBar != null)
+ BlackBar.SetActive(true);
+ else Debug.LogError("BlackBar is null");
+ if (playerMoved)
+ setScrolling(true);
 }
 
 private void setScrolling(bool isScroll) {
-   camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
-   camera2.gameObject.GetComponent<CameraController>().scroll = isScroll;
+ camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
+ camera2.gameObject.GetComponent<CameraController>().scroll = isScroll;
 }
 
 public void addRenderer(Renderer r){
-   renderers.Add(r);
+ renderers.Add(r);
 }
 
 public void resetRenderers(){
-   foreach(Renderer r in renderers)
-   {
-      r.enabled = true;
-  }
+ foreach(Renderer r in renderers)
+ {
+  r.enabled = true;
+}
 }
 }

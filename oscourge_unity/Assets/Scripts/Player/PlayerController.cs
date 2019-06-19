@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public Animator animator;
 	public GameObject SFX;
 	public bool localMode;
+	public GameObject death;
 	private bool isGrounded; 
 	private Vector3 spawnLocation;
 	private bool wasGrounded;
@@ -124,6 +125,9 @@ public class PlayerController : MonoBehaviour {
 		myRigidbody.velocity = new Vector3(0f, 0f, 0f);
 		isDead=true;
 		animator.SetBool("isDead",true);
+		this.gameObject.GetComponent<SpriteRenderer>().enabled=false;
+		Instantiate(death,this.transform.position, Quaternion.identity);
+
 	}
 
 	public void Respawn(){
@@ -132,6 +136,7 @@ public class PlayerController : MonoBehaviour {
 		animator.SetBool("isDead",false);
 		transform.position=spawnLocation;
 		jump=false;
+		this.gameObject.GetComponent<SpriteRenderer>().enabled=true;
 	}
 
 
