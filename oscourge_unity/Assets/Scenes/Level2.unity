@@ -10264,11 +10264,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649826}
-    - target: {fileID: 3258000839847610629, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5362119521538666472, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
         type: 3}
       propertyPath: gameManager
@@ -11277,11 +11272,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649826}
-    - target: {fileID: 5419564249777572802, guid: 0742b7d7edd12e541aca7cf62fc9070f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1773641070445303366, guid: 0742b7d7edd12e541aca7cf62fc9070f,
         type: 3}
       propertyPath: gameManager
