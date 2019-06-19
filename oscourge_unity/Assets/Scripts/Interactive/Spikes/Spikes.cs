@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spikes : Mechanism
 {
-    public Animator myAnim;
+    private Animator myAnim;
 
     // The number of pressurePlates/levers/... that has to be activated to trigger this gameobject
     public int activatorNumber = 1;
@@ -25,11 +25,7 @@ public class Spikes : Mechanism
     }
 
     void Start() {
-        
-        if(myAnim == null)
-        {
-            this.myAnim = GetComponent<Animator>();
-        }
+        this.myAnim = GetComponent<Animator>();
         this.spikesCollider = GetComponent<Collider2D>();
         updateSpikes();
     }
