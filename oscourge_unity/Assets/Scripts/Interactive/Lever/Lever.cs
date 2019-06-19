@@ -41,7 +41,15 @@ public class Lever : Trigger
 		foreach(BlinkPlatform platform in deactivatePlatform){
 			platform.trigger(!isLeverActivated, this.GetInstanceID());
 		}
-	}
+
+        foreach (Spikes spikes in activateSpikes) {
+            spikes.trigger(!isLeverActivated, this.GetInstanceID());
+        }
+
+        foreach (Spikes spikes in deactivateSpikes) {
+            spikes.trigger(isLeverActivated, this.GetInstanceID());
+        }
+    }
 
 	void Update(){
 		if(playerIsNear && Input.GetButtonDown("ContextualAction")){

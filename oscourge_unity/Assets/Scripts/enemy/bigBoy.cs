@@ -13,8 +13,6 @@ public class bigBoy : MonoBehaviour
 	public Tilemap tilemap;
 	public GameObject gameManager;
 
-	public GameObject tilemapPrefab;
-
 
 
 	List<string> values = new List<string>();

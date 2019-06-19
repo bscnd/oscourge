@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss1 : MonoBehaviour
 {
-	private Boss1Control[] boss;
+	public Boss1Control[] boss;
 	public Chain chain;
 
 	// The number of pressure plate activation by the two players needed to trigger the chain
@@ -13,20 +13,6 @@ public class Boss1 : MonoBehaviour
 
 	void Start()
 	{
-		boss = new Boss1Control[2];
-
-		if(this.gameObject.transform.childCount == 2){
-			GameObject control0 = this.transform.GetChild(0).gameObject;
-			GameObject control1 = this.transform.GetChild(1).gameObject;
-			boss[0] = control0.GetComponent<Boss1Control>();
-			boss[1] = control1.GetComponent<Boss1Control>();
-
-		}
-		else{
-			Debug.Log("This object must have 2 childs with Boss1Control scripts attached to it !");
-			this.enabled = false;
-		}
-
 		if(boss[0] == null || boss[1] == null){
 			Debug.Log("One or both Boss1Control scripts is null");
 			this.enabled = false;

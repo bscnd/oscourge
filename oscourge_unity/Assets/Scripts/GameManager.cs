@@ -4,7 +4,6 @@ using UnityEngine;
 using Scripts.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	public GameObject player1;
