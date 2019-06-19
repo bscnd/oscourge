@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour {
 	public GameObject player2;
 	public GameObject camera1;
 	public GameObject camera2;
-	public GameObject mountains;
+	public GameObject scrollMountains1;
+  public GameObject scrollMountains2;
 	public GameObject fade;
  public GameObject gridPrefab;
  public GameObject currentGrid;
@@ -191,7 +192,9 @@ IEnumerator GO() {
  yield return new WaitForSeconds(4);
  camera1.GetComponent<CameraController>().Respawn();
  camera2.GetComponent<CameraController>().Respawn();
- mountains.GetComponent<Parallax>().Reset();
+ scrollMountains1.GetComponent<Parallax>().Reset();
+ scrollMountains2.GetComponent<Parallax>().Reset();
+
  playerMoved = false;
 
  Lever[] levers = (Lever[])Object.FindObjectsOfType<Lever>();

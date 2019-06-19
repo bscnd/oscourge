@@ -390,7 +390,8 @@ MonoBehaviour:
   player2: {fileID: 0}
   camera1: {fileID: 0}
   camera2: {fileID: 0}
-  mountains: {fileID: 0}
+  scrollMountains1: {fileID: 0}
+  scrollMountains2: {fileID: 0}
   fade: {fileID: 0}
   gridPrefab: {fileID: 8659957250868496174, guid: 84aa3cd41fbb2ea40a733cb05329a282,
     type: 3}

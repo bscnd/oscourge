@@ -120,20 +120,19 @@ public class PlayerController : MonoBehaviour {
 
 
 	public void Kill(){
-		myRigidbody.isKinematic = true;
 		SFX.gameObject.GetComponent<SFX>().HurtSound();
-		myRigidbody.velocity = new Vector3(0f, 0f, 0f);
 		isDead=true;
 		animator.SetBool("isDead",true);
 		this.gameObject.GetComponent<SpriteRenderer>().enabled=false;
-		Instantiate(death,this.transform.position, Quaternion.identity);
+		GameObject d=Instantiate(death,this.transform.position, Quaternion.identity);
+		d.transform.parent=this.transform;
 
 	}
 
 	public void Respawn(){
-		myRigidbody.isKinematic = false;
 		isDead=false;
 		animator.SetBool("isDead",false);
+		animator.SetBool("isJumping",false);
 		transform.position=spawnLocation;
 		jump=false;
 		this.gameObject.GetComponent<SpriteRenderer>().enabled=true;
