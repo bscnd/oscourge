@@ -136,7 +136,8 @@ public class PlayerController : MonoBehaviour {
 		transform.position=spawnLocation;
 		jump=false;
 		this.gameObject.GetComponent<SpriteRenderer>().enabled=true;
-	}
+        myRigidbody.velocity = new Vector3(0, 0, 0);
+    }
 
 
 	void OnTriggerEnter2D(Collider2D col)

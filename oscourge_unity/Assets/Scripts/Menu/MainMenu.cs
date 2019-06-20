@@ -13,17 +13,52 @@ public class MainMenu : MonoBehaviour {
 
     public TMP_InputField ipInput;
     public TMP_InputField portInput;
+    public TMP_InputField portInputHost;
     public GameObject ErrorBox;
     public TextMeshProUGUI ErrorTxt;
     public GameObject SFX;
     public GameObject waitingPanel;
     public GameObject onlinePanel;
     public GameObject playPanel;
+    public GameObject hostPanel;
     public AudioMixer mixer;
     public GameObject loadingScene;
+    public GameObject server;
 
     private bool sceneIsLoading=false;
     private AsyncOperation currentLoadingOperation=null;
+
+
+
+    public void HostGame()
+    {
+        try
+        {
+
+            if (string.IsNullOrEmpty(portInputHost.text)) { EmptyInputFieldError(); }
+            else
+            {
+                changePanel(1);
+                string ip = "192.168.1.1";
+                IPAddress adresse = IPAddress.Parse(ip);
+                int port = int.Parse(portInputHost.text);
+
+
+                server.GetComponent<serverLauncher>().Launch(port);
+
+                Debug.Log("ip : " + ip + " / port : " + port);
+                ClientUDP.Instance.ConnectToServer(ip, port);
+                //ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
+                //Debug.LogError("RESET THESES LIGNES !");
+            }
+        }
+        catch (FormatException e)
+        {
+            Debug.LogError(e);
+            ErrorTxt.SetText("This is not a correct IP adress");
+            ErrorBox.SetActive(true);
+        }
+    }
 
     public void PlayGame(bool modeOnline) {
         if (modeOnline) {
@@ -31,7 +66,7 @@ public class MainMenu : MonoBehaviour {
 
                 if (string.IsNullOrEmpty(ipInput.text) || string.IsNullOrEmpty(portInput.text)) { EmptyInputFieldError(); }
                 else {
-                    changePanel();
+                    changePanel(0);
 
                     string ip = ipInput.text;
                     IPAddress adresse = IPAddress.Parse(ip);
@@ -76,11 +111,22 @@ public class MainMenu : MonoBehaviour {
         ipInput.image.color = Color.red;
         if (string.IsNullOrEmpty(portInput.text))
         portInput.image.color = Color.red;
+        if (string.IsNullOrEmpty(portInputHost.text))
+            portInputHost.image.color = Color.red;
     }
 
-    private void changePanel() {
-        waitingPanel.SetActive(true);
-        onlinePanel.SetActive(false);
+    private void changePanel(int i) {
+        if (i == 0)
+        {
+            waitingPanel.SetActive(true);
+            onlinePanel.SetActive(false);
+        }
+        if (i == 1)
+        {
+            waitingPanel.SetActive(true);
+            hostPanel.SetActive(false);
+
+        }
     }
 
     public void QuitGame() {

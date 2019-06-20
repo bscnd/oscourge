@@ -470,6 +470,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFXManager
       objectReference: {fileID: 0}
+    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: m_Volume
+      value: 0.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3561720818320430333, guid: 3f32e2085e58d754282545e6d75f5014,
+        type: 2}
+    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 3686431432576856885}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: menuMusic
+      value: 
+      objectReference: {fileID: 535490308}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1859045659}
     - target: {fileID: 7432963705511551612, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -525,21 +561,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 3686431432576856885}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: menuMusic
-      value: 
-      objectReference: {fileID: 535490308}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: music
-      value: 
-      objectReference: {fileID: 1859045659}
     - target: {fileID: 7552844510017770101, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -618,27 +639,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1641702906061344280, guid: 3f32e2085e58d754282545e6d75f5014,
         type: 2}
-    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
-      propertyPath: m_Volume
-      value: 0.198
-      objectReference: {fileID: 0}
-    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 3561720818320430333, guid: 3f32e2085e58d754282545e6d75f5014,
-        type: 2}
-    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
 --- !u!82 &1859045659 stripped
@@ -790,49 +790,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 583117714}
-    - target: {fileID: 1615077787, guid: 291e75e99800e5e08bed490fba5e5baf, type: 3}
-      propertyPath: namee
-      value: SFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 330357906, guid: 291e75e99800e5e08bed490fba5e5baf, type: 3}
-      propertyPath: namee
-      value: Master
-      objectReference: {fileID: 0}
-    - target: {fileID: 2013879212, guid: 291e75e99800e5e08bed490fba5e5baf, type: 3}
-      propertyPath: namee
-      value: Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: -1374881268004520166, guid: c645738e5550f6e42b326c5a463b3e18,
-        type: 3}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Launch
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296447538963690474, guid: 291e75e99800e5e08bed490fba5e5baf,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291e75e99800e5e08bed490fba5e5baf, type: 3}
 --- !u!82 &3686431432576856885 stripped

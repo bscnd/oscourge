@@ -190,8 +190,6 @@ IEnumerator GO() {
  player1.GetComponent<PlayerController>().Kill();
  player2.GetComponent<PlayerController>().Kill();
  yield return new WaitForSeconds(4);
- camera1.GetComponent<CameraController>().Respawn();
- camera2.GetComponent<CameraController>().Respawn();
  scrollMountains1.GetComponent<Parallax>().Reset();
  scrollMountains2.GetComponent<Parallax>().Reset();
 
@@ -220,7 +218,9 @@ sprite.sortingLayerName = "Ground";
  boy2.GetComponent<bigBoy>().Respawn();
 fade.SetActive(false);
 gameIsOver=false;
-}
+        camera1.GetComponent<CameraController>().Respawn();
+        camera2.GetComponent<CameraController>().Respawn();
+    }
 
 
 private void setOnDisconnected() {
