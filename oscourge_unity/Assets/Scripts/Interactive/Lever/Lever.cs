@@ -5,10 +5,18 @@ using UnityEngine;
 public class Lever : Trigger
 {
 	private Animator myAnim;
-	private bool playerIsNear = false;
+
+	// Up player is 0 in the array
+	// Down player is 1 in the array
+	private bool[] playerIsNear;
 	
 	int hashIsTriggered = Animator.StringToHash("isTriggered");
-	
+
+	public Lever(){
+		this.playerIsNear = new bool[2];
+		this.playerIsNear[0] = false;
+		this.playerIsNear[1] = false;
+	}
 
 	// Start is called before the first frame update
 	void Start()
@@ -31,7 +39,7 @@ public class Lever : Trigger
 		}
 
 		foreach(Chain chain in deactivateChains){
-			chain.trigger(!isLeverActivated, this.GetInstanceID());
+			chain.detrigger(isLeverActivated, this.GetInstanceID());
 		}
 
 		foreach(BlinkPlatform platform in activatePlatform){
@@ -42,17 +50,22 @@ public class Lever : Trigger
 			platform.trigger(!isLeverActivated, this.GetInstanceID());
 		}
 
-        foreach (Spikes spikes in activateSpikes) {
-            spikes.trigger(!isLeverActivated, this.GetInstanceID());
-        }
+		foreach (Spikes spikes in activateSpikes) {
+			spikes.trigger(!isLeverActivated, this.GetInstanceID());
+		}
 
-        foreach (Spikes spikes in deactivateSpikes) {
-            spikes.trigger(isLeverActivated, this.GetInstanceID());
-        }
-    }
+		foreach (Spikes spikes in deactivateSpikes) {
+			spikes.trigger(isLeverActivated, this.GetInstanceID());
+		}
+	}
 
 	void Update(){
-		if(playerIsNear && Input.GetButtonDown("ContextualAction")){
+		if(playerIsNear[0] && Input.GetButtonDown("ContextualAction")){
+			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
+		}
+
+		if(playerIsNear[1] && Input.GetButtonDown("ContextualAction2")){
+
 			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
 		}
 		updateInteractiveObjects();
@@ -60,13 +73,19 @@ public class Lever : Trigger
 
 	private void OnTriggerExit2D(Collider2D collision){
 		if(collision.tag == "Player"){
-			playerIsNear = false;
+			PlayerController script = collision.gameObject.GetComponent<PlayerController>();
+
+			int playerIndex = script.isTallSquash ? 1 : 0;
+			this.playerIsNear[playerIndex] = false;
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if(collision.tag == "Player") {
-			playerIsNear = true;
+			PlayerController script = collision.gameObject.GetComponent<PlayerController>();
+
+			int playerIndex = script.isTallSquash ? 1 : 0;
+			this.playerIsNear[playerIndex] = true;
 		}
 	}
 }

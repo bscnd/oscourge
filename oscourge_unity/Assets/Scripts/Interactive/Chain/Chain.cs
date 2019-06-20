@@ -38,11 +38,22 @@ public class Chain : Mechanism
 	public void trigger(bool isActivate, int objectId){
 		if(isActivate){
 			activators.Add(objectId);
-			deactivators.Remove(objectId);
 		}
 		else{
-			deactivators.Add(objectId);
 			activators.Remove(objectId);
+		}
+
+		if(myAnim != null){
+			updateChain();
+		}
+	}
+
+	public void detrigger(bool isActivate, int objectId){
+		if(isActivate){
+			deactivators.Add(objectId);
+		}
+		else{
+			deactivators.Remove(objectId);
 		}
 
 		if(myAnim != null){
