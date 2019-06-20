@@ -69,8 +69,8 @@ if (player1.transform.position.x > camera1.transform.position.x + 18) {
  player1.transform.position = new Vector3(camera1.transform.position.x + 18, player1.transform.position.y, player1.transform.position.z);
 }
 
-if (player2.transform.position.x > camera2.transform.position.x + 18) {
- player2.transform.position = new Vector3(camera2.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
+if (player2.transform.position.x > camera1.transform.position.x + 18) {
+ player2.transform.position = new Vector3(camera1.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
 }
 
 if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
@@ -287,7 +287,6 @@ private void setOffPause() {
 
 private void setScrolling(bool isScroll) {
  camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
- camera2.gameObject.GetComponent<CameraController>().scroll = isScroll;
 }
 
 public void addRenderer(Renderer r){
