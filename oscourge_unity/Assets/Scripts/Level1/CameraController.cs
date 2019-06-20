@@ -30,5 +30,6 @@ scroll=false;
 
 	public void Respawn(){
 		transform.position=spawnLocation;
+        scroll = false;
 	}
 }

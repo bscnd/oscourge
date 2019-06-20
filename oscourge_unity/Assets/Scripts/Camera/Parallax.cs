@@ -75,6 +75,7 @@ public class Parallax : MonoBehaviour
 		a1.transform.position=aa1;
 		a2.transform.position=aa2;
 		a3.transform.position=aa3;
+        transform.position = startPos;
 	}
 
 	

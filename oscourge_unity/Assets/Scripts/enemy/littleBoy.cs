@@ -41,6 +41,10 @@ public class littleBoy : MonoBehaviour
 				seen=true;
 			}
 
+            
+
+
+
 			if(seen){
 				if(player.transform.position.x>transform.position.x){
 					myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
@@ -75,6 +79,8 @@ public class littleBoy : MonoBehaviour
 				else if (z==2*patrolRadius*100){
 					z=0;
 				}
+
+
 
 
 			}
