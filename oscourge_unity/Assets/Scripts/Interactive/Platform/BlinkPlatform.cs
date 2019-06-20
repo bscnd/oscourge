@@ -28,8 +28,8 @@ public class BlinkPlatform : Mechanism
 			deactivators.Remove(objectId);
 		}
 		else{
-			deactivators.Add(objectId);
 			activators.Remove(objectId);
+			deactivators.Add(objectId);
 		}
 
 		if(deactivators.Count == 0 && activators.Count >= 1){
