@@ -1,4 +1,4 @@
-package ouscourge.ui;
+package ouscourge.ui.graphical;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

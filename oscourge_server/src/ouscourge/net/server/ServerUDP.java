@@ -228,7 +228,7 @@ public class ServerUDP implements Runnable {
 				resumeGame();
 				break;
 			case MessageUDP.RESTART:
-				restartGame(client,msg);
+				restartGame(client, msg);
 				try {
 					Thread.sleep(200);
 				} catch (InterruptedException e) {
@@ -326,8 +326,10 @@ public class ServerUDP implements Runnable {
 	}
 
 	private void print(String mess) {
-		console.append(mess);
-		console.append("\n");
+		if (console != null) {
+			console.append(mess);
+			console.append("\n");
+		}
 		System.out.println(mess);
 	}
 
@@ -373,22 +375,24 @@ public class ServerUDP implements Runnable {
 	 * @param state
 	 */
 	private void changeState(int state) {
-		switch (state) {
-		case INIT:
-			lblState.setText("INIT");
-			break;
-		case PLAYING:
-			lblState.setText("PLAYING");
-			break;
-		case PAUSE:
-			lblState.setText("PAUSE");
-			break;
-		case CONNECTION_ERROR:
-			lblState.setText("CONNECTION_ERROR");
-			break;
-		default:
-			print("wrong state");
-			break;
+		if (lblState != null) {
+			switch (state) {
+			case INIT:
+				lblState.setText("INIT");
+				break;
+			case PLAYING:
+				lblState.setText("PLAYING");
+				break;
+			case PAUSE:
+				lblState.setText("PAUSE");
+				break;
+			case CONNECTION_ERROR:
+				lblState.setText("CONNECTION_ERROR");
+				break;
+			default:
+				print("wrong state");
+				break;
+			}
 		}
 		gameState = state;
 	}
@@ -401,7 +405,8 @@ public class ServerUDP implements Runnable {
 		if (pauseHandShake != null)
 			pauseHandShake.stopHandShake();
 		serverSocket.close();
-		console.setText("");
+		if (console != null)
+			console.setText("");
 	}
 
 	/**

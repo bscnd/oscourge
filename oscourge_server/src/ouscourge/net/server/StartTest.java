@@ -1,8 +1,8 @@
 package ouscourge.net.server;
 
 
-import ouscourge.ui.ClientUI;
-import ouscourge.ui.ServerUI;
+import ouscourge.ui.graphical.ClientUI;
+import ouscourge.ui.graphical.ServerUI;
 
 public class StartTest {
 	public static void main(String[] args) {
