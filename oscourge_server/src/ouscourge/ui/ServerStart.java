@@ -20,10 +20,10 @@ public class ServerStart {
 		} catch (NumberFormatException e) {
 			System.out.println("You have to enter an integer between 1024 and 8191");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("You have to pass the port for the server in first argument");
-		}
+		} 
 
 	}
 
