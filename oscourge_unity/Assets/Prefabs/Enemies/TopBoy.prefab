@@ -196,6 +196,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   cam: {fileID: 0}
   anim: {fileID: 6638286561206702072}
+  destroy: {fileID: 7377147924088038337, guid: ea02418fc7646ca478dde7c8ee969eb7, type: 3}
 --- !u!61 &6638286561206702078
 BoxCollider2D:
   m_ObjectHideFlags: 0

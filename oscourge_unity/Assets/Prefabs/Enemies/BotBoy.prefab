@@ -215,6 +215,12 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 5379783874204299814}
+    - target: {fileID: 5586722148255344916, guid: 599903ac0a1ad4144a2b7ee9c9c422ec,
+        type: 3}
+      propertyPath: destroy
+      value: 
+      objectReference: {fileID: 7377147924088038337, guid: ea02418fc7646ca478dde7c8ee969eb7,
+        type: 3}
     - target: {fileID: 5586722148255344907, guid: 599903ac0a1ad4144a2b7ee9c9c422ec,
         type: 3}
       propertyPath: m_Offset.x
