@@ -77,7 +77,7 @@ public class KeyCodeToString
 		stringKeys.Add(KeyCode.Help, "Help");
 		stringKeys.Add(KeyCode.Home, "Home");
 		stringKeys.Add(KeyCode.I, "I");
-		stringKeys.Add(KeyCode.Insert, "insert");
+		stringKeys.Add(KeyCode.Insert, "Insert");
 		stringKeys.Add(KeyCode.J, "J");
 		stringKeys.Add(KeyCode.Joystick1Button0, "Button 0 on first joystick");
 		stringKeys.Add(KeyCode.Joystick1Button1, "Button 1 on first joystick");

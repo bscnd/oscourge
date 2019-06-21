@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 	
 public enum ButtonName { Left, Right, Jump, Action, Left2, Right2, Jump2, Action2, Pause, None };
+public enum AxisName { Horizontal, Horizontal2, None };
 
 // Singleton
 public class InputManager
 {
+	private static SortedSet<ButtonName> axis;
 	private static InputManager instance;
 
 	public static InputManager Instance(){
@@ -18,25 +20,30 @@ public class InputManager
 
 	private Dictionary<ButtonName, KeyCode> buttonKeys;
 	private Dictionary<ButtonName, string> keysName;
-	private Dictionary<ButtonName, string> unityKeyName;
 
 	private InputManager(){
 		buttonKeys = new Dictionary<ButtonName, KeyCode >();
 		keysName = new Dictionary<ButtonName, string>();
-		unityKeyName = new Dictionary<ButtonName, string>();
 
 		// TODO : Change menu with these strings
 		// TODO : Change inputs in project settings
-		buttonKeys[ButtonName.Left   ] = KeyCode.None;
-		buttonKeys[ButtonName.Right  ] = KeyCode.None;
-		buttonKeys[ButtonName.Jump   ] = KeyCode.None;
-		buttonKeys[ButtonName.Action ] = KeyCode.None;
-		buttonKeys[ButtonName.Left2  ] = KeyCode.None;
-		buttonKeys[ButtonName.Right2 ] = KeyCode.None;
-		buttonKeys[ButtonName.Jump2  ] = KeyCode.None;
-		buttonKeys[ButtonName.Action2] = KeyCode.None;
-		buttonKeys[ButtonName.Pause  ] = KeyCode.None;
+		buttonKeys[ButtonName.Left   ] = KeyCode.Q;
+		buttonKeys[ButtonName.Right  ] = KeyCode.D;
+		buttonKeys[ButtonName.Jump   ] = KeyCode.W;
+		buttonKeys[ButtonName.Action ] = KeyCode.E;
+		buttonKeys[ButtonName.Left2  ] = KeyCode.LeftArrow;
+		buttonKeys[ButtonName.Right2 ] = KeyCode.RightArrow;
+		buttonKeys[ButtonName.Jump2  ] = KeyCode.UpArrow;
+		buttonKeys[ButtonName.Action2] = KeyCode.Insert;
+		buttonKeys[ButtonName.Pause  ] = KeyCode.Escape;
+		buttonKeys[ButtonName.None  ] = KeyCode.None;
 
+		ButtonName[] values = (ButtonName[])ButtonName.GetValues(typeof(ButtonName));
+		foreach(ButtonName button in values){
+			keysName.Add(button, KeyCodeToString.Instance().Convert(buttonKeys[button]));
+		}
+
+		/*
 		keysName[ButtonName.Left   ] = "A";
 		keysName[ButtonName.Right  ] = "D";
 		keysName[ButtonName.Jump   ] = "Space";
@@ -46,16 +53,7 @@ public class InputManager
 		keysName[ButtonName.Jump2  ] = "Up arrow";
 		keysName[ButtonName.Action2] = "Keypad 0";
 		keysName[ButtonName.Pause  ] = "Escape";
-
-		unityKeyName[ButtonName.Left   ] = "";
-		unityKeyName[ButtonName.Right  ] = "";
-		unityKeyName[ButtonName.Jump   ] = "";
-		unityKeyName[ButtonName.Action ] = "";
-		unityKeyName[ButtonName.Left2  ] = "";
-		unityKeyName[ButtonName.Right2 ] = "";
-		unityKeyName[ButtonName.Jump2  ] = "";
-		unityKeyName[ButtonName.Action2] = "";
-		unityKeyName[ButtonName.Pause  ] = "";
+		*/
 	}
 
 	public bool GetButtonDown(ButtonName buttonName){
@@ -64,12 +62,33 @@ public class InputManager
 			return false;
 		}
 
-		if(buttonKeys[buttonName] == KeyCode.None){
-			return Input.GetButton(this.GetKeyName(buttonName));
+		return Input.GetKeyDown(buttonKeys[buttonName]);
+	}
+
+	public float GetAxisRaw(AxisName axisName){
+		float horizontal = 0;
+
+		if(axisName == AxisName.None){
+			Debug.LogError("InputManager::GetAxisRaw -- no axis named : " + axisName);
 		}
-		else{
-			return Input.GetKeyDown(buttonKeys[buttonName]);
+		else if(axisName == AxisName.Horizontal){
+			if(this.GetButtonDown(ButtonName.Left)){
+				horizontal -= 1F;
+			}
+			if(this.GetButtonDown(ButtonName.Right)){
+				horizontal += 1F;
+			}
 		}
+		else if(axisName == AxisName.Horizontal2){
+			if(this.GetButtonDown(ButtonName.Left2)){
+				horizontal -= 1F;
+			}
+			if(this.GetButtonDown(ButtonName.Right2)){
+				horizontal += 1F;
+			}
+		}
+
+		return horizontal;
 	}
 
 	public string GetKeyName(ButtonName buttonName){
