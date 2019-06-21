@@ -16,8 +16,12 @@ public class bigBoy : MonoBehaviour
 
 	public Animator anim;
 
+    public GameObject destroy;
 
-	List<string> values = new List<string>();
+
+    private GameObject destroyContainer;
+
+    List<string> values = new List<string>();
 
 	Vector3 spawnPos;
 
@@ -45,14 +49,30 @@ public class bigBoy : MonoBehaviour
 		pos2=transform.position;
 
 
-		for(int i=-50;i<50;i++){
+        destroyContainer = new GameObject();
+        destroyContainer.name = "destroyContainer";
+
+
+
+        for (int i=-50;i<50;i++){
 
 			for(int j=-20;j<6;j++){
 				pos.x= (int)pos2.x+j;
 				pos.y= (int)pos2.y+i;
 				pos.z= 0;
 
-				tilemap.SetTile(pos, null);
+                if (tilemap.GetTile(pos) != null)
+                {
+
+                    GameObject g=Instantiate(destroy, pos, Quaternion.identity);
+                    g.transform.parent = destroyContainer.transform;
+
+
+                    tilemap.SetTile(pos, null);
+                }
+
+
+
 			}
 		}
 
@@ -78,9 +98,14 @@ public class bigBoy : MonoBehaviour
 			pos.y= (int)pos2.y+i;
 			pos.z= 0;
 
-			tilemap.SetTile(pos, null);
+            if (tilemap.GetTile(pos) != null)
+            {
 
-		}
+                GameObject g = Instantiate(destroy, pos, Quaternion.identity);
+                g.transform.parent = destroyContainer.transform;
+                tilemap.SetTile(pos, null);
+            }
+        }
 
 
 	}
@@ -122,7 +147,9 @@ public class bigBoy : MonoBehaviour
 		else if(!values.Contains(col.transform.name)){
 			Renderer r=	col.GetComponent<Renderer>();
 			if(r!= null){
-				r.enabled = false;
+                GameObject g = Instantiate(destroy, col.transform.position, Quaternion.identity);
+                g.transform.parent = destroyContainer.transform;
+                r.enabled = false;
 				gameManager.GetComponent<GameManager>().addRenderer(r);
 			}
 		}
