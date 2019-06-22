@@ -155,12 +155,10 @@ public class GameManager : MonoBehaviour {
 
     public void nextLevel() {
         gameIsWon = false;
-        if (SceneManager.GetActiveScene().name == "Level2") {
-            currentLoadingOperation = SceneManager.LoadSceneAsync("Menu");
-        } else {
+     
             currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
             sceneIsLoading = true;
-        }
+        
     }
 
 
