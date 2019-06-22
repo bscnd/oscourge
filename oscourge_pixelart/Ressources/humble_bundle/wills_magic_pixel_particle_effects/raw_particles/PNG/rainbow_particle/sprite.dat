@@ -1,8 +1,0 @@
-<Sprite>
-	name gfx/rainbow_particle
-	frame_data 1_frame0000
-	frame_data 1_frame0001
-	is_looping True
-	is_playing True
-	play_speed 20
-</Sprite>
