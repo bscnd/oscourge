@@ -178,6 +178,7 @@ public class GameManager : MonoBehaviour {
         player1.GetComponent<PlayerController>().Kill();
         player2.GetComponent<PlayerController>().Kill();
         yield return new WaitForSeconds(4);
+        if(scrollMountains1!=null)
         scrollMountains1.GetComponent<Parallax>().Reset();
 
         playerMoved = false;
