@@ -18,8 +18,7 @@ public class GameManager : MonoBehaviour {
     public GameObject loadingScene;
 
     public GameObject PausePanel;
-    public GameObject OptionsPanel;
-    public GameObject BlackBar;
+    public GameObject OptionsPanel; 
     public GameObject DisconnectedPanel;
 
     private bool isPaused = false;
@@ -124,7 +123,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Replay() {
-        SceneManager.LoadScene("Level1"); // change to current scene is multiple levels
+        currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        sceneIsLoading = true;
         if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
             if (ClientUDP.Instance.gameState != ClientUDP.RESTART) ClientUDP.Instance.sendTypedMessage(Message.RESTART);
         } else {
@@ -249,9 +249,6 @@ public class GameManager : MonoBehaviour {
         if (PausePanel != null)
             PausePanel.SetActive(true);
         else Debug.LogError("PausePanel is null");
-        if (BlackBar != null)
-            BlackBar.SetActive(false);
-        else Debug.LogError("BlackBar is null");
         setScrolling(false);
     }
 
@@ -263,9 +260,6 @@ public class GameManager : MonoBehaviour {
         if (OptionsPanel != null)
             OptionsPanel.SetActive(false);
         else Debug.LogError("PausePanel is null");
-        if (BlackBar != null)
-            BlackBar.SetActive(true);
-        else Debug.LogError("BlackBar is null");
         if (playerMoved)
             setScrolling(true);
     }
