@@ -9,7 +9,7 @@ The two squashes inadvertently stole a time machine from a very powerful charact
 ## Gameplay :
 In the first stage of each level, your goal is to run away fast enough to avoid being hit by the enemy. At this stage the screen is split in two, one for you, another for your partner. You will have to help the latter to pass some obstacles, and vice versa. After that, in the second stage, you will have to solve a puzzle that takes some gameplay elements already seen in the level. In this stage the screen is not split anymore.
 
-## Actual Features :
+## Current Features :
 * Local / Online
 * Keyboard & Xbox Controller
 * Cutscene to introduce the first level
