@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7467340234611687525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -680,50 +680,50 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4756148710117756803, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: button
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148710117756803, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: buttonName
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: button
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: buttonName
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709713413415, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: button
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709713413415, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: buttonName
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: button
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
+        type: 3}
+      propertyPath: buttonName
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1166366374141382060, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
       propertyPath: m_Text
       value: Player 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148710117756803, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: button
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148710117756803, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: buttonName
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: button
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: buttonName
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709713413415, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: button
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709713413415, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: buttonName
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: button
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
-        type: 3}
-      propertyPath: buttonName
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac8aef21d2e4e35f8e587e262ae868f, type: 3}
@@ -980,15 +980,15 @@ PrefabInstance:
       propertyPath: buttonName
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
+    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
       propertyPath: button
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
+    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
       propertyPath: buttonName
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4756148709713413415, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
@@ -1000,15 +1000,15 @@ PrefabInstance:
       propertyPath: buttonName
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
+    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
       propertyPath: button
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4756148709747652753, guid: dac8aef21d2e4e35f8e587e262ae868f,
+    - target: {fileID: 4756148709694792594, guid: dac8aef21d2e4e35f8e587e262ae868f,
         type: 3}
       propertyPath: buttonName
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac8aef21d2e4e35f8e587e262ae868f, type: 3}
