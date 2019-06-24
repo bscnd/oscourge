@@ -54,7 +54,7 @@ public class bigBoy : MonoBehaviour
 
 
 
-        for (int i=-50;i<50;i++){
+        for (int i=-14;i<50;i++){
 
 			for(int j=-20;j<6;j++){
 				pos.x= (int)pos2.x+j;
@@ -93,7 +93,7 @@ public class bigBoy : MonoBehaviour
 		pos2=transform.position;
 
 
-		for(int i=-50;i<50;i++){
+		for(int i=-14;i<50;i++){
 			pos.x= (int)pos2.x+5;
 			pos.y= (int)pos2.y+i;
 			pos.z= 0;
@@ -124,7 +124,7 @@ public class bigBoy : MonoBehaviour
 
 
 		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
-		for(int i=-50;i<50;i++){
+		for(int i=-14;i<50;i++){
 
 			for(int j=-20;j<6;j++){
 				pos.x= (int)pos2.x+j;

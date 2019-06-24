@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void FixedUpdate() { // stops during the pause (depends on the timescale ?)
-        if (playersHaveMoved() && !isPaused) {
+        if (!isPaused) {
             setScrolling(true);
         }
     }
@@ -277,5 +277,14 @@ public class GameManager : MonoBehaviour {
         foreach (Renderer r in renderers) {
             r.enabled = true;
         }
+    }
+
+
+
+    public void SetStart()
+    {
+        player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position;
+        player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position;
+        camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position;
     }
 }

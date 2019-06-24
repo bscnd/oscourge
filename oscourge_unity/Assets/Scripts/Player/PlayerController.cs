@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool localMode;
     public GameObject death;
     private bool isGrounded;
-    private Vector3 spawnLocation;
+    public Vector3 spawnLocation;
     private bool wasGrounded;
     private bool jump;
     private Rigidbody2D myRigidbody;
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         spawnLocation = transform.position;
         isGrounded = true;
         isDead = false;
-        intro = true;
+        intro = false;
 
     }
 
