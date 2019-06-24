@@ -20,19 +20,37 @@ public class littleBoy : MonoBehaviour
 	public LayerMask whatIsGround;
 	public UnityEvent OnLandEvent;
 	private bool seen;
-	private int z;
+	private float z;
 
 	private Vector3 spawn;
+
+    private Vector3 oldPos;
 
 	void Start() {
 		myRigidbody = GetComponent<Rigidbody2D>();
 		seen=false;
 		z=0;
 		spawn=transform.position;
+        oldPos = new Vector3(0, 0, 0);
+
 	}
 
 	void Update()
 	{
+
+        if ((transform.position.x < oldPos.x+0.01f )&& (transform.position.x > oldPos.x-0.01f))
+        {
+            if (z < patrolRadius * 100)
+            {
+                z = patrolRadius * 100;
+            }
+            else if (z < 2 * patrolRadius * 100)
+            {
+                z =0;
+            }
+        }
+
+        oldPos = transform.position;
 
 		if(!isDead){
 
@@ -40,9 +58,6 @@ public class littleBoy : MonoBehaviour
 			if((i>0f&&i<detectRadius)||(i<0f && i>-detectRadius) ){
 				seen=true;
 			}
-
-            
-
 
 
 			if(seen){
