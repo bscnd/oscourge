@@ -30,12 +30,15 @@ public class PlayerController : MonoBehaviour
     private bool jumpPressed;
     private bool isDead;
 
+    public bool intro;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         spawnLocation = transform.position;
         isGrounded = true;
         isDead = false;
+        intro = true;
 
     }
 
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
         {
             OnLandEvent.Invoke();
         }
+
+        if (!intro) { 
 
         if ((isTallSquash && ClientUDP.Instance.playerMode == 2) || (!isTallSquash && ClientUDP.Instance.playerMode == 1))
         {
@@ -86,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
             Move(horizontal, jumpPressed);
         }
-
+    }
 
     }
 
