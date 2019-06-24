@@ -41,11 +41,14 @@ public class GameManager : MonoBehaviour {
 
     private Vector3 gridPos;
 
+    public bool intro ;
+
     void Start() {
         fade.SetActive(false);
         gridPos = gridPrefab.transform.position;
         SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
         SFX.gameObject.GetComponent<SFX>().Music();
+        intro = true;
     }
 
     void Update() {
@@ -105,7 +108,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void FixedUpdate() { // stops during the pause (depends on the timescale ?)
-        if (!isPaused) {
+        if (!intro && playersHaveMoved() && !isPaused) {
             setScrolling(true);
         }
     }
@@ -266,7 +269,7 @@ public class GameManager : MonoBehaviour {
             setScrolling(true);
     }
 
-    private void setScrolling(bool isScroll) {
+    public void setScrolling(bool isScroll) {
         camera1.gameObject.GetComponent<CameraController>().scroll = isScroll;
     }
 
@@ -287,5 +290,7 @@ public class GameManager : MonoBehaviour {
         player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position;
         player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position;
         camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position;
+        boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position;
+        scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position;
     }
 }

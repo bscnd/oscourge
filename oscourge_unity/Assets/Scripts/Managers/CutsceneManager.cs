@@ -7,8 +7,8 @@ public class CutsceneManager : MonoBehaviour
 {
     public GameObject player1,player2;
     public GameObject newPlayer1, newPlayer2;
-    public GameObject castle;
     public GameObject gameManager;
+    public float timeBeforeScroll;
     void Start()
     {
         foreach (Behaviour childCompnent in newPlayer1.GetComponentsInChildren<Behaviour>())
@@ -25,8 +25,19 @@ public class CutsceneManager : MonoBehaviour
     }
     private  bool hasEnded=false;
 
+    private bool scrollEnabled = false;
+
     void Update()
     {
+
+        timeBeforeScroll -= Time.deltaTime;
+        if (!scrollEnabled && timeBeforeScroll < 0)
+        {
+            gameManager.GetComponent<GameManager>().setScrolling(true);
+        }
+
+
+
         if (GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
          
@@ -63,6 +74,8 @@ public class CutsceneManager : MonoBehaviour
                 newPlayer2.transform.position = player2.transform.position;
 
                 gameManager.GetComponent<GameManager>().SetStart();
+                gameManager.GetComponent<GameManager>().intro = false; 
+
 
 
             }

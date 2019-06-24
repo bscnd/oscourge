@@ -23,7 +23,7 @@ public class bigBoy : MonoBehaviour
 
     List<string> values = new List<string>();
 
-	Vector3 spawnPos;
+	public Vector3 spawnPos;
 
 	Vector3Int pos;
 

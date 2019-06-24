@@ -24,7 +24,7 @@ public bool scroll;
 
 
 	public void Stop(){
-scroll=false;
+        scroll=false;
 
 	}
 

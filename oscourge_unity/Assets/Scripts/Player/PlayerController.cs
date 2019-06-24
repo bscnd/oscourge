@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject SFX;
     public bool localMode;
     public GameObject death;
-    private bool isGrounded;
+    public bool isGrounded;
     public Vector3 spawnLocation;
     private bool wasGrounded;
     private bool jump;
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
 		horizontal = InputManager.Instance().GetAxisRaw(AxisName.Horizontal);
 		//jumpPressed = Input.GetButtonDown("Jump");
 		jumpPressed = InputManager.Instance().GetButtonDown(ButtonName.Jump);
+
+
 
             InputValues inputs = new InputValues(horizontal, jumpPressed);
             Vector3 pos = transform.position;
