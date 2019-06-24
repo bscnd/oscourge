@@ -56,8 +56,10 @@ public class PlayerController : MonoBehaviour
         if ((isTallSquash && ClientUDP.Instance.playerMode == 2) || (!isTallSquash && ClientUDP.Instance.playerMode == 1))
         {
 
-            horizontal = Input.GetAxisRaw("Horizontal");
-            jumpPressed = Input.GetButtonDown("Jump");
+		//horizontal = Input.GetAxisRaw("Horizontal");
+		horizontal = InputManager.Instance().GetAxisRaw(AxisName.Horizontal);
+		//jumpPressed = Input.GetButtonDown("Jump");
+		jumpPressed = InputManager.Instance().GetButtonDown(ButtonName.Jump);
 
             InputValues inputs = new InputValues(horizontal, jumpPressed);
             Vector3 pos = transform.position;
@@ -73,8 +75,10 @@ public class PlayerController : MonoBehaviour
         }
         else if (ClientUDP.Instance.gameState == ClientUDP.OFFLINE)
         {
-            horizontal = Input.GetAxisRaw("Horizontal2");
-            jumpPressed = Input.GetButtonDown("Jump2");
+		//horizontal = Input.GetAxisRaw("Horizontal2");
+		horizontal = InputManager.Instance().GetAxisRaw(AxisName.Horizontal2);
+		//jumpPressed = Input.GetButtonDown("Jump2");
+		jumpPressed = InputManager.Instance().GetButtonDown(ButtonName.Jump2);
 
             InputValues inputs = new InputValues(horizontal, jumpPressed);
             Vector3 pos = transform.position;

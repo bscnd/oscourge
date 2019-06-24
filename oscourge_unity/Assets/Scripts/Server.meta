@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:oscourge_unity/Assets/ColdRessources/Sprites/Static.meta
+guid: 73c9f4be94cca53a0878206fb8defec9
+=======
 guid: 1520831283b8ff7459d90590056f51a9
+>>>>>>> 128c5e1ef8d5f67eecf68c31cf480a9e59ccd207:oscourge_unity/Assets/Scripts/Server.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

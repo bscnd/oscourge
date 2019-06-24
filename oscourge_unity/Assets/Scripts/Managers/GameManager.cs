@@ -70,7 +70,8 @@ public class GameManager : MonoBehaviour {
             player2.transform.position = new Vector3(camera1.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
         }
 
-        if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
+        //if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
+	if ((!isDisconnected && InputManager.Instance().GetButtonDown(ButtonName.Pause)) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && InputManager.Instance().GetButtonDown(ButtonName.Pause))) {
             if (OptionsPanel.activeSelf) {
                 OptionsPanel.SetActive(false);
                 PausePanel.SetActive(true);
