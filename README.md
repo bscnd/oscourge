@@ -1,4 +1,4 @@
-# Oscourge
+﻿# Oscourge
 
 Oscourge is a 2D platformer made with Unity. The two main characters are squashes. 
 ![Oscourge splashscreen](https://github.com/bscnd/oscourge/blob/master/oscourge_documents/SplashScreen.png)
@@ -9,25 +9,14 @@ The two squashes inadvertently stole a time machine from a very powerful charact
 ## Gameplay :
 In the first stage of each level, your goal is to run away fast enough to avoid being hit by the enemy. At this stage the screen is split in two, one for you, another for your partner. You will have to help the latter to pass some obstacles, and vice versa. After that, in the second stage, you will have to solve a puzzle that takes some gameplay elements already seen in the level. In this stage the screen is not split anymore.
 
-## Getting Started
+## Actual Features :
+* Local / Online
+* Keyboard & Xbox Controller
+* Cutscene to introduce the first level
+* Two functional levels
 
-In order to build Oscourge, you have to clone this repository with this command :
-
-git clone https://github.com/bscnd/oscourge
-
-### Prerequisites
-
-Then you need Unity version 2019.1.1f1 available here : 
-
-<https://unity3d.com/get-unity/download/archive>
-
-To launch the server, you will also need Java JDK, available here :
-
-<https://www.oracle.com/technetwork/java/javase/downloads/index.html>
-
-### Open the project in Unity
-
-You need to open oscourge_unity from Unity Hub in order to edit the levels.
+## Future Features :
+* Many levels over several eras
 
 ## Used technologies :
 
@@ -43,7 +32,7 @@ Audacity <https://www.audacityteam.org/>
 * **Léo Cauvin**
 * **Dorian Bouillet**
 * **Alexandre De Rycke**
-* **Sattler Donatien**
+* **Donatien Sattler**
 
 ## License
 
