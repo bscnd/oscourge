@@ -60,11 +60,13 @@ public class Lever : Trigger
 	}
 
 	void Update(){
-		if(playerIsNear[0] && Input.GetButtonDown("ContextualAction")){
+		//if(playerIsNear[0] && Input.GetButtonDown("ContextualAction")){
+		if(playerIsNear[0] && InputManager.Instance().GetButtonDown(ButtonName.Action)){
 			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
 		}
 
-		if(playerIsNear[1] && Input.GetButtonDown("ContextualAction2")){
+		//if(playerIsNear[1] && Input.GetButtonDown("ContextualAction2")){
+		if(playerIsNear[1] && InputManager.Instance().GetButtonDown(ButtonName.Action2)){
 
 			myAnim.SetBool(hashIsTriggered, !myAnim.GetBool(hashIsTriggered));
 		}

@@ -65,6 +65,15 @@ public class InputManager
 		return Input.GetKeyDown(buttonKeys[buttonName]);
 	}
 
+	public bool GetButton(ButtonName buttonName){
+		if(buttonKeys.ContainsKey(buttonName) == false){
+			Debug.LogError("InputManager::GetButtonDown -- no button named : " + buttonName);
+			return false;
+		}
+
+		return Input.GetKey(buttonKeys[buttonName]);
+	}
+
 	public float GetAxisRaw(AxisName axisName){
 		float horizontal = 0;
 
@@ -72,18 +81,18 @@ public class InputManager
 			Debug.LogError("InputManager::GetAxisRaw -- no axis named : " + axisName);
 		}
 		else if(axisName == AxisName.Horizontal){
-			if(this.GetButtonDown(ButtonName.Left)){
+			if(this.GetButton(ButtonName.Left)){
 				horizontal -= 1F;
 			}
-			if(this.GetButtonDown(ButtonName.Right)){
+			if(this.GetButton(ButtonName.Right)){
 				horizontal += 1F;
 			}
 		}
 		else if(axisName == AxisName.Horizontal2){
-			if(this.GetButtonDown(ButtonName.Left2)){
+			if(this.GetButton(ButtonName.Left2)){
 				horizontal -= 1F;
 			}
-			if(this.GetButtonDown(ButtonName.Right2)){
+			if(this.GetButton(ButtonName.Right2)){
 				horizontal += 1F;
 			}
 		}
