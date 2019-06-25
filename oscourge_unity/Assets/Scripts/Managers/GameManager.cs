@@ -69,12 +69,12 @@ public class GameManager : MonoBehaviour {
 
 
 
-        if (player1.transform.position.x > camera1.transform.position.x + 18) {
-            player1.transform.position = new Vector3(camera1.transform.position.x + 18, player1.transform.position.y, player1.transform.position.z);
+        if (player1.transform.position.x > camera1.transform.position.x + 20) {
+            player1.transform.position = new Vector3(camera1.transform.position.x + 20, player1.transform.position.y, player1.transform.position.z);
         }
 
-        if (player2.transform.position.x > camera1.transform.position.x + 18) {
-            player2.transform.position = new Vector3(camera1.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
+        if (player2.transform.position.x > camera1.transform.position.x + 20) {
+            player2.transform.position = new Vector3(camera1.transform.position.x + 20, player2.transform.position.y, player2.transform.position.z);
         }
 
         //if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
