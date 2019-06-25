@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public Vector3 spawnLocation;
     private bool wasGrounded;
-    private bool jump;
+    public bool jump;
     private Rigidbody2D myRigidbody;
 
     public bool isTallSquash;
@@ -156,6 +156,7 @@ public class PlayerController : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         GameObject d = Instantiate(death, this.transform.position, Quaternion.identity);
         d.transform.parent = this.transform;
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-50f, 50f), Random.Range(-50f, 50f)), ForceMode2D.Impulse);
 
     }
 

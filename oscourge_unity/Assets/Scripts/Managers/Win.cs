@@ -32,6 +32,8 @@ public class Win : MonoBehaviour
     {
         yield return new WaitForSeconds(scrollingOffset);
         parentScript.setScrolling(false);
+        parentScript.boy1.GetComponent<bigBoy>().Kill();
+
     }
 
 }

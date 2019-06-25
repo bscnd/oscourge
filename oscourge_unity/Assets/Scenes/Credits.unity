@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 450877235}
   - component: {fileID: 450877234}
   m_Layer: 0
-  m_Name: credits
+  m_Name: creditsMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,8 @@ AudioSource:
   m_GameObject: {fileID: 450877233}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3561720818320430333, guid: 3f32e2085e58d754282545e6d75f5014,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 80ef90769ea042c429c39827bc230f52, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -455,12 +456,17 @@ PrefabInstance:
     - target: {fileID: 1032234847009280313, guid: 29129ae2a68734647b31038af0dde5ca,
         type: 3}
       propertyPath: timeBeforeMenu
-      value: 15
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2096167196789191902, guid: 29129ae2a68734647b31038af0dde5ca,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486686468774851782, guid: 29129ae2a68734647b31038af0dde5ca,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29129ae2a68734647b31038af0dde5ca, type: 3}

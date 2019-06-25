@@ -551,6 +551,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 372.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1428074346725511077, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4bd5d0f7d74998648b744430338d3545, type: 3}
+    - target: {fileID: 1428074346725511077, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428074346725511077, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428129458884929372, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ad7b1ddf74c5a94386370806d60f6bf, type: 3}
     - target: {fileID: 416375247, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -599,21 +619,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.0603776
       objectReference: {fileID: 0}
-    - target: {fileID: 1428074346725511077, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4743aeeddfe9d7b4192484d995799070, type: 3}
-    - target: {fileID: 1428074346725511077, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.427
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428129458884929372, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7ad7b1ddf74c5a94386370806d60f6bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
 --- !u!114 &682410496 stripped
@@ -755,16 +760,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1839450796}
-    - target: {fileID: 3978912917580305190, guid: 03f12d8852ce21b4ebc9b9be0ce0b053,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.12
-      objectReference: {fileID: 0}
     - target: {fileID: 7378127909515379907, guid: 03f12d8852ce21b4ebc9b9be0ce0b053,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1839450796}
+    - target: {fileID: 3978912917580305190, guid: 03f12d8852ce21b4ebc9b9be0ce0b053,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f12d8852ce21b4ebc9b9be0ce0b053, type: 3}
 --- !u!1 &886150243 stripped
@@ -1721,6 +1726,21 @@ PrefabInstance:
       propertyPath: namee
       value: Master
       objectReference: {fileID: 0}
+    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 613649826}
+    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Replay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696592512542369752, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2095257019895857707, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1735,16 +1755,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6.800537
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 613649826}
-    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Replay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}

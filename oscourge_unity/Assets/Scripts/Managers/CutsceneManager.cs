@@ -55,7 +55,6 @@ private  bool hasEnded=false;
             if (!hasEnded)
             {
                 hasEnded = true;
-                Debug.Log("Cutscene end");
                 foreach (Behaviour childCompnent in player1.GetComponentsInChildren<Behaviour>())
                     childCompnent.enabled = false;
 
