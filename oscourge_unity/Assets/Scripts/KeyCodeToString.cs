@@ -340,10 +340,10 @@ public class KeyCodeToString
 		stringKeys.Add(KeyCode.Underscore, "_");
 		stringKeys.Add(KeyCode.UpArrow, "Up arrow");
 		stringKeys.Add(KeyCode.V, "V");
-		stringKeys.Add(KeyCode.W, "W");
+		stringKeys.Add(KeyCode.W, "Z");
 		stringKeys.Add(KeyCode.X, "X");
 		stringKeys.Add(KeyCode.Y, "Y");
-		stringKeys.Add(KeyCode.Z, "Z");
+		stringKeys.Add(KeyCode.Z, "W");
 	}
 
 	public string Convert(KeyCode code){
