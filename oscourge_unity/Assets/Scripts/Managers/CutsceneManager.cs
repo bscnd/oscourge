@@ -22,22 +22,28 @@ public class CutsceneManager : MonoBehaviour
         newPlayer2.GetComponent<SpriteRenderer>().enabled = false;
 
 
-    }
-    private  bool hasEnded=false;
+        StartCoroutine(Scroll());
+    
+}
 
-    private bool scrollEnabled = false;
+
+
+IEnumerator Scroll()
+{
+    yield return new WaitForSeconds(timeBeforeScroll);
+   gameManager.GetComponent<GameManager>().setScrolling(true);
+
+    }
+
+
+
+private  bool hasEnded=false;
+
 
     void Update()
     {
 
-        timeBeforeScroll -= Time.deltaTime;
-        if (!scrollEnabled && timeBeforeScroll < 0)
-        {
-            gameManager.GetComponent<GameManager>().setScrolling(true);
-        }
-
-
-
+  
         if (GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
          
