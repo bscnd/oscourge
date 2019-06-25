@@ -15,6 +15,7 @@ public class credits : MonoBehaviour
 
     public GameObject loadingScene;
     public GameObject creditsPanel;
+
     void Update()
     {
 
