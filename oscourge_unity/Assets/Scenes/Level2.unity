@@ -483,6 +483,11 @@ PrefabInstance:
       propertyPath: scrollMountains2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8522149274857746085, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: ControlsPanel
+      value: 
+      objectReference: {fileID: 1343175673}
     - target: {fileID: 8522149274857746086, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -918,6 +923,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7378127909478828091, guid: 03f12d8852ce21b4ebc9b9be0ce0b053,
     type: 3}
   m_PrefabInstance: {fileID: 884023194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1343175673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5224646963615437431, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1950849333}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1376252963 stripped
 Transform:
@@ -1709,6 +1720,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6.800537
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 613649826}
+    - target: {fileID: 5749192038787088307, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Replay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}

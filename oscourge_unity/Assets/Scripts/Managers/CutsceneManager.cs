@@ -9,6 +9,9 @@ public class CutsceneManager : MonoBehaviour
     public GameObject newPlayer1, newPlayer2;
     public GameObject gameManager;
     public float timeBeforeScroll;
+
+
+
     void Start()
     {
         foreach (Behaviour childCompnent in newPlayer1.GetComponentsInChildren<Behaviour>())
@@ -23,8 +26,9 @@ public class CutsceneManager : MonoBehaviour
 
 
         StartCoroutine(Scroll());
-    
-}
+
+
+    }
 
 
 
@@ -39,11 +43,12 @@ IEnumerator Scroll()
 
 private  bool hasEnded=false;
 
-
     void Update()
     {
 
-  
+
+
+
         if (GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
          

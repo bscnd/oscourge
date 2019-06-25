@@ -6,10 +6,25 @@ using UnityEngine.SceneManagement;
 public class Splash : MonoBehaviour
 {
 
-	float timer = 3.5f;
+    public AudioSource sound;
 
-	void Update()
+	float timer = 3.5f;
+    void Start()
+    {
+        int width = 1280;
+        int height = 720;
+        bool isFullScreen = false; 
+        int desiredFPS = 60; 
+
+        Screen.SetResolution(width, height, isFullScreen, desiredFPS);
+
+        sound.PlayDelayed(0.5f);
+    }
+    void Update()
 	{
+
+
+
 		timer -= Time.deltaTime;
 
 		if(timer <= 0)

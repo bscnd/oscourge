@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour {
     public GameObject PausePanel;
     public GameObject OptionsPanel; 
     public GameObject DisconnectedPanel;
+    public GameObject ControlsPanel;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
     private bool isDisconnected = false;
 
     // used to force the camera to stay still after respawn
@@ -49,6 +50,9 @@ public class GameManager : MonoBehaviour {
         SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
         SFX.gameObject.GetComponent<SFX>().Music();
         intro = true;
+
+
+
     }
 
     void Update() {
@@ -75,10 +79,18 @@ public class GameManager : MonoBehaviour {
 
         //if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
 	if ((!isDisconnected && InputManager.Instance().GetButtonDown(ButtonName.Pause)) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && InputManager.Instance().GetButtonDown(ButtonName.Pause))) {
-            if (OptionsPanel.activeSelf) {
+            if (OptionsPanel.activeSelf)
+            {
                 OptionsPanel.SetActive(false);
                 PausePanel.SetActive(true);
-            } else
+            }
+            else if (ControlsPanel.activeSelf)
+            {
+                ControlsPanel.SetActive(false);
+                OptionsPanel.SetActive(true);
+            }
+
+            else if(!intro)
                 PauseToggle();
         }
 
@@ -150,8 +162,8 @@ public class GameManager : MonoBehaviour {
 
         gameIsWon = true;
         camera1.GetComponent<CameraController>().Stop();
-        player1.GetComponent<PlayerController>().Kill();
-        player2.GetComponent<PlayerController>().Kill();
+        player1.GetComponent<PlayerController>().Win();
+        player2.GetComponent<PlayerController>().Win();
         boy1.GetComponent<bigBoy>().Kill();
         yield return new WaitForSeconds(0.3f);
         winPanel.SetActive(true);
@@ -264,8 +276,9 @@ public class GameManager : MonoBehaviour {
             PausePanel.SetActive(false);
         if (OptionsPanel != null)
             OptionsPanel.SetActive(false);
+        if (ControlsPanel != null)
+            ControlsPanel.SetActive(false);
         else Debug.LogError("PausePanel is null");
-        if (playerMoved)
             setScrolling(true);
     }
 
