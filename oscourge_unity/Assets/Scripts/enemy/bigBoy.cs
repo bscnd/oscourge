@@ -18,6 +18,8 @@ public class bigBoy : MonoBehaviour
 
     public GameObject destroy;
 
+    public GameObject SFX;
+
 
     private GameObject destroyContainer;
 
@@ -71,27 +73,40 @@ public class bigBoy : MonoBehaviour
 
 
                     tilemap.SetTile(pos, null);
+                    SFX.gameObject.GetComponent<SFX>().destructionSound();
                 }
 
 
 
-			}
-		}
+            }
+        }
 
 	}
 
 	void Update(){
 		bool scroll=cam.GetComponent<CameraController>().scroll;
 		float speed=cam.GetComponent<CameraController>().speed;
+        bool intro = gameManager.GetComponent<GameManager>().intro;
 
-		if(scroll&& !isDead){
+
+        if( intro || (scroll && !isDead))
+        {
+            SFX.gameObject.GetComponent<SFX>().KnightRunSound();
+
+        }
+
+        if (scroll&& !isDead){
 			anim.SetBool("Run",true);
 
+
 			transform.position=transform.position+new Vector3(speed/100,0,0);
-		}
+
+        }
 
 
-		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
+
+
+        tilemap =gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
 		pos2=transform.position;
 
 
@@ -106,6 +121,7 @@ public class bigBoy : MonoBehaviour
                 GameObject g = Instantiate(destroy, pos, Quaternion.identity);
                 g.transform.parent = destroyContainer.transform;
                 tilemap.SetTile(pos, null);
+                SFX.gameObject.GetComponent<SFX>().destructionSound();
             }
         }
 
@@ -116,8 +132,9 @@ public class bigBoy : MonoBehaviour
 	public void Kill(){
 		anim.SetBool("Run",false);
 		isDead=true;
+        SFX.gameObject.GetComponent<SFX>().KnightRunStop();
 
-	}
+    }
 
 	public void Respawn(){
 		isDead=false;
@@ -134,7 +151,8 @@ public class bigBoy : MonoBehaviour
 				pos.z= 0;
 
 				tilemap.SetTile(pos, null);
-			}
+                SFX.gameObject.GetComponent<SFX>().destructionSound();
+            }
 		}
 
 	}

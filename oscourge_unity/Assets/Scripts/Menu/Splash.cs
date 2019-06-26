@@ -13,7 +13,7 @@ public class Splash : MonoBehaviour
     {
         int width = 1280;
         int height = 720;
-        bool isFullScreen = false; 
+        bool isFullScreen = true; 
         int desiredFPS = 60; 
 
         Screen.SetResolution(width, height, isFullScreen, desiredFPS);

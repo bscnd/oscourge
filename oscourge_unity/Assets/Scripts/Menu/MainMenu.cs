@@ -159,4 +159,10 @@ public class MainMenu : MonoBehaviour {
         }
 
     }
+
+
+    public void SwitchFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }

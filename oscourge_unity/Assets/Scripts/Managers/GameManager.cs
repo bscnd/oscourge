@@ -307,8 +307,5 @@ public class GameManager : MonoBehaviour {
         scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
 
-    public void SwitchFullscreen()
-    {
-        Screen.fullScreen = !Screen.fullScreen;
-    }
+   
 }
