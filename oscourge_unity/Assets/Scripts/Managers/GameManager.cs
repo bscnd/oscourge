@@ -306,4 +306,9 @@ public class GameManager : MonoBehaviour {
         boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position+ boyOffset;
         scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
+
+    public void SwitchFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
