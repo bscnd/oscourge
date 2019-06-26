@@ -4,13 +4,36 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-	public void OnTriggerEnter2D(Collider2D col){
 
-		if(col.gameObject.CompareTag("Player")){
-			GameManager parentScript = transform.parent.GetComponent<GameManager>();
-			parentScript.Win();
-		}
+    public float scrollingOffset = 0;
+    GameManager parentScript;
 
-	}
+    private void Start()
+    {
+         parentScript = transform.parent.GetComponent<GameManager>();
+    }
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+           
+            parentScript.Win();
+        }
+
+        if (col.gameObject.CompareTag("MainCamera"))
+        {
+            StartCoroutine(End());
+        }
+    }
+
+    IEnumerator End()
+    {
+        yield return new WaitForSeconds(scrollingOffset);
+        parentScript.setScrolling(false);
+        parentScript.boy1.GetComponent<bigBoy>().Kill();
+
+    }
 
 }

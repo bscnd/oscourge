@@ -21,7 +21,10 @@ public class MovingPlatform : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision){
 		if(collision.gameObject.CompareTag("Player")){
 			collision.collider.transform.SetParent(this.transform);
-		}
+            PlayerController p = collision.gameObject.GetComponent<PlayerController>();
+             p.isGrounded = true;
+             p.jump = false;
+        }
 	}
 
 	void OnCollisionExit2D(Collision2D collision){
