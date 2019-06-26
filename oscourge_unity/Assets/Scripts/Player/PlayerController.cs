@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public Vector3 spawnLocation;
     private bool wasGrounded;
-    private bool jump;
+    public bool jump;
     private Rigidbody2D myRigidbody;
 
     public bool isTallSquash;
@@ -108,14 +108,19 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
             transform.localScale = new Vector3(4f, 4f, 1f);
             animator.SetFloat("Speed", moveSpeed);
-            SFX.gameObject.GetComponent<SFX>().RunSound();
+	    if(!jump){
+            	SFX.gameObject.GetComponent<SFX>().RunSound();
+	    }
         }
         else if (horizontal < 0f)
         {
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
             transform.localScale = new Vector3(-4f, 4f, 1f);
             animator.SetFloat("Speed", moveSpeed);
-            SFX.gameObject.GetComponent<SFX>().RunSound();
+
+	    if(!jump){
+            	SFX.gameObject.GetComponent<SFX>().RunSound();
+	    }
         }
         else
         {
@@ -156,6 +161,7 @@ public class PlayerController : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         GameObject d = Instantiate(death, this.transform.position, Quaternion.identity);
         d.transform.parent = this.transform;
+        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-50f, 50f), Random.Range(-50f, 50f)), ForceMode2D.Impulse);
 
     }
 

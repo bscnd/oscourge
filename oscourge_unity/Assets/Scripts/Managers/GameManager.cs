@@ -69,12 +69,12 @@ public class GameManager : MonoBehaviour {
 
 
 
-        if (player1.transform.position.x > camera1.transform.position.x + 18) {
-            player1.transform.position = new Vector3(camera1.transform.position.x + 18, player1.transform.position.y, player1.transform.position.z);
+        if (player1.transform.position.x > camera1.transform.position.x + 20) {
+            player1.transform.position = new Vector3(camera1.transform.position.x + 20, player1.transform.position.y, player1.transform.position.z);
         }
 
-        if (player2.transform.position.x > camera1.transform.position.x + 18) {
-            player2.transform.position = new Vector3(camera1.transform.position.x + 18, player2.transform.position.y, player2.transform.position.z);
+        if (player2.transform.position.x > camera1.transform.position.x + 20) {
+            player2.transform.position = new Vector3(camera1.transform.position.x + 20, player2.transform.position.y, player2.transform.position.z);
         }
 
         //if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
@@ -298,12 +298,14 @@ public class GameManager : MonoBehaviour {
 
 
 
-    public void SetStart()
+    public void SetCheckpoint(Vector3 p1Offset,Vector3 p2Offset,Vector3 camOffset, Vector3 boyOffset, Vector3 mountainsOffset)
     {
-        player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position;
-        player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position;
-        camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position;
-        boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position;
-        scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position;
+        player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position+p1Offset;
+        player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position+p2Offset;
+        camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position+camOffset;
+        boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position+ boyOffset;
+        scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
+
+   
 }

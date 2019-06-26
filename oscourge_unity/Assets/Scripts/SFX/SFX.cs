@@ -13,10 +13,36 @@ public class SFX : MonoBehaviour
 	public AudioSource button;
 	public AudioSource music;
 	public AudioSource menuMusic;
+    public AudioSource knightRun;
+    public AudioSource destruction;
 
 
 
-	public void JumpSound1(){
+    public void destructionSound()
+    {
+        if (!destruction.isPlaying)
+        {
+            destruction.Play();
+        }
+    }
+
+    public void KnightRunSound()
+    {
+
+        if (!knightRun.isPlaying)
+        {
+            knightRun.Play();
+        }
+    }
+
+    public void KnightRunStop()
+    {
+
+            knightRun.Stop();
+        
+    }
+
+    public void JumpSound1(){
 		jump1.Play();
 	}
 
