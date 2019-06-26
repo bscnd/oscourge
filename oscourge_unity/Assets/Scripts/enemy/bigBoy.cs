@@ -49,8 +49,10 @@ public class bigBoy : MonoBehaviour
 		pos2=transform.position;
 
 
-        destroyContainer = new GameObject();
-        destroyContainer.name = "destroyContainer";
+        destroyContainer = new GameObject
+        {
+            name = "destroyContainer"
+        };
 
 
 

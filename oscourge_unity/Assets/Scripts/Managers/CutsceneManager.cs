@@ -83,7 +83,8 @@ private  bool hasEnded=false;
                 newPlayer1.transform.position = player1.transform.position;
                 newPlayer2.transform.position = player2.transform.position;
 
-                gameManager.GetComponent<GameManager>().SetStart();
+                Vector3 p = new Vector3(0, 0, 0);
+                gameManager.GetComponent<GameManager>().SetCheckpoint(p,p,p,p,p);
                 gameManager.GetComponent<GameManager>().intro = false; 
 
 

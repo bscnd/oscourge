@@ -298,12 +298,12 @@ public class GameManager : MonoBehaviour {
 
 
 
-    public void SetStart()
+    public void SetCheckpoint(Vector3 p1Offset,Vector3 p2Offset,Vector3 camOffset, Vector3 boyOffset, Vector3 mountainsOffset)
     {
-        player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position;
-        player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position;
-        camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position;
-        boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position;
-        scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position;
+        player1.GetComponent<PlayerController>().spawnLocation = player1.transform.position+p1Offset;
+        player2.GetComponent<PlayerController>().spawnLocation = player2.transform.position+p2Offset;
+        camera1.GetComponent<CameraController>().spawnLocation = camera1.transform.position+camOffset;
+        boy1.GetComponent<bigBoy>().spawnPos = boy1.transform.position+ boyOffset;
+        scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
 }
