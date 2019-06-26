@@ -18,10 +18,11 @@ public class Parallax : MonoBehaviour
 	private Transform[] layers;
 	private int leftIndex;
 	private int rightIndex;
-	Vector3 aa1,aa2,aa3,startPos;
+    Vector3 aa1, aa2, aa3;
+    public Vector3 startPos;
 
 
-	private void Start(){
+	 void Start(){
 
 		startPos = transform.position;
 

@@ -29,7 +29,7 @@ public class InputManager
 		// TODO : Change inputs in project settings
 		buttonKeys[ButtonName.Left   ] = KeyCode.Q;
 		buttonKeys[ButtonName.Right  ] = KeyCode.D;
-		buttonKeys[ButtonName.Jump   ] = KeyCode.W;
+		buttonKeys[ButtonName.Jump   ] = KeyCode.Space;
 		buttonKeys[ButtonName.Action ] = KeyCode.E;
 		buttonKeys[ButtonName.Left2  ] = KeyCode.LeftArrow;
 		buttonKeys[ButtonName.Right2 ] = KeyCode.RightArrow;

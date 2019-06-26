@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     public GameObject SFX;
     public bool localMode;
     public GameObject death;
-    private bool isGrounded;
-    private Vector3 spawnLocation;
+    public bool isGrounded;
+    public Vector3 spawnLocation;
     private bool wasGrounded;
     private bool jump;
     private Rigidbody2D myRigidbody;
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         spawnLocation = transform.position;
         isGrounded = true;
         isDead = false;
-        intro = true;
+        intro = false;
 
     }
 
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
 		horizontal = InputManager.Instance().GetAxisRaw(AxisName.Horizontal);
 		//jumpPressed = Input.GetButtonDown("Jump");
 		jumpPressed = InputManager.Instance().GetButtonDown(ButtonName.Jump);
+
+
 
             InputValues inputs = new InputValues(horizontal, jumpPressed);
             Vector3 pos = transform.position;
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
         if (jumpPressed && isGrounded && !jump)
         {
             SFX.gameObject.GetComponent<SFX>().RunStop();
-            if (gameObject.name == "Player1")
+            if (gameObject.name == "newPlayer1")
             {
                 SFX.gameObject.GetComponent<SFX>().JumpSound2();
             }
@@ -154,6 +156,14 @@ public class PlayerController : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         GameObject d = Instantiate(death, this.transform.position, Quaternion.identity);
         d.transform.parent = this.transform;
+
+    }
+
+
+    public void Win()
+    {
+        isDead = true;
+        animator.SetBool("isDead", true);
 
     }
 

@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
 public float speed;
 public bool scroll;
 
-	private Vector3 spawnLocation;
+	public Vector3 spawnLocation;
 
 	void Start(){
 		scroll=false;
@@ -24,7 +24,7 @@ public bool scroll;
 
 
 	public void Stop(){
-scroll=false;
+        scroll=false;
 
 	}
 
