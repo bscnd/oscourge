@@ -108,14 +108,19 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
             transform.localScale = new Vector3(4f, 4f, 1f);
             animator.SetFloat("Speed", moveSpeed);
-            SFX.gameObject.GetComponent<SFX>().RunSound();
+	    if(!jump){
+            	SFX.gameObject.GetComponent<SFX>().RunSound();
+	    }
         }
         else if (horizontal < 0f)
         {
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
             transform.localScale = new Vector3(-4f, 4f, 1f);
             animator.SetFloat("Speed", moveSpeed);
-            SFX.gameObject.GetComponent<SFX>().RunSound();
+
+	    if(!jump){
+            	SFX.gameObject.GetComponent<SFX>().RunSound();
+	    }
         }
         else
         {
