@@ -3,13 +3,19 @@ importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 - Assets/ColdRessources/Sprites/castle_spritesheet.tpsheet
+- Assets/ColdRessources/Sprites/Character/Player1/squash_large_s.tpsheet
+- Assets/ColdRessources/Sprites/Character/Player2/squash_tall_s.tpsheet
 - Assets/ColdRessources/Sprites/Character/tall_squash.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/ColdRessources/Sprites/castle_spritesheet.png
+- Assets/ColdRessources/Sprites/Character/Player1/squash_large_s.png
+- Assets/ColdRessources/Sprites/Character/Player2/squash_tall_s.png
 - Assets/ColdRessources/Sprites/Character/tall_squash.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 - 
 - 
 enableDebugOutput: 0
