@@ -563,9 +563,9 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1 &115769846 stripped
 GameObject:
@@ -1842,6 +1842,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115769846, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749192037697225646, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -9281,7 +9286,7 @@ PrefabInstance:
     - target: {fileID: 316405369441531250, guid: 97cfd35360097a448a79ddb00b6bc197,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.45
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 316405369441531250, guid: 97cfd35360097a448a79ddb00b6bc197,
         type: 3}
@@ -9386,7 +9391,7 @@ PrefabInstance:
     - target: {fileID: 8483763799604750966, guid: 97cfd35360097a448a79ddb00b6bc197,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.45
+      value: 10.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cfd35360097a448a79ddb00b6bc197, type: 3}
