@@ -103,6 +103,26 @@ public class PlayerController : MonoBehaviour
 
     private void Move(float horizontal, bool jumpPressed)
     {
+
+
+
+
+        if (jumpPressed && isGrounded && !jump)
+        {
+            SFX.gameObject.GetComponent<SFX>().RunStop();
+            if (gameObject.name == "newPlayer1")
+            {
+                SFX.gameObject.GetComponent<SFX>().JumpSound2();
+            }
+            else
+            {
+                SFX.gameObject.GetComponent<SFX>().JumpSound1();
+            }
+            jump = true;
+            animator.SetBool("isJumping", true);
+            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
+        }
+
         if (horizontal > 0f)
         {
             myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
@@ -128,21 +148,8 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Speed", 0f);
             SFX.gameObject.GetComponent<SFX>().RunStop();
         }
-        if (jumpPressed && isGrounded && !jump)
-        {
-            SFX.gameObject.GetComponent<SFX>().RunStop();
-            if (gameObject.name == "newPlayer1")
-            {
-                SFX.gameObject.GetComponent<SFX>().JumpSound2();
-            }
-            else
-            {
-                SFX.gameObject.GetComponent<SFX>().JumpSound1();
-            }
-            jump = true;
-            animator.SetBool("isJumping", true);
-            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
-        }
+
+     
     }
 
 

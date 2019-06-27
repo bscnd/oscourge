@@ -44,7 +44,7 @@ public class Parallax : MonoBehaviour
 		
 	}
 
-	private void Update(){
+	private void FixedUpdate(){
 
 
 		bool scroll2=cameraTransform.gameObject.GetComponent<CameraController>().scroll;
