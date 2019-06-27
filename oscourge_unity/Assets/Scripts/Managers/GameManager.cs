@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
         isPaused = false;
 
 
+        Cursor.visible = false;
 
     }
 
@@ -76,12 +77,22 @@ public class GameManager : MonoBehaviour {
             player1.transform.position = new Vector3(camera1.transform.position.x + 20, player1.transform.position.y, player1.transform.position.z);
         }
 
+        if (player1.transform.position.x < camera1.transform.position.x - 20)
+        {
+            player1.transform.position = new Vector3(camera1.transform.position.x - 20, player1.transform.position.y, player1.transform.position.z);
+        }
+
         if (player2.transform.position.x > camera1.transform.position.x + 20) {
             player2.transform.position = new Vector3(camera1.transform.position.x + 20, player2.transform.position.y, player2.transform.position.z);
         }
 
+        if (player2.transform.position.x < camera1.transform.position.x - 20)
+        {
+            player2.transform.position = new Vector3(camera1.transform.position.x - 20, player2.transform.position.y, player2.transform.position.z);
+        }
+
         //if ((!isDisconnected && Input.GetKeyDown("escape")) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && Input.GetKeyDown("escape"))) {
-	if ((!isDisconnected && InputManager.Instance().GetButtonDown(ButtonName.Pause)) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && InputManager.Instance().GetButtonDown(ButtonName.Pause))) {
+        if ((!isDisconnected && InputManager.Instance().GetButtonDown(ButtonName.Pause)) || (ClientUDP.Instance.gameState == ClientUDP.OFFLINE && InputManager.Instance().GetButtonDown(ButtonName.Pause))) {
             if (OptionsPanel.activeSelf)
             {
                 OptionsPanel.SetActive(false);
