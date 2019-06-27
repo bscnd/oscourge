@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28df80a80ef212b4db183343d58c5409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollingOffset: 0
 --- !u!1 &8522149274857746084
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8522149274857746086}
   - component: {fileID: 8522149274857746085}
+  - component: {fileID: 4460965841307719040}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -118,9 +120,7 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   camera1: {fileID: 0}
-  camera2: {fileID: 0}
   scrollMountains1: {fileID: 0}
-  scrollMountains2: {fileID: 0}
   fade: {fileID: 0}
   gridPrefab: {fileID: 8659957250868496174, guid: 84aa3cd41fbb2ea40a733cb05329a282,
     type: 3}
@@ -130,11 +130,24 @@ MonoBehaviour:
   loadingScene: {fileID: 0}
   PausePanel: {fileID: 0}
   OptionsPanel: {fileID: 0}
-  BlackBar: {fileID: 0}
   DisconnectedPanel: {fileID: 0}
+  ControlsPanel: {fileID: 0}
+  isPaused: 0
   boy1: {fileID: 0}
-  boy2: {fileID: 0}
   renderers: []
+  intro: 0
+--- !u!114 &4460965841307719040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522149274857746084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b63da301693521c8a882f4f0ea7d2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8428129458690295896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,12 +215,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963704835304560, guid: e302dc6321d2ea64da461aa6ac75c37c,
+    - target: {fileID: 7432963705705764592, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963704844183330, guid: e302dc6321d2ea64da461aa6ac75c37c,
+    - target: {fileID: 7432963706202727565, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432963704835304560, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -222,22 +240,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963706202727565, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432963705705764592, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1323728736797782401, guid: e302dc6321d2ea64da461aa6ac75c37c,
+    - target: {fileID: 7432963704844183330, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 535490307, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323728736797782401, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
