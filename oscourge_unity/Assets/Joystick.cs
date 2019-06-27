@@ -26,7 +26,7 @@ public class Joystick : MonoBehaviour{
 		}
 
 		for(int i=0 ; i<index ; i++){
-			Debug.Log("You are using the joystick number" + joysticks[index]);
+			Debug.Log("You are using the joystick number" + joysticks[i]);
 		}
 
 		if(index == 0){
