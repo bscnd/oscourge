@@ -34,7 +34,7 @@ public class InputManager
 		buttonKeys[ButtonName.Left2  ] = KeyCode.LeftArrow;
 		buttonKeys[ButtonName.Right2 ] = KeyCode.RightArrow;
 		buttonKeys[ButtonName.Jump2  ] = KeyCode.UpArrow;
-		buttonKeys[ButtonName.Action2] = KeyCode.Insert;
+		buttonKeys[ButtonName.Action2] = KeyCode.Keypad0;
 		buttonKeys[ButtonName.Pause  ] = KeyCode.Escape;
 		buttonKeys[ButtonName.None  ] = KeyCode.None;
 
@@ -62,7 +62,28 @@ public class InputManager
 			return false;
 		}
 
-		return Input.GetKeyDown(buttonKeys[buttonName]);
+		bool res = Input.GetKeyDown(buttonKeys[buttonName]);
+
+		switch(buttonName){
+			case ButtonName.Jump :
+				res = res || Input.GetButtonDown("Jump");
+				break;
+			case ButtonName.Jump2 :
+				res = res || Input.GetButtonDown("Jump2");
+				break;
+			case ButtonName.Action :
+				res = res || Input.GetButtonDown("Action");
+				break;
+			case ButtonName.Action2 :
+				res = res || Input.GetButtonDown("Action2");
+				break;
+			case ButtonName.Pause :
+				res = res || Input.GetButtonDown("Pause");
+				res = res || Input.GetButtonDown("Pause2");
+				break;
+		}
+
+		return res;
 	}
 
 	public bool GetButton(ButtonName buttonName){
@@ -71,7 +92,28 @@ public class InputManager
 			return false;
 		}
 
-		return Input.GetKey(buttonKeys[buttonName]);
+		bool res = Input.GetKey(buttonKeys[buttonName]);
+
+		switch(buttonName){
+			case ButtonName.Jump :
+				res = res || Input.GetButton("Jump");
+				break;
+			case ButtonName.Jump2 :
+				res = res || Input.GetButton("Jump2");
+				break;
+			case ButtonName.Action :
+				res = res || Input.GetButton("Action");
+				break;
+			case ButtonName.Action2 :
+				res = res || Input.GetButton("Action2");
+				break;
+			case ButtonName.Pause :
+				res = res || Input.GetButton("Pause");
+				res = res || Input.GetButton("Pause2");
+				break;
+		}
+
+		return res;
 	}
 
 	public float GetAxisRaw(AxisName axisName){
@@ -87,6 +129,8 @@ public class InputManager
 			if(this.GetButton(ButtonName.Right)){
 				horizontal += 1F;
 			}
+		
+			horizontal += Input.GetAxisRaw("Horizontal");
 		}
 		else if(axisName == AxisName.Horizontal2){
 			if(this.GetButton(ButtonName.Left2)){
@@ -95,7 +139,10 @@ public class InputManager
 			if(this.GetButton(ButtonName.Right2)){
 				horizontal += 1F;
 			}
+			
+			horizontal += Input.GetAxisRaw("Horizontal2");
 		}
+
 
 		return horizontal;
 	}
