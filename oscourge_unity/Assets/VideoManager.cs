@@ -15,6 +15,19 @@ public class VideoManager : MonoBehaviour {
             intro.SetActive(false);
             loadingScene.SetActive(true);
         }
+
+
+        if (InputManager.Instance().GetButtonDown(ButtonName.Pause))
+        {
+            Debug.Log("Event for movie end called");
+            GetComponent<VideoPlayer>().Stop();
+            currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneIsLoading = true;
+        }
+
+
+
+
     }
 
     void Awake() {

@@ -1303,9 +1303,9 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!4 &904958536 stripped
 Transform:
@@ -2994,6 +2994,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5749192037697225646, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7071608887911590667, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: namee
@@ -4298,6 +4303,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649825}
+    - target: {fileID: 460438195615671262, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
+        type: 3}
+      propertyPath: patrolRadius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 611587599211380504, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
         type: 3}
       propertyPath: gameManager
@@ -4388,6 +4398,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649825}
+    - target: {fileID: 7496001869631672862, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
+        type: 3}
+      propertyPath: patrolRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7793303371416427889, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
         type: 3}
       propertyPath: gameManager
@@ -4817,6 +4832,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258000839847610629, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496001869631672858, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 460438195615671249, guid: 4844eb0a52d07e74da75612ebb5a0c2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4844eb0a52d07e74da75612ebb5a0c2e, type: 3}
@@ -5392,6 +5422,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649825}
+    - target: {fileID: 330123169503112375, guid: 0742b7d7edd12e541aca7cf62fc9070f,
+        type: 3}
+      propertyPath: patrolRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 348968581970868522, guid: 0742b7d7edd12e541aca7cf62fc9070f,
         type: 3}
       propertyPath: gameManager
@@ -5577,6 +5612,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 613649825}
+    - target: {fileID: 7268609233611889773, guid: 0742b7d7edd12e541aca7cf62fc9070f,
+        type: 3}
+      propertyPath: patrolRadius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7403931744049528773, guid: 0742b7d7edd12e541aca7cf62fc9070f,
         type: 3}
       propertyPath: gameManager
@@ -5895,6 +5935,21 @@ PrefabInstance:
     - target: {fileID: 345052413772658613, guid: 0742b7d7edd12e541aca7cf62fc9070f,
         type: 3}
       propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419564249777572802, guid: 0742b7d7edd12e541aca7cf62fc9070f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 330123169503112371, guid: 0742b7d7edd12e541aca7cf62fc9070f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268609233611889762, guid: 0742b7d7edd12e541aca7cf62fc9070f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

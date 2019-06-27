@@ -42,11 +42,11 @@ public class littleBoy : MonoBehaviour
         {
             if (z < patrolRadius * 100)
             {
-                z = patrolRadius * 100;
+             //   z = patrolRadius * 100;
             }
             else if (z < 2 * patrolRadius * 100)
             {
-                z =0;
+               // z =0;
             }
         }
 
@@ -56,7 +56,7 @@ public class littleBoy : MonoBehaviour
 
 			float i=player.transform.position.x-transform.position.x;
 			if((i>0f&&i<detectRadius)||(i<0f && i>-detectRadius) ){
-				seen=true;
+				seen=false;
 			}
 
 
