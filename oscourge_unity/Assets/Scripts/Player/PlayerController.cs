@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private bool jumpPressed;
     private bool isDead;
+    private bool lookRight;
 
     public bool intro;
 
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         isDead = false;
         intro = false;
+        lookRight = true;
 
     }
 
@@ -135,6 +137,7 @@ public class PlayerController : MonoBehaviour
 	    if(!jump){
             	SFX.gameObject.GetComponent<SFX>().RunSound();
 	    }
+            lookRight = true;
 
         }
         else if (horizontal < 0f)
@@ -142,6 +145,7 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
             transform.localScale = new Vector3(4f, 4f, 1f);
             animator.SetFloat("Speed", -moveSpeed);
+            lookRight = false;
 
 	    if(!jump){
             	SFX.gameObject.GetComponent<SFX>().RunSound();
@@ -152,6 +156,11 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
             animator.SetFloat("Speed", 0f);
             SFX.gameObject.GetComponent<SFX>().RunStop();
+            if (!lookRight)
+            {
+
+                transform.localScale = new Vector3(-4f, 4f, 1f);
+            }
           
         }
 

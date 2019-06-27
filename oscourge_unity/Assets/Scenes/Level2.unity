@@ -1043,15 +1043,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50372323, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_Offset.y
-      value: -19.874453
+      value: -17.2
       objectReference: {fileID: 0}
     - target: {fileID: 50372323, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_Size.y
-      value: 14.539715
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 50372323, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_Offset.x
-      value: -0.03789732
+      value: -1.46
       objectReference: {fileID: 0}
     - target: {fileID: 50372323, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_Size.x
@@ -1304,7 +1304,7 @@ PrefabInstance:
     - target: {fileID: 1508705181510577674, guid: ab61a99dbba038544ba04da9b66772d6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 317.74
+      value: 319.89
       objectReference: {fileID: 0}
     - target: {fileID: 1508705181510577674, guid: ab61a99dbba038544ba04da9b66772d6,
         type: 3}
@@ -2698,10 +2698,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.945076, y: -0.25684166}
+  m_Offset: {x: 8.1, y: -0.25684166}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2712,7 +2712,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0388641, y: 12.888077}
+  m_Size: {x: 2.6540813, y: 12.888077}
   m_EdgeRadius: 0
 --- !u!114 &1889098266 stripped
 MonoBehaviour:
@@ -2958,16 +2958,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 5749192037715771465, guid: 47250280029d3dc4eaaa1aaf75b721b7,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 613649826}
-    - target: {fileID: 5749192037715771465, guid: 47250280029d3dc4eaaa1aaf75b721b7,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2095257019895857707, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2982,6 +2972,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6.800537
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749192037715771465, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 613649826}
+    - target: {fileID: 5749192037715771465, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
