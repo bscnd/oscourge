@@ -34,7 +34,9 @@ public class bigBoy : MonoBehaviour
 
 	private bool isDead;
 
-	void Start(){
+    List<Vector3> tiles = new List<Vector3>();
+
+    void Start(){
 
 		spawnPos=this.transform.position;
 
@@ -65,14 +67,15 @@ public class bigBoy : MonoBehaviour
 				pos.y= (int)pos2.y+i;
 				pos.z= 0;
 
-                if (tilemap.GetTile(pos) != null)
-                {
+
+                if (tilemap.GetTile(pos) != null && !tiles.Contains(pos)) {
 
                     GameObject g=Instantiate(destroy, pos, Quaternion.identity);
                     g.transform.parent = destroyContainer.transform;
 
 
-                    tilemap.SetTile(pos, null);
+                    //  tilemap.SetTile(pos, null);
+                    tiles.Add(pos);
                     SFX.gameObject.GetComponent<SFX>().destructionSound();
                 }
 
@@ -115,12 +118,15 @@ public class bigBoy : MonoBehaviour
 			pos.y= (int)pos2.y+i;
 			pos.z= 0;
 
-            if (tilemap.GetTile(pos) != null)
+
+
+            if (tilemap.GetTile(pos) != null && !tiles.Contains(pos))
             {
 
                 GameObject g = Instantiate(destroy, pos, Quaternion.identity);
                 g.transform.parent = destroyContainer.transform;
-                tilemap.SetTile(pos, null);
+                //   tilemap.SetTile(pos, null);
+                tiles.Add(pos);
                 SFX.gameObject.GetComponent<SFX>().destructionSound();
             }
         }
@@ -140,6 +146,7 @@ public class bigBoy : MonoBehaviour
 		isDead=false;
 		this.transform.position=spawnPos;
 	pos2=transform.position;
+        tiles.Clear();
 
 
 		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
@@ -150,8 +157,15 @@ public class bigBoy : MonoBehaviour
 				pos.y= (int)pos2.y+i;
 				pos.z= 0;
 
-				tilemap.SetTile(pos, null);
-                SFX.gameObject.GetComponent<SFX>().destructionSound();
+
+                if (tilemap.GetTile(pos) != null && !tiles.Contains(pos)) {
+
+                    GameObject g = Instantiate(destroy, pos, Quaternion.identity);
+                    g.transform.parent = destroyContainer.transform;
+                    //   tilemap.SetTile(pos, null);
+                    tiles.Add(pos);
+                    SFX.gameObject.GetComponent<SFX>().destructionSound();
+                }
             }
 		}
 
