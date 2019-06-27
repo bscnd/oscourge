@@ -13,16 +13,22 @@ public class menu : MonoBehaviour
 	private GameObject spawn;
 	int i=0;
 
-
+    float timeBeforeClear = 30;
 
 
 
 
 	void Update()
 	{
+        timeBeforeClear -= Time.deltaTime;
+        if (timeBeforeClear < 0)
+        {
+            timeBeforeClear = 30;
+            Clear();
+        }
 
 
-		var dist = (transform.position - Camera.main.transform.position).z;
+        var dist = (transform.position - Camera.main.transform.position).z;
 
 		var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
 		var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
@@ -60,6 +66,22 @@ public class menu : MonoBehaviour
 	}
 
 
+
+    public void Clear()
+    {
+        StartCoroutine(ClearRoutine());
+    }
+
+    IEnumerator ClearRoutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        borderBot.GetComponent<BoxCollider2D>().enabled = false;
+        yield return new WaitForSeconds(5f);
+        borderBot.GetComponent<BoxCollider2D>().enabled = true;
+
+
+
+    }
 
 
 
