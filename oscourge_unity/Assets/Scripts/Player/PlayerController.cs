@@ -42,8 +42,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    
     void Update()
     {
+
+
+
         wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         if (isGrounded && !wasGrounded)
@@ -131,6 +135,7 @@ public class PlayerController : MonoBehaviour
 	    if(!jump){
             	SFX.gameObject.GetComponent<SFX>().RunSound();
 	    }
+
         }
         else if (horizontal < 0f)
         {
@@ -140,13 +145,14 @@ public class PlayerController : MonoBehaviour
 
 	    if(!jump){
             	SFX.gameObject.GetComponent<SFX>().RunSound();
-	    }
+            }
         }
         else
         {
             myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
             animator.SetFloat("Speed", 0f);
             SFX.gameObject.GetComponent<SFX>().RunStop();
+          
         }
 
      
@@ -199,6 +205,7 @@ public class PlayerController : MonoBehaviour
             spawnLocation = col.transform.position + new Vector3(0.2f, 0, 0);
         }
     }
+
 
 
 
