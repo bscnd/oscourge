@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour {
                 OptionsPanel.SetActive(true);
             }
 
-            else if(!intro)
+            else if(!intro && !gameIsOver)
                 PauseToggle();
         }
 
