@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);

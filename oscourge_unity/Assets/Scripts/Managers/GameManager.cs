@@ -311,5 +311,16 @@ public class GameManager : MonoBehaviour {
         scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
 
-   
+
+
+
+    public void LoadMenu()
+    {
+        currentLoadingOperation = SceneManager.LoadSceneAsync("Menu");
+        sceneIsLoading = true;
+
+
+    }
+
+
 }

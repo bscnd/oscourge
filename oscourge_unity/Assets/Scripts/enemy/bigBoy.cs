@@ -86,7 +86,7 @@ public class bigBoy : MonoBehaviour
 
 	}
 
-	void Update(){
+	void FixedUpdate(){
 		bool scroll=cam.GetComponent<CameraController>().scroll;
 		float speed=cam.GetComponent<CameraController>().speed;
         bool intro = gameManager.GetComponent<GameManager>().intro;
@@ -94,9 +94,9 @@ public class bigBoy : MonoBehaviour
 
         if( intro || (scroll && !isDead))
         {
-            SFX.gameObject.GetComponent<SFX>().KnightRunSound();
-
+            StartCoroutine(WalkSound());
         }
+  
 
         if (scroll&& !isDead){
 			anim.SetBool("Run",true);
@@ -135,7 +135,15 @@ public class bigBoy : MonoBehaviour
 	}
 
 
-	public void Kill(){
+    IEnumerator WalkSound()
+    {
+
+        yield return new WaitForSeconds(0.5f);
+        SFX.GetComponent<SFX>().KnightRunSound();
+    }
+
+
+        public void Kill(){
 		anim.SetBool("Run",false);
 		isDead=true;
         SFX.gameObject.GetComponent<SFX>().KnightRunStop();
