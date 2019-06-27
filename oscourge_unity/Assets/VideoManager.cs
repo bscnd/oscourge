@@ -20,6 +20,8 @@ public class VideoManager : MonoBehaviour {
     void Awake() {
         m_VideoPlayer = GetComponent<VideoPlayer>();
         m_VideoPlayer.loopPointReached += OnMovieFinished; // loopPointReached is the event for the end of the video
+
+        Cursor.visible = false;
     }
 
     void OnMovieFinished(VideoPlayer player) {

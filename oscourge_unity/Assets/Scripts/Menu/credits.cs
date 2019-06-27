@@ -16,6 +16,13 @@ public class credits : MonoBehaviour
     public GameObject loadingScene;
     public GameObject creditsPanel;
 
+
+    private void Start()
+    {
+
+
+        Cursor.visible = false;
+    }
     void Update()
     {
 

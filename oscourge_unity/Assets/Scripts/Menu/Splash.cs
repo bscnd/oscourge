@@ -18,6 +18,7 @@ public class Splash : MonoBehaviour
     void Start()
 
     {
+        Cursor.visible = false;
         int width = 1280;
         int height = 720;
         bool isFullScreen = true; 

@@ -16,9 +16,13 @@ public class menu : MonoBehaviour
     float timeBeforeClear = 30;
 
 
+    private void Start()
+    {
 
+        Cursor.visible = true;
+    }
 
-	void Update()
+    void Update()
 	{
         timeBeforeClear -= Time.deltaTime;
         if (timeBeforeClear < 0)

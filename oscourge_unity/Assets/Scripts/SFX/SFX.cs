@@ -11,6 +11,7 @@ public class SFX : MonoBehaviour
 	public AudioSource hurt;
 	public AudioSource teleport;
 	public AudioSource button;
+	public AudioSource click;
 	public AudioSource music;
 	public AudioSource menuMusic;
     public AudioSource knightRun;
@@ -76,8 +77,11 @@ public class SFX : MonoBehaviour
 	public void ButtonSound(){
 		button.Play();
 	}
-
-	public void Music(){
+    public void ClickSound()
+    {
+        click.Play();
+    }
+    public void Music(){
 		music.Play();
 	}
 

@@ -313,11 +313,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -352,6 +347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -733,11 +733,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 20323728}
     m_Modifications:
-    - target: {fileID: 4018125580776288226, guid: ccb787a76d1c2a84b8d18fa3e6ef70fb,
-        type: 3}
-      propertyPath: m_Name
-      value: chandelier (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5045018634516340458, guid: ccb787a76d1c2a84b8d18fa3e6ef70fb,
         type: 3}
       propertyPath: m_RootOrder
@@ -767,6 +762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018125580776288226, guid: ccb787a76d1c2a84b8d18fa3e6ef70fb,
+        type: 3}
+      propertyPath: m_Name
+      value: chandelier (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb787a76d1c2a84b8d18fa3e6ef70fb, type: 3}
@@ -897,16 +897,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.1868668
       objectReference: {fileID: 0}
-    - target: {fileID: 5718141730881381818, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0b5dc233a59c2a249989d6eb6b181bbb, type: 2}
     - target: {fileID: 6863277410546081402, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5718141730881381818, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b5dc233a59c2a249989d6eb6b181bbb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d, type: 3}
 --- !u!4 &246596092 stripped
@@ -1223,11 +1223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1085772554}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1262,6 +1257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -1366,11 +1366,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1085772554}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1405,6 +1400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (15)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -1465,11 +1465,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1504,6 +1499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -1845,6 +1845,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5224646963615437431, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8696592512542369755, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: m_IsActive
@@ -1970,6 +1975,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5224646963615437430, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 649688481, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 552346698}
+    - target: {fileID: 2095257019895857706, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095257019895857706, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095257019895857706, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5749192037715771465, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1985,15 +2014,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 5224646963615437430, guid: 47250280029d3dc4eaaa1aaf75b721b7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 649688481, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 552346698}
     - target: {fileID: 5749192037848321349, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2013,6 +2033,715 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 534058000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089070065011133737, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1887784666, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 649688479, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 956296127, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2095257019895857708, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5663522142305938888, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323515341422043986, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2655881587336914362, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749689877889596325, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7005874300230937319, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749192037195702084, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749192038728190554, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749192037715771471, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534058016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5749192038787088305, guid: 47250280029d3dc4eaaa1aaf75b721b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 534058000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &534058017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &534058030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534058016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669773547}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &536166947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2257,11 +2986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32741159}
     m_Modifications:
-    - target: {fileID: 5923723815956667223, guid: 7c31e7f9bf7ab96488b8025179de4b28,
-        type: 3}
-      propertyPath: m_Name
-      value: stool
-      objectReference: {fileID: 0}
     - target: {fileID: 2792793592845796329, guid: 7c31e7f9bf7ab96488b8025179de4b28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2316,6 +3040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923723815956667223, guid: 7c31e7f9bf7ab96488b8025179de4b28,
+        type: 3}
+      propertyPath: m_Name
+      value: stool
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c31e7f9bf7ab96488b8025179de4b28, type: 3}
@@ -2754,12 +3483,40 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7ad7b1ddf74c5a94386370806d60f6bf, type: 3}
+    - target: {fileID: 8428129458884929372, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428074346993068579, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+        type: 3}
+      propertyPath: click
+      value: 
+      objectReference: {fileID: 1421853680}
     - target: {fileID: 50372323, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8, type: 3}
+--- !u!114 &669773547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1428074346993068579, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 669773546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d27e0cbe891d044a71ed8b6a81b401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &669773548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1428074346993068580, guid: 58bfd307a4e846b4fb2b39e79c0ff7e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 669773546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &679965453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
@@ -2965,11 +3722,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3004,6 +3756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -3212,11 +3969,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178080962}
     m_Modifications:
-    - target: {fileID: 2547221142415943924, guid: 6f177d64042801c42bbecc3713b968ec,
-        type: 3}
-      propertyPath: m_Name
-      value: fireplace
-      objectReference: {fileID: 0}
     - target: {fileID: 7227529414418108482, guid: 6f177d64042801c42bbecc3713b968ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3271,6 +4023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547221142415943924, guid: 6f177d64042801c42bbecc3713b968ec,
+        type: 3}
+      propertyPath: m_Name
+      value: fireplace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f177d64042801c42bbecc3713b968ec, type: 3}
@@ -3491,11 +4248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3530,6 +4282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -4012,11 +4769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516607638}
     m_Modifications:
-    - target: {fileID: 1675872999677963177, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
-        type: 3}
-      propertyPath: m_Name
-      value: candle
-      objectReference: {fileID: 0}
     - target: {fileID: 2365491978200650238, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4071,6 +4823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675872999677963177, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d,
+        type: 3}
+      propertyPath: m_Name
+      value: candle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3661f9c7aadba4a499c3a15d6f3c1a9d, type: 3}
@@ -4137,11 +4894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -4176,6 +4928,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -4625,11 +5382,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32741159}
     m_Modifications:
-    - target: {fileID: 5923723815956667223, guid: 7c31e7f9bf7ab96488b8025179de4b28,
-        type: 3}
-      propertyPath: m_Name
-      value: stool (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2792793592845796329, guid: 7c31e7f9bf7ab96488b8025179de4b28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4684,6 +5436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923723815956667223, guid: 7c31e7f9bf7ab96488b8025179de4b28,
+        type: 3}
+      propertyPath: m_Name
+      value: stool (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c31e7f9bf7ab96488b8025179de4b28, type: 3}
@@ -4906,11 +5663,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248398524}
     m_Modifications:
-    - target: {fileID: 6403809033501242227, guid: 31002b120bc4ed44b9aebcc01f34a601,
-        type: 3}
-      propertyPath: m_Name
-      value: spider_web_top_left
-      objectReference: {fileID: 0}
     - target: {fileID: 1279880211823023231, guid: 31002b120bc4ed44b9aebcc01f34a601,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4965,6 +5717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403809033501242227, guid: 31002b120bc4ed44b9aebcc01f34a601,
+        type: 3}
+      propertyPath: m_Name
+      value: spider_web_top_left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31002b120bc4ed44b9aebcc01f34a601, type: 3}
@@ -5104,11 +5861,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -5143,6 +5895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -6024,6 +6781,134 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd02d57fb428a48b799aa9f0d6682dde, type: 3}
+--- !u!1 &1421853678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1421853679}
+  - component: {fileID: 1421853680}
+  m_Layer: 0
+  m_Name: click
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1421853679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421853678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.499035, y: -38.334328, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 669773548}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1421853680
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421853678}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1641702906061344280, guid: 3f32e2085e58d754282545e6d75f5014,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 79fcc0a824310cb4089fa27d29743007, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1442102557
 Transform:
   m_ObjectHideFlags: 0
@@ -6863,11 +7748,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1085772554}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -6902,6 +7782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (14)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -7152,11 +8037,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -7191,6 +8071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -7407,11 +8292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32741159}
     m_Modifications:
-    - target: {fileID: 2210193941014689629, guid: 5184e19a6d17ade49bbe81208882b6db,
-        type: 3}
-      propertyPath: m_Name
-      value: glass_items_17 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6260456670277515859, guid: 5184e19a6d17ade49bbe81208882b6db,
         type: 3}
       propertyPath: m_RootOrder
@@ -7441,6 +8321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.842268
+      objectReference: {fileID: 0}
+    - target: {fileID: 2210193941014689629, guid: 5184e19a6d17ade49bbe81208882b6db,
+        type: 3}
+      propertyPath: m_Name
+      value: glass_items_17 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7220167175250124878, guid: 5184e19a6d17ade49bbe81208882b6db,
         type: 3}
@@ -7900,11 +8785,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -7939,6 +8819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -8492,11 +9377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -8531,6 +9411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -8714,11 +9599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 968452845}
     m_Modifications:
-    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
-        type: 3}
-      propertyPath: m_Name
-      value: torch_flammed (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 3039537959127315111, guid: e378dd196e0a0f947b38e8984b5f600e,
         type: 3}
       propertyPath: m_RootOrder
@@ -8753,6 +9633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413485961482951188, guid: e378dd196e0a0f947b38e8984b5f600e,
+        type: 3}
+      propertyPath: m_Name
+      value: torch_flammed (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e378dd196e0a0f947b38e8984b5f600e, type: 3}
@@ -14005,6 +14890,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ee0557fa1f6eaf1428502ee74ca4c69e, type: 2}
+    - target: {fileID: 6088758858348962780, guid: 8cf4bc3c48e041d448617bce187502b3,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6596002035016463956, guid: 8cf4bc3c48e041d448617bce187502b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cf4bc3c48e041d448617bce187502b3, type: 3}
