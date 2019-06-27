@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 6695810231638041759}
   - component: {fileID: 5172975806982984561}
   - component: {fileID: 6789599085100424827}
+  - component: {fileID: 1585917149734854878}
+  - component: {fileID: 631597212136804817}
   m_Layer: 0
   m_Name: CourgeFULL
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +229,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23258722}
+  m_Offset: {x: 0.03627777, y: 0.6774405}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -238,5 +240,37 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.1348255}
+  m_Size: {x: 0.35899353, y: 0.24511886}
   m_EdgeRadius: 0
+--- !u!58 &1585917149734854878
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637351795456827413}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.28908157, y: 0.18622291}
+  serializedVersion: 2
+  m_Radius: 0.4707756
+--- !u!58 &631597212136804817
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637351795456827413}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3370107, y: 0.1816425}
+  serializedVersion: 2
+  m_Radius: 0.43650308

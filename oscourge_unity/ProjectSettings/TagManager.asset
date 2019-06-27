@@ -9,6 +9,7 @@ TagManager:
   - Indicator
   - Checkpoint
   - end
+  - boyStopWalking
   layers:
   - Default
   - TransparentFX
