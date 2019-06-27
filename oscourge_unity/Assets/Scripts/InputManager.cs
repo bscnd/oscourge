@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 	
 public enum ButtonName { Left, Right, Jump, Action, Left2, Right2, Jump2, Action2, Pause, None };
 public enum AxisName { Horizontal, Horizontal2, None };
 
 // Singleton
 public class InputManager
+//public class InputManager
 {
 	private static SortedSet<ButtonName> axis;
 	private static InputManager instance;
