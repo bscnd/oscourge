@@ -119,6 +119,44 @@ public class PlayerController : MonoBehaviour
         {
 
 
+            if (horizontal > 0f)
+            {
+                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
+                animator.SetFloat("Speed", moveSpeed);
+                if (!jump)
+                {
+                    SFX.gameObject.GetComponent<SFX>().RunSound();
+                    transform.localScale = new Vector3(4f, 4f, 1f);
+                }
+                lookRight = true;
+
+            }
+            else if (horizontal < 0f)
+            {
+                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
+                animator.SetFloat("Speed", -moveSpeed);
+                lookRight = false;
+
+                if (!jump)
+                {
+                    SFX.gameObject.GetComponent<SFX>().RunSound();
+                    transform.localScale = new Vector3(4f, 4f, 1f);
+                }
+            }
+            else
+            {
+                myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
+                animator.SetFloat("Speed", 0f);
+                SFX.gameObject.GetComponent<SFX>().RunStop();
+                if (!lookRight)
+                {
+
+                    transform.localScale = new Vector3(-4f, 4f, 1f);
+                }
+
+            }
+
+
             if (jumpPressed && isGrounded && !jump)
             {
                 SFX.gameObject.GetComponent<SFX>().RunStop();
@@ -133,43 +171,11 @@ public class PlayerController : MonoBehaviour
                 jump = true;
                 animator.SetBool("isJumping", true);
                 myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
-            }
-
-            if (horizontal > 0f)
-            {
-                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
-                transform.localScale = new Vector3(4f, 4f, 1f);
-                animator.SetFloat("Speed", moveSpeed);
-                if (!jump)
-                {
-                    SFX.gameObject.GetComponent<SFX>().RunSound();
-                }
-                lookRight = true;
-
-            }
-            else if (horizontal < 0f)
-            {
-                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
-                transform.localScale = new Vector3(4f, 4f, 1f);
-                animator.SetFloat("Speed", -moveSpeed);
-                lookRight = false;
-
-                if (!jump)
-                {
-                    SFX.gameObject.GetComponent<SFX>().RunSound();
-                }
-            }
-            else
-            {
-                myRigidbody.velocity = new Vector3(0f, myRigidbody.velocity.y, 0f);
-                animator.SetFloat("Speed", 0f);
-                SFX.gameObject.GetComponent<SFX>().RunStop();
                 if (!lookRight)
                 {
 
                     transform.localScale = new Vector3(-4f, 4f, 1f);
                 }
-
             }
         }
      

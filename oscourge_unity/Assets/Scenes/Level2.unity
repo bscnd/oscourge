@@ -2796,11 +2796,6 @@ PrefabInstance:
       propertyPath: boy
       value: 
       objectReference: {fileID: 1561691263}
-    - target: {fileID: 2146544870007249588, guid: 97cfd35360097a448a79ddb00b6bc197,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cfd35360097a448a79ddb00b6bc197, type: 3}
 --- !u!4 &1790147331 stripped
@@ -2995,6 +2990,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 115769846, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7071608887911590667, guid: 47250280029d3dc4eaaa1aaf75b721b7,
         type: 3}
       propertyPath: namee
@@ -3134,6 +3133,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 649688481, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 613649826}
+    - target: {fileID: 649688481, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: nextLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
