@@ -8,6 +8,7 @@ public class CutsceneManager : MonoBehaviour
     public GameObject player1,player2;
     public GameObject newPlayer1, newPlayer2;
     public GameObject gameManager;
+    public GameObject cinematicBars;
     public float timeBeforeScroll;
 
 
@@ -85,7 +86,10 @@ private  bool hasEnded=false;
 
                 Vector3 p = new Vector3(0, 0, 0);
                 gameManager.GetComponent<GameManager>().SetCheckpoint(p,p,p,p,p);
-                gameManager.GetComponent<GameManager>().intro = false; 
+                gameManager.GetComponent<GameManager>().intro = false;
+
+                if(cinematicBars!=null)
+                    cinematicBars.SetActive(false);
 
 
 
