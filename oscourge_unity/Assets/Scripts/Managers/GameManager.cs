@@ -182,6 +182,7 @@ public class GameManager : MonoBehaviour {
         boy1.GetComponent<bigBoy>().Kill();
         yield return new WaitForSeconds(0.3f);
         winPanel.SetActive(true);
+        Cursor.visible = true;
     }
 
     public void nextLevel() {
