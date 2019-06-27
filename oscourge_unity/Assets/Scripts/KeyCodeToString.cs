@@ -18,7 +18,7 @@ public class KeyCodeToString
 	private KeyCodeToString(){
 		this.stringKeys = new Dictionary<KeyCode, string>();
 
-		stringKeys.Add(KeyCode.A, "Q");
+		stringKeys.Add(KeyCode.A, "A");
 		stringKeys.Add(KeyCode.Alpha0, "Alpha Keyboard 0");
 		stringKeys.Add(KeyCode.Alpha1, "Alpha Keyboard 1");
 		stringKeys.Add(KeyCode.Alpha2, "Alpha Keyboard 2");
@@ -42,7 +42,7 @@ public class KeyCodeToString
 		stringKeys.Add(KeyCode.CapsLock, "Capslock");
 		stringKeys.Add(KeyCode.Caret, "^");
 		stringKeys.Add(KeyCode.Clear, "Clear");
-		stringKeys.Add(KeyCode.Colon, ",");
+		stringKeys.Add(KeyCode.Colon, ":");
 		stringKeys.Add(KeyCode.Comma, ",");
 		stringKeys.Add(KeyCode.D, "D");
 		stringKeys.Add(KeyCode.Delete, "Delete");
@@ -312,7 +312,7 @@ public class KeyCodeToString
 		stringKeys.Add(KeyCode.Pipe, "|");
 		stringKeys.Add(KeyCode.Plus, "+");
 		stringKeys.Add(KeyCode.Print, "Print");
-		stringKeys.Add(KeyCode.Q, "A");
+		stringKeys.Add(KeyCode.Q, "Q");
 		stringKeys.Add(KeyCode.Question, "?");
 		stringKeys.Add(KeyCode.Quote, "'");
 		stringKeys.Add(KeyCode.R, "R");
@@ -340,10 +340,10 @@ public class KeyCodeToString
 		stringKeys.Add(KeyCode.Underscore, "_");
 		stringKeys.Add(KeyCode.UpArrow, "Up arrow");
 		stringKeys.Add(KeyCode.V, "V");
-		stringKeys.Add(KeyCode.W, "Z");
+		stringKeys.Add(KeyCode.W, "W");
 		stringKeys.Add(KeyCode.X, "X");
 		stringKeys.Add(KeyCode.Y, "Y");
-		stringKeys.Add(KeyCode.Z, "W");
+		stringKeys.Add(KeyCode.Z, "Z");
 	}
 
 	public string Convert(KeyCode code){
