@@ -80,7 +80,7 @@ public class menu : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         borderBot.GetComponent<BoxCollider2D>().enabled = false;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         borderBot.GetComponent<BoxCollider2D>().enabled = true;
 
 
