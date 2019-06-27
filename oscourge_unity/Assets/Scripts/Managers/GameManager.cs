@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour {
         SFX.gameObject.GetComponent<SFX>().Music();
         intro = true;
 
+        Time.timeScale = 1.0f;
+        isPaused = false;
+
 
 
     }
@@ -143,9 +146,10 @@ public class GameManager : MonoBehaviour {
         sceneIsLoading = true;
         if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
             if (ClientUDP.Instance.gameState != ClientUDP.RESTART) ClientUDP.Instance.sendTypedMessage(Message.RESTART);
-        } else {
-            setOffPause();
         }
+        //else {
+        //    setOffPause();
+        //}
     }
 
     private bool gameIsWon = false;
@@ -278,7 +282,7 @@ public class GameManager : MonoBehaviour {
             OptionsPanel.SetActive(false);
         if (ControlsPanel != null)
             ControlsPanel.SetActive(false);
-        else Debug.LogError("PausePanel is null");
+
             setScrolling(true);
     }
 
@@ -307,5 +311,16 @@ public class GameManager : MonoBehaviour {
         scrollMountains1.GetComponent<Parallax>().startPos = scrollMountains1.transform.position+mountainsOffset;
     }
 
-   
+
+
+
+    public void LoadMenu()
+    {
+        currentLoadingOperation = SceneManager.LoadSceneAsync("Menu");
+        sceneIsLoading = true;
+
+
+    }
+
+
 }

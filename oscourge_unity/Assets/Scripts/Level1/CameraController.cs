@@ -15,7 +15,7 @@ public bool scroll;
 		spawnLocation=transform.position;
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		if(scroll){
 			transform.position=transform.position+new Vector3(speed/100,0,0);

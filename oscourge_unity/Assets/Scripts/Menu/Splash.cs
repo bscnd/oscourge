@@ -9,7 +9,14 @@ public class Splash : MonoBehaviour
     public AudioSource sound;
 
 	float timer = 3.5f;
+
+
+    public GameObject loadingScene;
+
+    private bool sceneIsLoading = false;
+    private AsyncOperation currentLoadingOperation = null;
     void Start()
+
     {
         int width = 1280;
         int height = 720;
@@ -23,14 +30,24 @@ public class Splash : MonoBehaviour
     void Update()
 	{
 
+        if (sceneIsLoading)
+        {
+            loadingScene.SetActive(true);
+            if (currentLoadingOperation.isDone)
+            {
+                loadingScene.SetActive(false);
+                sceneIsLoading = false;
+            }
+        }
 
 
-		timer -= Time.deltaTime;
+        timer -= Time.deltaTime;
 
 		if(timer <= 0)
-		{
-			SceneManager.LoadScene("Menu");
-		}
+        {
+            currentLoadingOperation = SceneManager.LoadSceneAsync("Menu");
+            sceneIsLoading = true;
+        }
 	}
 
 
