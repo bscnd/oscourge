@@ -282,6 +282,7 @@ public class GameManager : MonoBehaviour {
             PausePanel.SetActive(true);
         else Debug.LogError("PausePanel is null");
         setScrolling(false);
+        Cursor.visible = true;
     }
 
     private void setOffPause() {
@@ -295,6 +296,8 @@ public class GameManager : MonoBehaviour {
             ControlsPanel.SetActive(false);
 
             setScrolling(true);
+
+        Cursor.visible = false;
     }
 
     public void setScrolling(bool isScroll) {
