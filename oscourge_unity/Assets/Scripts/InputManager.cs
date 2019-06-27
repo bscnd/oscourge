@@ -11,6 +11,7 @@ public class InputManager
 {
 	private static SortedSet<ButtonName> axis;
 	private static InputManager instance;
+	private int[] joysticks;
 
 	public static InputManager Instance(){
 		if(InputManager.instance == null){
@@ -26,6 +27,7 @@ public class InputManager
 	private InputManager(){
 		buttonKeys = new Dictionary<ButtonName, KeyCode >();
 		keysName = new Dictionary<ButtonName, string>();
+		this.joysticks = new int[2];
 
 		// TODO : Change menu with these strings
 		// TODO : Change inputs in project settings
@@ -44,6 +46,9 @@ public class InputManager
 		foreach(ButtonName button in values){
 			keysName.Add(button, KeyCodeToString.Instance().Convert(buttonKeys[button]));
 		}
+
+		this.joysticks[0] = -1;
+		this.joysticks[1] = -1;
 
 		/*
 		keysName[ButtonName.Left   ] = "A";
@@ -66,53 +71,76 @@ public class InputManager
 
 		bool res = Input.GetKeyDown(buttonKeys[buttonName]);
 
-		switch(buttonName){
-			case ButtonName.Jump :
-				res = res || Input.GetButtonDown("Jump");
-				break;
-			case ButtonName.Jump2 :
-				res = res || Input.GetButtonDown("Jump2");
-				break;
-			case ButtonName.Action :
-				res = res || Input.GetButtonDown("Action");
-				break;
-			case ButtonName.Action2 :
-				res = res || Input.GetButtonDown("Action2");
-				break;
-			case ButtonName.Pause :
-				res = res || Input.GetButtonDown("Pause");
-				res = res || Input.GetButtonDown("Pause2");
-				break;
+		if(this.joysticks[0] > 0){
+			int index = this.joysticks[0];
+			switch(buttonName){
+				case ButtonName.Jump :
+					res = res || Input.GetButtonDown("Jump" + index);
+					break;
+				case ButtonName.Action :
+					res = res || Input.GetButtonDown("Action" + index);
+					break;
+				case ButtonName.Pause :
+					res = res || Input.GetButtonDown("Pause" + index);
+					break;
+			}
+		}
+
+		if(this.joysticks[1] > 0){
+			int index = this.joysticks[1];
+			switch(buttonName){
+				case ButtonName.Jump2 :
+					res = res || Input.GetButtonDown("Jump" + index);
+					break;
+				case ButtonName.Action2 :
+					res = res || Input.GetButtonDown("Action" + index);
+					break;
+				case ButtonName.Pause :
+					res = res || Input.GetButtonDown("Pause" + index);
+					break;
+			}
 		}
 
 		return res;
+
 	}
 
 	public bool GetButton(ButtonName buttonName){
 		if(buttonKeys.ContainsKey(buttonName) == false){
-			Debug.LogError("InputManager::GetButtonDown -- no button named : " + buttonName);
+			Debug.LogError("InputManager::GetButton -- no button named : " + buttonName);
 			return false;
 		}
 
 		bool res = Input.GetKey(buttonKeys[buttonName]);
 
-		switch(buttonName){
-			case ButtonName.Jump :
-				res = res || Input.GetButton("Jump");
-				break;
-			case ButtonName.Jump2 :
-				res = res || Input.GetButton("Jump2");
-				break;
-			case ButtonName.Action :
-				res = res || Input.GetButton("Action");
-				break;
-			case ButtonName.Action2 :
-				res = res || Input.GetButton("Action2");
-				break;
-			case ButtonName.Pause :
-				res = res || Input.GetButton("Pause");
-				res = res || Input.GetButton("Pause2");
-				break;
+		if(this.joysticks[0] > 0){
+			int index = this.joysticks[0];
+			switch(buttonName){
+				case ButtonName.Jump :
+					res = res || Input.GetButton("Jump" + index);
+					break;
+				case ButtonName.Action :
+					res = res || Input.GetButton("Action" + index);
+					break;
+				case ButtonName.Pause :
+					res = res || Input.GetButton("Pause" + index);
+					break;
+			}
+		}
+
+		if(this.joysticks[1] > 0){
+			int index = this.joysticks[1];
+			switch(buttonName){
+				case ButtonName.Jump2 :
+					res = res || Input.GetButton("Jump" + index);
+					break;
+				case ButtonName.Action2 :
+					res = res || Input.GetButton("Action" + index);
+					break;
+				case ButtonName.Pause :
+					res = res || Input.GetButton("Pause" + index);
+					break;
+			}
 		}
 
 		return res;
@@ -132,7 +160,10 @@ public class InputManager
 				horizontal += 1F;
 			}
 		
-			horizontal += Input.GetAxisRaw("Horizontal");
+			if(this.joysticks[0] > 0){
+				int index = this.joysticks[0];
+				horizontal += Input.GetAxisRaw("Horizontal" + index);
+			}
 		}
 		else if(axisName == AxisName.Horizontal2){
 			if(this.GetButton(ButtonName.Left2)){
@@ -142,7 +173,10 @@ public class InputManager
 				horizontal += 1F;
 			}
 			
-			horizontal += Input.GetAxisRaw("Horizontal2");
+			if(this.joysticks[1] > 0){
+				int index = this.joysticks[1];
+				horizontal += Input.GetAxisRaw("Horizontal" + index);
+			}
 		}
 
 
@@ -159,4 +193,10 @@ public class InputManager
 		keysName.Remove(buttonName);
 		keysName.Add(buttonName, newName);
 	}
+
+	public void SetJoystick(int[] sticks){
+		this.joysticks[0] = sticks[0] + 1;
+		this.joysticks[1] = sticks[1] + 1;
+	}
+
 }

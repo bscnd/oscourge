@@ -7,7 +7,6 @@ public class Joystick : MonoBehaviour{
 	private const int maxJoystick = 2;
 
 	void Start(){
-		Debug.Log("Start");
 		joysticks = new int[2];
 
 		joysticks[0] = -1;
@@ -25,12 +24,6 @@ public class Joystick : MonoBehaviour{
 
 		}
 
-		for(int i=0 ; i<index ; i++){
-			Debug.Log("You are using the joystick number" + joysticks[i]);
-		}
-
-		if(index == 0){
-			Debug.Log("You are not using any joystick !");
-		}
+		InputManager.Instance().SetJoystick(joysticks);
 	}
 }
