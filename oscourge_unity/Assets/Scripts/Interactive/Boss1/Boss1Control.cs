@@ -46,6 +46,12 @@ public class Boss1Control : MonoBehaviour
 			return false;
 		}
 	}
+	
+	public void deletePlatform(){
+		if(activePlatformScript != null){
+			activePlatformScript.despawnPlate();
+		}
+	}
 
 	public void switchPlatform(){
 		if(activePlatformScript != null){
