@@ -7326,7 +7326,7 @@ PrefabInstance:
     - target: {fileID: 1346300646539780755, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1570836631991327280, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
         type: 3}
@@ -7433,6 +7433,16 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 583117714}
+    - target: {fileID: 1346300646987725334, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346300646987725334, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 1346300647190380426, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7468,6 +7478,16 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 583117714}
+    - target: {fileID: 1346300647102810056, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346300646987725332, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd7cc5fb3f8cf43a8847cdc4e03ae8d, type: 3}
 --- !u!224 &1423815562316990409
