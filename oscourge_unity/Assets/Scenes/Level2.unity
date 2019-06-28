@@ -1903,16 +1903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFXManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: knightRun
-      value: 
-      objectReference: {fileID: 1001474385}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: destruction
-      value: 
-      objectReference: {fileID: 506034894}
     - target: {fileID: 7432963705511551612, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1987,6 +1977,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: knightRun
+      value: 
+      objectReference: {fileID: 1001474385}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: destruction
+      value: 
+      objectReference: {fileID: 506034894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
 --- !u!4 &1391754993 stripped
@@ -3395,7 +3395,8 @@ PrefabInstance:
       propertyPath: system
       value: 
       objectReference: {fileID: 477487299671944270}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5749192037374361554, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 47250280029d3dc4eaaa1aaf75b721b7, type: 3}
 --- !u!1 &1950849334 stripped
 GameObject:
