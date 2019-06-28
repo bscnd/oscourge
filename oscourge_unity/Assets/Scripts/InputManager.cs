@@ -64,15 +64,21 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump :
 					res = res || Input.GetButtonDown("Jump" + index);
-					Debug.Log("Player 1 : Jump using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Jump using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Action :
 					res = res || Input.GetButtonDown("Action" + index);
-					Debug.Log("Player 1 : Action using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Action using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
-					Debug.Log("Player 1 : Pause using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Pause using gamepad number " + index);
+					}
 					break;
 			}
 		}
@@ -82,15 +88,21 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump2 :
 					res = res || Input.GetButtonDown("Jump" + index);
-					Debug.Log("Player 2 : Jump using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 2 : Jump using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Action2 :
 					res = res || Input.GetButtonDown("Action" + index);
-					Debug.Log("Player 2 : Action using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 2 : Action using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
-					Debug.Log("Player 2 : Pause using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 2 : Pause using gamepad number " + index);
+					}
 					break;
 			}
 		}
@@ -112,15 +124,21 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump :
 					res = res || Input.GetButton("Jump" + index);
-					Debug.Log("Player 1 : Jump using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Jump using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Action :
 					res = res || Input.GetButton("Action" + index);
-					Debug.Log("Player 1 : Action using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Action using gamepad number " + index);
+					}
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButton("Pause" + index);
-					Debug.Log("Player 1 : Pause using gamepad number " + index);
+					if(res){
+						Debug.Log("Player 1 : Pause using gamepad number " + index);
+					}
 					break;
 			}
 		}
