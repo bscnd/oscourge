@@ -55,4 +55,10 @@ public class VideoManager : MonoBehaviour {
         currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         sceneIsLoading = true;
     }
+
+    void OnApplicationQuit()
+    {
+        if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
+            ClientUDP.Instance.sendTypedMessage(Message.ENDGAME);
+    }
 }
