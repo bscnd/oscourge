@@ -9,6 +9,9 @@ In his quest to find the perfect seasoning for his squash gratin, a mad scientis
 ## Gameplay :
 In the first stage of each level, your goal is to run away fast enough to avoid being hit by the enemy. At this stage the screen is split in two, one for you, another for your partner. You will have to help the latter to pass some obstacles, and vice versa. After that, in the second stage, you will have to solve a puzzle that takes some gameplay elements already seen in the level. In this stage the screen is not split anymore.
 
+## Presentation :
+https://drive.google.com/file/d/16wT1G38Hv8JJB9XCNYztJolMs4xYiKUE/view
+
 ## Current Features :
 * Local / Online 
 * Keyboard & Xbox Controller support
