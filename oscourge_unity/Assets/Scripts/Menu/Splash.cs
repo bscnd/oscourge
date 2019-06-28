@@ -46,6 +46,10 @@ public class Splash : MonoBehaviour
         }
 	}
 
-
+    void OnApplicationQuit()
+    {
+        if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
+            ClientUDP.Instance.sendTypedMessage(Message.ENDGAME);
+    }
 
 }
