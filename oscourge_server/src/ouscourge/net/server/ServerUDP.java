@@ -64,7 +64,7 @@ public class ServerUDP implements Runnable {
 
 				DatagramPacket packet = new DatagramPacket(data, data.length);
 				if (gameState == CONNECTION_ERROR)
-					serverSocket.setSoTimeout(60000);
+					serverSocket.setSoTimeout(0);
 				else {
 					serverSocket.setSoTimeout(0);
 				}

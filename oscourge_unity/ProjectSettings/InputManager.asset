@@ -7,7 +7,7 @@ InputManager:
   m_Axes:
   - serializedVersion: 3
     m_Name: Horizontal
-    descriptiveName: Left Thumb Horizontal
+    descriptiveName: Menu control
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -19,6 +19,54 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Vertical
+    descriptiveName: Menu control
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Submit
+    descriptiveName: Menu control
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 0
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Cancel
+    descriptiveName: Menu control
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 3
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 0
     axis: 0
     joyNum: 0
   - serializedVersion: 3
@@ -278,22 +326,6 @@ InputManager:
     axis: 0
     joyNum: 16
   - serializedVersion: 3
-    m_Name: Vertical
-    descriptiveName: Left Thumb Vertical
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 1
-    joyNum: 0
-  - serializedVersion: 3
     m_Name: Vertical1
     descriptiveName: Left Thumb Vertical
     descriptiveNegativeName: 
@@ -549,22 +581,6 @@ InputManager:
     type: 2
     axis: 1
     joyNum: 16
-  - serializedVersion: 3
-    m_Name: Jump
-    descriptiveName: A Button
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 0
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
   - serializedVersion: 3
     m_Name: Jump1
     descriptiveName: A Button
@@ -822,22 +838,6 @@ InputManager:
     axis: 0
     joyNum: 16
   - serializedVersion: 3
-    m_Name: Action
-    descriptiveName: X Button
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 2
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
     m_Name: Action1
     descriptiveName: X Button
     descriptiveNegativeName: 
@@ -1094,22 +1094,6 @@ InputManager:
     axis: 0
     joyNum: 16
   - serializedVersion: 3
-    m_Name: Pause
-    descriptiveName: X Button
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 3
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
     m_Name: Pause1
     descriptiveName: X Button
     descriptiveNegativeName: 
@@ -1365,35 +1349,3 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 16
-  - serializedVersion: 3
-    m_Name: Submit
-    descriptiveName: A Button
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 0
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Cancel
-    descriptiveName: Y Button
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 3
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0

@@ -27,6 +27,7 @@ namespace Scripts.Networking {
         public int playerMode;
         public Vector3 currentPos;
         public InputValues currentInputs;
+        public byte[] valuesToSend;
         #endregion
 
         #region private members 	
@@ -155,8 +156,8 @@ namespace Scripts.Networking {
 
                     // Handle the timeout (pause the game)
 
-                    changeGameState(CONNECTION_ERROR);
-                    sendTypedMessage(Message.CONNECTION_ERROR);
+                    //changeGameState(CONNECTION_ERROR);
+                    //sendTypedMessage(Message.CONNECTION_ERROR);
 
                     //GameManager[] gameManager = UnityEngine.Object.FindObjectsOfType<GameManager>();
                     //if (gameManager.Length == 0) {
