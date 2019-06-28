@@ -147,6 +147,7 @@ public class bigBoy : MonoBehaviour
 		anim.SetBool("Run",false);
 		isDead=true;
         SFX.gameObject.GetComponent<SFX>().KnightRunStop();
+        StopCoroutine(WalkSound());
 
     }
 
