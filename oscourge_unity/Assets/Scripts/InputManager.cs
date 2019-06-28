@@ -99,7 +99,6 @@ public class InputManager
 
 	}
 
-	/*
 	public bool GetButton(ButtonName buttonName){
 		if(buttonKeys.ContainsKey(buttonName) == false){
 			Debug.LogError("InputManager::GetButton -- no button named : " + buttonName);
@@ -140,7 +139,6 @@ public class InputManager
 
 		return res;
 	}
-	*/
 
 	public float GetAxisRaw(AxisName axisName){
 		float horizontal = 0;
@@ -166,6 +164,7 @@ public class InputManager
 				else if(horizontal < 0){
 					Debug.Log("Player 1 is going left using gamepad number " + index);
 				}
+
 			}
 		}
 		else if(axisName == AxisName.Horizontal2){
