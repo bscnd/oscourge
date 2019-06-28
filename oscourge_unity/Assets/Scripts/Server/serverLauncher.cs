@@ -14,7 +14,7 @@ public  class serverLauncher : MonoBehaviour
             Process foo = new Process();
             foo.StartInfo.FileName = Environment.CurrentDirectory + @"\Assets\Scripts\Server\launch.bat";
             foo.StartInfo.Arguments = port.ToString();
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
             foo.Start();
         }
         catch

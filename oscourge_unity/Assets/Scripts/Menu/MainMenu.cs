@@ -8,6 +8,7 @@ using System.Net;
 using Scripts.Networking;
 using System;
 using UnityEngine.Audio;
+using System.Threading;
 
 public class MainMenu : MonoBehaviour {
 
@@ -39,12 +40,13 @@ public class MainMenu : MonoBehaviour {
             else
             {
                 changePanel(1);
-                string ip = "192.168.1.1";
+                string ip = "127.0.0.1";
                 IPAddress adresse = IPAddress.Parse(ip);
                 int port = int.Parse(portInputHost.text);
 
-
                 server.GetComponent<serverLauncher>().Launch(port);
+
+                Thread.Sleep(1000); // Waiting for the server to actually start before connecting
 
                 Debug.Log("ip : " + ip + " / port : " + port);
                 ClientUDP.Instance.ConnectToServer(ip, port);

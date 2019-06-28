@@ -35,8 +35,8 @@ public class InputManager
 		// TODO : Change inputs in project settings
 		buttonKeys[ButtonName.Left   ] = KeyCode.Q;
 		buttonKeys[ButtonName.Right  ] = KeyCode.D;
-		buttonKeys[ButtonName.Jump   ] = KeyCode.Space;
-		buttonKeys[ButtonName.Action ] = KeyCode.E;
+        buttonKeys[ButtonName.Jump] =  KeyCode.Space;// KeyCode.Joystick1Button0;
+        buttonKeys[ButtonName.Action ] = KeyCode.E;
 		buttonKeys[ButtonName.Left2  ] = KeyCode.LeftArrow;
 		buttonKeys[ButtonName.Right2 ] = KeyCode.RightArrow;
 		buttonKeys[ButtonName.Jump2  ] = KeyCode.UpArrow;
@@ -60,13 +60,14 @@ public class InputManager
 			return false;
 		}
 
-		bool res = Input.GetKeyDown(buttonKeys[buttonName]);
+        bool res = false;
+        res = Input.GetKeyDown(buttonKeys[buttonName]);
 
 		if(this.joysticks[0] > 0){
 			int index = this.joysticks[0];
 			switch(buttonName){
 				case ButtonName.Jump :
-					res = res || Input.GetButtonDown("Jump" + index);
+					//res = res || Input.GetButtonDown("Jump" + index);
 					if(Input.GetButtonDown("Jump" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 1 : Jump using gamepad number " + index);
@@ -93,7 +94,7 @@ public class InputManager
 			int index = this.joysticks[1];
 			switch(buttonName){
 				case ButtonName.Jump2 :
-					res = res || Input.GetButtonDown("Jump" + index);
+					//res = res || Input.GetButtonDown("Jump" + index);
 					if(Input.GetButtonDown("Jump" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 2 : Jump using gamepad number " + index);
