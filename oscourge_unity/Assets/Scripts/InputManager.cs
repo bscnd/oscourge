@@ -49,18 +49,6 @@ public class InputManager
 
 		this.joysticks[0] = -1;
 		this.joysticks[1] = -1;
-
-		/*
-		keysName[ButtonName.Left   ] = "A";
-		keysName[ButtonName.Right  ] = "D";
-		keysName[ButtonName.Jump   ] = "Space";
-		keysName[ButtonName.Action ] = "E";
-		keysName[ButtonName.Left2  ] = "Left arrow";
-		keysName[ButtonName.Right2 ] = "Right arrow";
-		keysName[ButtonName.Jump2  ] = "Up arrow";
-		keysName[ButtonName.Action2] = "Keypad 0";
-		keysName[ButtonName.Pause  ] = "Escape";
-		*/
 	}
 
 	public bool GetButtonDown(ButtonName buttonName){
@@ -76,12 +64,15 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump :
 					res = res || Input.GetButtonDown("Jump" + index);
+					Debug.Log("Player 1 : Jump using gamepad number " + index);
 					break;
 				case ButtonName.Action :
 					res = res || Input.GetButtonDown("Action" + index);
+					Debug.Log("Player 1 : Action using gamepad number " + index);
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
+					Debug.Log("Player 1 : Pause using gamepad number " + index);
 					break;
 			}
 		}
@@ -91,12 +82,15 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump2 :
 					res = res || Input.GetButtonDown("Jump" + index);
+					Debug.Log("Player 2 : Jump using gamepad number " + index);
 					break;
 				case ButtonName.Action2 :
 					res = res || Input.GetButtonDown("Action" + index);
+					Debug.Log("Player 2 : Action using gamepad number " + index);
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
+					Debug.Log("Player 2 : Pause using gamepad number " + index);
 					break;
 			}
 		}
@@ -105,6 +99,7 @@ public class InputManager
 
 	}
 
+	/*
 	public bool GetButton(ButtonName buttonName){
 		if(buttonKeys.ContainsKey(buttonName) == false){
 			Debug.LogError("InputManager::GetButton -- no button named : " + buttonName);
@@ -145,6 +140,7 @@ public class InputManager
 
 		return res;
 	}
+	*/
 
 	public float GetAxisRaw(AxisName axisName){
 		float horizontal = 0;
@@ -163,6 +159,13 @@ public class InputManager
 			if(this.joysticks[0] > 0){
 				int index = this.joysticks[0];
 				horizontal += Input.GetAxisRaw("Horizontal" + index);
+
+				if(horizontal > 0){
+					Debug.Log("Player 1 is going right using gamepad number " + index);
+				}
+				else if(horizontal < 0){
+					Debug.Log("Player 1 is going left using gamepad number " + index);
+				}
 			}
 		}
 		else if(axisName == AxisName.Horizontal2){
@@ -176,9 +179,16 @@ public class InputManager
 			if(this.joysticks[1] > 0){
 				int index = this.joysticks[1];
 				horizontal += Input.GetAxisRaw("Horizontal" + index);
-			}
-		}
 
+				if(horizontal > 0){
+					Debug.Log("Player 2 is going right using gamepad number " + index);
+				}
+				else if(horizontal < 0){
+					Debug.Log("Player 2 is going left using gamepad number " + index);
+				}
+			}
+
+		}
 
 		return horizontal;
 	}
