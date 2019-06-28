@@ -20,7 +20,7 @@ public class serverLauncher : MonoBehaviour
                 foo.StartInfo.FileName = Application.dataPath + @"\launch.bat";
             }
             foo.StartInfo.Arguments = port.ToString();
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Normal; 
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden; 
             foo.Start();
             StartCoroutine(Exit(foo));
         }
