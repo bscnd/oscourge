@@ -157,18 +157,13 @@ public class InputManager
 		this.joysticks[0] = sticks[0] + 1;
 		this.joysticks[1] = sticks[1] + 1;
 
-		if(Application.platform == RuntimePlatform.OSXPlayer){
+		if(Application.platform != RuntimePlatform.OSXPlayer){
 			if(joysticks[0] != 0){
 				int index = joysticks[0];
 
 				joystickKeys[ButtonName.Jump   ] = stringToKeycode("Joystick" + index + "Button" + 0); 
 				joystickKeys[ButtonName.Action ] = stringToKeycode("Joystick" + index + "Button" + 2); 
 				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 7); 
-
-				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick1Button0;
-				joystickKeys[ButtonName.Action ] = KeyCode.Jostick1Button2;
-				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick1Button7;
-
 			}
 
 			if(joysticks[1] != 0){
@@ -177,10 +172,6 @@ public class InputManager
 				joystickKeys[ButtonName.Jump2  ] = stringToKeycode("Joystick" + index + "Button" + 0); 
 				joystickKeys[ButtonName.Action2] = stringToKeycode("Joystick" + index + "Button" + 2); 
 				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 7); 
-				
-				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button0;
-				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button2;
-				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button7;
 			}
 		}
 		else{
@@ -190,10 +181,6 @@ public class InputManager
 				joystickKeys[ButtonName.Jump   ] = stringToKeycode("Joystick" + index + "Button" + 16); 
 				joystickKeys[ButtonName.Action ] = stringToKeycode("Joystick" + index + "Button" + 18); 
 				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 9); 
-				
-				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button16;
-				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button18;
-				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button9;
 			}
 
 			if(joysticks[1] != 0){
@@ -202,10 +189,6 @@ public class InputManager
 				joystickKeys[ButtonName.Jump2  ] = stringToKeycode("Joystick" + index + "Button" + 16); 
 				joystickKeys[ButtonName.Action2] = stringToKeycode("Joystick" + index + "Button" + 18); 
 				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 9); 
-				
-				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button16;
-				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button18;
-				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button9;
 			}
 		}
 	}
