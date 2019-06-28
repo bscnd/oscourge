@@ -78,6 +78,7 @@ public class MainMenu : MonoBehaviour {
                 }
             }
             catch (FormatException e) {
+                Debug.Log(e.ToString());
                 ErrorTxt.SetText("This is not a correct IP adress");
                 ErrorBox.SetActive(true);
             }
