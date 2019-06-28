@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour {
     public GameObject camera1;
     public GameObject scrollMountains1;
     public GameObject fade;
-    public GameObject gridPrefab;
-    public GameObject currentGrid;
     public GameObject SFX;
     public GameObject winPanel;
     public GameObject loadingScene;
@@ -40,13 +38,11 @@ public class GameManager : MonoBehaviour {
 
     public List<Renderer> renderers = new List<Renderer>();
 
-    private Vector3 gridPos;
 
     public bool intro ;
 
     void Start() {
         fade.SetActive(false);
-        gridPos = gridPrefab.transform.position;
         SFX.gameObject.GetComponent<SFX>().MenuMusicStop();
         SFX.gameObject.GetComponent<SFX>().Music();
         intro = true;
@@ -198,7 +194,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    private bool gameIsOver = false;
+    public bool gameIsOver = false;
 
     public void GameOver() {
         if (!gameIsOver) {
@@ -227,17 +223,6 @@ public class GameManager : MonoBehaviour {
         player1.GetComponent<PlayerController>().Respawn();
         player2.GetComponent<PlayerController>().Respawn();
         resetRenderers();
-        GameObject temp = Instantiate(gridPrefab, gridPos, Quaternion.identity);
-        temp.transform.SetParent(currentGrid.transform.parent);
-        GameObject toDestroy = currentGrid;
-        currentGrid = temp;
-        Destroy(toDestroy);
-        GameObject tm = currentGrid.gameObject.transform.GetChild(0).gameObject;
-        TilemapRenderer sprite = tm.GetComponent<TilemapRenderer>();
-        sprite.sortingLayerName = "Ground";
-        tm = currentGrid.gameObject.transform.GetChild(1).gameObject;
-        sprite = tm.GetComponent<TilemapRenderer>();
-        sprite.sortingLayerName = "Ground";
         boy1.GetComponent<bigBoy>().Respawn();
         fade.SetActive(false);
         gameIsOver = false;
