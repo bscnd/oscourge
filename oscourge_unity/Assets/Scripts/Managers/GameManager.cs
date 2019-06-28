@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour {
                     setOffPause();
                     break;
                 case ClientUDP.RESTART:
-                    Replay();
+                    ReplayOnline();
                     break;
             }
         }
@@ -153,14 +153,18 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Replay() {
-        currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        sceneIsLoading = true;
         if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE) {
             if (ClientUDP.Instance.gameState != ClientUDP.RESTART) ClientUDP.Instance.sendTypedMessage(Message.RESTART);
+        } else {
+            currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            sceneIsLoading = true;
         }
-        //else {
-        //    setOffPause();
-        //}
+    }
+
+    public void ReplayOnline() {
+        currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        sceneIsLoading = true;
+        ClientUDP.Instance.changeGameState(ClientUDP.PLAYING);
     }
 
     private bool gameIsWon = false;

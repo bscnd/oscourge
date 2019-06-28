@@ -200,9 +200,7 @@ public class ServerUDP implements Runnable {
 		} else if (ind != P1 && ind != P2) {
 			print(Consts.badIndex);
 		} else {
-			if (ind == P1)
 				sendTo(player2, MessageUDP.RESTART);
-			else
 				sendTo(player1, MessageUDP.RESTART);
 		}
 	}

@@ -2,6 +2,7 @@
 using UnityEngine.Video;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Scripts.Networking;
 
 public class VideoManager : MonoBehaviour {
 
@@ -19,10 +20,13 @@ public class VideoManager : MonoBehaviour {
 
         if (InputManager.Instance().GetButtonDown(ButtonName.Pause))
         {
-            Debug.Log("Event for movie end called");
-            GetComponent<VideoPlayer>().Stop();
-            currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-            sceneIsLoading = true;
+            if (ClientUDP.Instance.gameState == ClientUDP.OFFLINE)
+            {
+                Debug.Log("Event for movie end called");
+                GetComponent<VideoPlayer>().Stop();
+                currentLoadingOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+                sceneIsLoading = true;
+            }
         }
 
 
