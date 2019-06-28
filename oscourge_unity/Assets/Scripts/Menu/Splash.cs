@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Scripts.Networking;
 
 public class Splash : MonoBehaviour
 {
