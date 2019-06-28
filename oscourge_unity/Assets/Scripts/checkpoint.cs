@@ -31,10 +31,10 @@ public class checkpoint : MonoBehaviour
 
             Vector3 p1Offset = player1.transform.position;
             p1Offset.x = -player1.transform.position.x + this.transform.position.x;
-            p1Offset.y = -player1.transform.position.y + this.gameObject.transform.GetChild(0).transform.position.y ;
+            p1Offset.y = -player1.transform.position.y + this.gameObject.transform.GetChild(1).transform.position.y ;
             Vector3 p2Offset = player2.transform.position;
             p2Offset.x = -player2.transform.position.x + this.transform.position.x;
-            p2Offset.y = -player2.transform.position.y + this.gameObject.transform.GetChild(1).transform.position.y;
+            p2Offset.y = -player2.transform.position.y + this.gameObject.transform.GetChild(0).transform.position.y;
             Vector3 camOffset = cam.transform.position;
             camOffset.x = -cam.transform.position.x + this.transform.position.x;
             camOffset.y = 0;

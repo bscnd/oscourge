@@ -63,13 +63,13 @@ public class littleBoy : MonoBehaviour
 			if(seen){
 				if(player.transform.position.x>transform.position.x){
 					myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
-					transform.localScale = new Vector3(2f, 2f, 1f);
+					transform.localScale = new Vector3(1f, 1f, 1f);
 					animator.SetFloat("Speed",moveSpeed);
 				}
 				else if(player.transform.position.x<transform.position.x){
 
 					myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
-					transform.localScale = new Vector3(-2f, 2f, 1f);
+					transform.localScale = new Vector3(-1f, 1f, 1f);
 					animator.SetFloat("Speed",moveSpeed);
 				}
 
@@ -80,14 +80,14 @@ public class littleBoy : MonoBehaviour
 			} else{
 				if(z<patrolRadius*100){
 					myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
-					transform.localScale = new Vector3(2f, 2f, 1f);
+					transform.localScale = new Vector3(1f, 1f, 1f);
 					animator.SetFloat("Speed",moveSpeed);
 					z++;
 				}
 				else if (z<2*patrolRadius*100){
 
 					myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
-					transform.localScale = new Vector3(-2f, 2f, 1f);
+					transform.localScale = new Vector3(-1f,1f, 1f);
 					animator.SetFloat("Speed",moveSpeed);
 					z++;
 				}
