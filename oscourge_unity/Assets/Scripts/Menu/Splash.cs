@@ -19,12 +19,7 @@ public class Splash : MonoBehaviour
 
     {
         Cursor.visible = false;
-        int width = 1280;
-        int height = 720;
-        bool isFullScreen = true; 
-        int desiredFPS = 60; 
-
-        Screen.SetResolution(width, height, isFullScreen, desiredFPS);
+      
 
         sound.PlayDelayed(0.5f);
     }

@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour
 
     private GameObject gameManager;
 
+
+    private int jumpDuration=0;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -48,9 +51,22 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
+
     
     void Update()
     {
+
+        if (jump)
+        {
+            jumpDuration++;
+        }
+
+        if (jumpDuration == 100)
+        {
+            onLanding();
+            jumpDuration = 0;
+        }
 
 
 
@@ -78,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
             Message data = new Message(gameObject.name, "look at these moves", Message.DATA, inputs, pos);
             string dataString = JsonConvert.SerializeObject(data);
-            if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE)
+            if (ClientUDP.Instance.gameState != ClientUDP.OFFLINE && !gameManager.GetComponent<GameManager>().isPaused)
                 ClientUDP.Instance.SendData(Encoding.ASCII.GetBytes(dataString));
             if (!isDead)
             {
