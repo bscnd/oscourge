@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 	
@@ -12,7 +13,6 @@ public class InputManager
 	private static SortedSet<ButtonName> axis;
 	private static InputManager instance;
 	private int[] joysticks;
-	private long debugCount;
 
 	public static InputManager Instance(){
 		if(InputManager.instance == null){
@@ -23,11 +23,12 @@ public class InputManager
 	}
 
 	private Dictionary<ButtonName, KeyCode> buttonKeys;
+	private Dictionary<ButtonName, KeyCode> joystickKeys;
 	private Dictionary<ButtonName, string> keysName;
 
 	private InputManager(){
-		debugCount = 0;
 		buttonKeys = new Dictionary<ButtonName, KeyCode >();
+		joystickKeys = new Dictionary<ButtonName, KeyCode >();
 		keysName = new Dictionary<ButtonName, string>();
 		this.joysticks = new int[2];
 
@@ -35,14 +36,25 @@ public class InputManager
 		// TODO : Change inputs in project settings
 		buttonKeys[ButtonName.Left   ] = KeyCode.Q;
 		buttonKeys[ButtonName.Right  ] = KeyCode.D;
-        buttonKeys[ButtonName.Jump] =  KeyCode.Space;// KeyCode.Joystick1Button0;
-        buttonKeys[ButtonName.Action ] = KeyCode.E;
+		buttonKeys[ButtonName.Jump   ] = KeyCode.Space;
+		buttonKeys[ButtonName.Action ] = KeyCode.E;
 		buttonKeys[ButtonName.Left2  ] = KeyCode.LeftArrow;
 		buttonKeys[ButtonName.Right2 ] = KeyCode.RightArrow;
 		buttonKeys[ButtonName.Jump2  ] = KeyCode.UpArrow;
 		buttonKeys[ButtonName.Action2] = KeyCode.Keypad0;
 		buttonKeys[ButtonName.Pause  ] = KeyCode.Escape;
-		buttonKeys[ButtonName.None  ] = KeyCode.None;
+		buttonKeys[ButtonName.None   ] = KeyCode.None;
+
+		joystickKeys[ButtonName.Left   ] = KeyCode.None;
+		joystickKeys[ButtonName.Right  ] = KeyCode.None;
+		joystickKeys[ButtonName.Jump   ] = KeyCode.None;
+		joystickKeys[ButtonName.Action ] = KeyCode.None;
+		joystickKeys[ButtonName.Left2  ] = KeyCode.None;
+		joystickKeys[ButtonName.Right2 ] = KeyCode.None;
+		joystickKeys[ButtonName.Jump2  ] = KeyCode.None;
+		joystickKeys[ButtonName.Action2] = KeyCode.None;
+		joystickKeys[ButtonName.Pause  ] = KeyCode.None;
+		joystickKeys[ButtonName.None   ] = KeyCode.None;
 
 		ButtonName[] values = (ButtonName[])ButtonName.GetValues(typeof(ButtonName));
 		foreach(ButtonName button in values){
@@ -54,71 +66,23 @@ public class InputManager
 	}
 
 	public bool GetButtonDown(ButtonName buttonName){
-		debugCount++;
 		if(buttonKeys.ContainsKey(buttonName) == false){
 			Debug.LogError("InputManager::GetButtonDown -- no button named : " + buttonName);
 			return false;
 		}
 
-        bool res = false;
-        res = Input.GetKeyDown(buttonKeys[buttonName]);
-
-		if(this.joysticks[0] > 0){
-			int index = this.joysticks[0];
-			switch(buttonName){
-				case ButtonName.Jump :
-					//res = res || Input.GetButtonDown("Jump" + index);
-					if(Input.GetButtonDown("Jump" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 1 : Jump using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Action :
-					res = res || Input.GetButtonDown("Action" + index);
-					if(Input.GetButtonDown("Action" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 1 : Action using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Pause :
-					res = res || Input.GetButtonDown("Pause" + index);
-					if(Input.GetButtonDown("Pause" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 1 : Pause using gamepad number " + index);
-					}
-					break;
-			}
+		if(joystickKeys.ContainsKey(buttonName) == false){
+			Debug.LogError("InputManager::GetButton -- no joystick button named : " + buttonName);
+			return false;
 		}
 
-		if(this.joysticks[1] > 0){
-			int index = this.joysticks[1];
-			switch(buttonName){
-				case ButtonName.Jump2 :
-					//res = res || Input.GetButtonDown("Jump" + index);
-					if(Input.GetButtonDown("Jump" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 2 : Jump using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Action2 :
-					res = res || Input.GetButtonDown("Action" + index);
-					if(Input.GetButtonDown("Action" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 2 : Action using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Pause :
-					res = res || Input.GetButtonDown("Pause" + index);
-					if(Input.GetButtonDown("Pause" + index)){
-						Debug.Log("Method have been called this number of time : " + debugCount);
-						Debug.Log("(GetButtonDown) Player 2 : Pause using gamepad number " + index);
-					}
-					break;
-			}
+		bool res = Input.GetKeyDown(buttonKeys[buttonName]);
+
+		if(joystickKeys[buttonName] != KeyCode.None){
+			res = res || Input.GetKeyDown(joystickKeys[buttonName]);
 		}
 
 		return res;
-
 	}
 
 	public bool GetButton(ButtonName buttonName){
@@ -127,48 +91,15 @@ public class InputManager
 			return false;
 		}
 
-		bool res = Input.GetKey(buttonKeys[buttonName]);
-
-		if(this.joysticks[0] > 0){
-			int index = this.joysticks[0];
-			switch(buttonName){
-				case ButtonName.Jump :
-					res = res || Input.GetButton("Jump" + index);
-					if(res){
-						Debug.Log("Player 1 : Jump using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Action :
-					res = res || Input.GetButton("Action" + index);
-					if(res){
-						Debug.Log("Player 1 : Action using gamepad number " + index);
-					}
-					break;
-				case ButtonName.Pause :
-					res = res || Input.GetButton("Pause" + index);
-					if(res){
-						Debug.Log("Player 1 : Pause using gamepad number " + index);
-					}
-					break;
-			}
+		if(joystickKeys.ContainsKey(buttonName) == false){
+			Debug.LogError("InputManager::GetButton -- no joystick button named : " + buttonName);
+			return false;
 		}
 
-		if(this.joysticks[1] > 0){
-			int index = this.joysticks[1];
-			switch(buttonName){
-				case ButtonName.Jump2 :
-					res = res || Input.GetButton("Jump" + index);
-					Debug.Log("Player 2 : Jump using gamepad number " + index);
-					break;
-				case ButtonName.Action2 :
-					res = res || Input.GetButton("Action" + index);
-					Debug.Log("Player 2 : Action using gamepad number " + index);
-					break;
-				case ButtonName.Pause :
-					res = res || Input.GetButton("Pause" + index);
-					Debug.Log("Player 2 : Pause using gamepad number " + index);
-					break;
-			}
+		bool res = Input.GetKey(buttonKeys[buttonName]);
+
+		if(joystickKeys[buttonName] != KeyCode.None){
+			res = res || Input.GetKey(joystickKeys[buttonName]);
 		}
 
 		return res;
@@ -187,18 +118,10 @@ public class InputManager
 			if(this.GetButton(ButtonName.Right)){
 				horizontal += 1F;
 			}
-		
+			
 			if(this.joysticks[0] > 0){
 				int index = this.joysticks[0];
 				horizontal += Input.GetAxisRaw("Horizontal" + index);
-
-				if(horizontal > 0){
-					Debug.Log("Player 1 is going right using gamepad number " + index);
-				}
-				else if(horizontal < 0){
-					Debug.Log("Player 1 is going left using gamepad number " + index);
-				}
-
 			}
 		}
 		else if(axisName == AxisName.Horizontal2){
@@ -212,16 +135,9 @@ public class InputManager
 			if(this.joysticks[1] > 0){
 				int index = this.joysticks[1];
 				horizontal += Input.GetAxisRaw("Horizontal" + index);
-
-				if(horizontal > 0){
-					Debug.Log("Player 2 is going right using gamepad number " + index);
-				}
-				else if(horizontal < 0){
-					Debug.Log("Player 2 is going left using gamepad number " + index);
-				}
 			}
-
 		}
+
 
 		return horizontal;
 	}
@@ -240,6 +156,63 @@ public class InputManager
 	public void SetJoystick(int[] sticks){
 		this.joysticks[0] = sticks[0] + 1;
 		this.joysticks[1] = sticks[1] + 1;
+
+		if(Application.platform == RuntimePlatform.OSXPlayer){
+			if(joysticks[0] != 0){
+				int index = joysticks[0];
+
+				joystickKeys[ButtonName.Jump   ] = stringToKeycode("Joystick" + index + "Button" + 0); 
+				joystickKeys[ButtonName.Action ] = stringToKeycode("Joystick" + index + "Button" + 2); 
+				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 7); 
+
+				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick1Button0;
+				joystickKeys[ButtonName.Action ] = KeyCode.Jostick1Button2;
+				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick1Button7;
+
+			}
+
+			if(joysticks[1] != 0){
+				int index = joysticks[1];
+
+				joystickKeys[ButtonName.Jump2  ] = stringToKeycode("Joystick" + index + "Button" + 0); 
+				joystickKeys[ButtonName.Action2] = stringToKeycode("Joystick" + index + "Button" + 2); 
+				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 7); 
+				
+				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button0;
+				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button2;
+				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button7;
+			}
+		}
+		else{
+			if(joysticks[0] != 0){
+				int index = joysticks[0];
+
+				joystickKeys[ButtonName.Jump   ] = stringToKeycode("Joystick" + index + "Button" + 16); 
+				joystickKeys[ButtonName.Action ] = stringToKeycode("Joystick" + index + "Button" + 18); 
+				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 9); 
+				
+				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button16;
+				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button18;
+				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button9;
+			}
+
+			if(joysticks[1] != 0){
+				int index = joysticks[1];
+
+				joystickKeys[ButtonName.Jump2  ] = stringToKeycode("Joystick" + index + "Button" + 16); 
+				joystickKeys[ButtonName.Action2] = stringToKeycode("Joystick" + index + "Button" + 18); 
+				joystickKeys[ButtonName.Pause  ] = stringToKeycode("JoystickButton" + 9); 
+				
+				joystickKeys[ButtonName.Jump   ] = KeyCode.Jostick2Button16;
+				joystickKeys[ButtonName.Action ] = KeyCode.Jostick2Button18;
+				joystickKeys[ButtonName.Pause  ] = KeyCode.Jostick2Button9;
+			}
+		}
 	}
 
+	private static KeyCode stringToKeycode(string touch){
+		KeyCode.TryParse(touch, out KeyCode code);
+
+		return code;
+	}
 }

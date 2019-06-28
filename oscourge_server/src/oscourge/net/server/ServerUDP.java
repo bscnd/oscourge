@@ -152,7 +152,10 @@ public class ServerUDP implements Runnable {
 			}
 
 		} else {
-			if (ind != -1) // It's the connected client
+			if( msg.getType() ==  MessageUDP.ENDGAME) {
+				endGame();
+			}
+			else if (ind != -1) // It's the connected client
 				sendTo(client, MessageUDP.WAIT);
 			else
 				sendErrorMessage(client, Consts.wrongMsgType);
@@ -184,7 +187,9 @@ public class ServerUDP implements Runnable {
 			case MessageUDP.PAUSE:
 				pauseGame();
 				break;
-
+			case MessageUDP.ENDGAME:
+				endGame();
+				break;
 			default:
 				print(Consts.wrongMsgType);
 				break;
@@ -234,6 +239,9 @@ public class ServerUDP implements Runnable {
 				}
 				resumeGame();
 				break;
+			case MessageUDP.ENDGAME:
+				endGame();
+				break;
 			default:
 				print(Consts.wrongMsgType);
 				break;
@@ -262,7 +270,9 @@ public class ServerUDP implements Runnable {
 					resumeGame();
 				}
 
-			} else {
+			}else if( msg.getType() ==  MessageUDP.ENDGAME)
+				endGame();
+			else {
 				print(Consts.wrongMsgType);
 			}
 		}
@@ -280,6 +290,7 @@ public class ServerUDP implements Runnable {
 		player1 = null;
 		player2 = null;
 		print(Consts.endGame);
+		shutdown();
 	}
 
 	private void connectionError() throws IOException {

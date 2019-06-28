@@ -54,6 +54,8 @@ namespace Scripts.Networking {
         }
         #endregion
 
+
+
         public void ConnectToServer(string ip, int port) {
             try {
                 changeGameState(INIT);
@@ -139,6 +141,9 @@ namespace Scripts.Networking {
                             case Message.RESTART:
                                 Debug.Log("type : restart");
                                 changeGameState(RESTART);
+                                break;
+                            case Message.ENDGAME:
+                                Debug.Log("type : endGame");
                                 break;
                             default:
                                 Debug.LogError("wrong type of message");
