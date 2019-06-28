@@ -17,3 +17,8 @@ To launch the server, you will also need Java JDK, available here :
 ## Open the project in Unity
 
 You need to open oscourge_unity from Unity Hub in order to edit the levels.
+
+## Building the game with Unity
+
+Every time you  build the game you will have to copy the files server.jar and launch.bat from oscourge\oscourge_unity\Assets\Scripts\Server to build_location/Oscourge_Data . 
+
