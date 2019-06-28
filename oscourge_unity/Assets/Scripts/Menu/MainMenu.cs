@@ -39,7 +39,6 @@ public class MainMenu : MonoBehaviour {
             if (string.IsNullOrEmpty(portInputHost.text)) { EmptyInputFieldError(); }
             else
             {
-                changePanel(1);
                 string ip = "127.0.0.1";
                 IPAddress adresse = IPAddress.Parse(ip);
                 int port = int.Parse(portInputHost.text);
@@ -50,8 +49,8 @@ public class MainMenu : MonoBehaviour {
 
                 Debug.Log("ip : " + ip + " / port : " + port);
                 ClientUDP.Instance.ConnectToServer(ip, port);
-                //ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
-                //Debug.LogError("RESET THESES LIGNES !");
+
+                changePanel(1);
             }
         }
         catch (FormatException e)
@@ -68,20 +67,17 @@ public class MainMenu : MonoBehaviour {
 
                 if (string.IsNullOrEmpty(ipInput.text) || string.IsNullOrEmpty(portInput.text)) { EmptyInputFieldError(); }
                 else {
-                    changePanel(0);
-
                     string ip = ipInput.text;
                     IPAddress adresse = IPAddress.Parse(ip);
                     int port = int.Parse(portInput.text);
 
                     Debug.Log("ip : " + ip + " / port : " + port);
                     ClientUDP.Instance.ConnectToServer(ip, port);
-                    //ClientUDP.Instance.ConnectToServer("127.0.0.1", 1331);
-                    //Debug.LogError("RESET THESES LIGNES !");
+
+                    changePanel(0);
                 }
             }
             catch (FormatException e) {
-                Debug.LogError(e);
                 ErrorTxt.SetText("This is not a correct IP adress");
                 ErrorBox.SetActive(true);
             }
@@ -97,15 +93,20 @@ public class MainMenu : MonoBehaviour {
     public void resetColorIpInput() {
         ipInput.image.color = Color.white;
     }
-    public void resetColorPortInput() {
+    public void resetColorPortJoinInput() {
         portInput.image.color = Color.white;
+    }
+    public void resetColorPortHostInput() {
+        portInputHost.image.color = Color.white;
     }
 
     public void resetInputs() {
         resetColorIpInput();
-        resetColorPortInput();
+        resetColorPortJoinInput();
+        resetColorPortHostInput();
         ipInput.text = "";
         portInput.text = "";
+        portInputHost.text = "";
     }
 
     private void EmptyInputFieldError() {
