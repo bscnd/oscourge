@@ -67,21 +67,21 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump :
 					res = res || Input.GetButtonDown("Jump" + index);
-					if(res){
+					if(Input.GetButtonDown("Jump" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 1 : Jump using gamepad number " + index);
 					}
 					break;
 				case ButtonName.Action :
 					res = res || Input.GetButtonDown("Action" + index);
-					if(res){
+					if(Input.GetButtonDown("Action" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 1 : Action using gamepad number " + index);
 					}
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
-					if(res){
+					if(Input.GetButtonDown("Pause" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 1 : Pause using gamepad number " + index);
 					}
@@ -94,21 +94,21 @@ public class InputManager
 			switch(buttonName){
 				case ButtonName.Jump2 :
 					res = res || Input.GetButtonDown("Jump" + index);
-					if(res){
+					if(Input.GetButtonDown("Jump" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 2 : Jump using gamepad number " + index);
 					}
 					break;
 				case ButtonName.Action2 :
 					res = res || Input.GetButtonDown("Action" + index);
-					if(res){
+					if(Input.GetButtonDown("Action" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 2 : Action using gamepad number " + index);
 					}
 					break;
 				case ButtonName.Pause :
 					res = res || Input.GetButtonDown("Pause" + index);
-					if(res){
+					if(Input.GetButtonDown("Pause" + index)){
 						Debug.Log("Method have been called this number of time : " + debugCount);
 						Debug.Log("(GetButtonDown) Player 2 : Pause using gamepad number " + index);
 					}
