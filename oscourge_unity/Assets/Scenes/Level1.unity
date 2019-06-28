@@ -9388,6 +9388,36 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 14.68615
       objectReference: {fileID: 0}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 737453553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 737453553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2146544870007249588, guid: 97cfd35360097a448a79ddb00b6bc197,
         type: 3}
       propertyPath: m_LocalPosition.y

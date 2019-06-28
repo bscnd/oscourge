@@ -2802,6 +2802,36 @@ PrefabInstance:
       propertyPath: boy
       value: 
       objectReference: {fileID: 1561691263}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 737453553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070411283983101306, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 737453553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483763799604750953, guid: 97cfd35360097a448a79ddb00b6bc197,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cfd35360097a448a79ddb00b6bc197, type: 3}
 --- !u!4 &1790147331 stripped
