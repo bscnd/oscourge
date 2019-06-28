@@ -19,11 +19,12 @@ public class Joystick : MonoBehaviour{
 		for(int i=0 ; !(i >= sticks.Length || index >= maxJoystick) ; i++){
 			if(sticks[i] != null){
 				joysticks[index] = i;
+				Debug.Log("You are using the joystick number " + (i+1));
+				Debug.Log("This joystick is named " + sticks[i]);
 				index++;
 			}
 
 		}
-
 		InputManager.Instance().SetJoystick(joysticks);
 	}
 }
