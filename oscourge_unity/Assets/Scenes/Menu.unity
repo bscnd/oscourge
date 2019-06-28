@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -503,7 +503,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6.7e-44, z: 4.818e-42, w: 1.05e-43}
+  m_BoundingSphereOverride: {x: -4.4415697e-16, y: 1.3292285e+36, z: 1.5046328e-36,
+    w: 6.3108872e-30}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1282,6 +1283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFXManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
+        type: 3}
+      propertyPath: click
+      value: 
+      objectReference: {fileID: 54830909}
     - target: {fileID: 7432963705511551612, guid: e302dc6321d2ea64da461aa6ac75c37c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1337,11 +1343,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7432963705511551611, guid: e302dc6321d2ea64da461aa6ac75c37c,
-        type: 3}
-      propertyPath: click
-      value: 
-      objectReference: {fileID: 54830909}
     - target: {fileID: 535490308, guid: e302dc6321d2ea64da461aa6ac75c37c, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -2214,6 +2215,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131937618482809177, guid: 291e75e99800e5e08bed490fba5e5baf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131937618482809177, guid: 291e75e99800e5e08bed490fba5e5baf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291e75e99800e5e08bed490fba5e5baf, type: 3}
