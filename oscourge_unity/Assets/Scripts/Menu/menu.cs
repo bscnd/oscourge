@@ -20,6 +20,8 @@ public class menu : MonoBehaviour
     {
 
         Cursor.visible = true;
+
+        Time.timeScale = 1.0f;
     }
 
     void Update()
