@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="checkpoint">
+    <Position X="38.25" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>wEAABAAAQCBAAEAAAAAAAgAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\checkpoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="bigBoy">
+    <Position X="24" Y="22" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAAAmAAAAAAAAYBAOAAhlAAASAAAQAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\enemy\bigBoy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ennemyPlatformEdge">
+    <Position X="30.75" Y="22" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAIAQAQAAAAIAAgAAAAQAAAAAgAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\enemy\ennemyPlatformEdge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="littleBoy">
+    <Position X="27.5" Y="22" Width="2.25" />
+    <Members>
+      <Field Name="z" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>hkQAAAAAEGEAAwQAAAAAAIABBJAAAACBAAAgAQAAACA=</HashCode>
+      <FileName>Assets\Scripts\enemy\littleBoy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss1">
+    <Position X="25" Y="36.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAACAAAAAAAAAAAEAAAAAAAAIAQAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Boss1\Boss1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss1Control">
+    <Position X="33" Y="36.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAIMCIACAEAAAAAAAAgAAAAAAAAAACAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Boss1\Boss1Control.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss1Editor">
+    <Position X="30.25" Y="36.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Boss1\Boss1Editor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss1Movement">
+    <Position X="27.5" Y="36.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAEBAAAAAAAAAEAAAAAgCAAAARAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Boss1\Boss1Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chain">
+    <Position X="16.25" Y="24.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECCAAAAAAAADAARAAEgDAAACAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Chain\Chain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mechanism">
+    <Position X="13" Y="21.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Generic\Mechanism.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trigger">
+    <Position X="3" Y="21.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQgAABAAAAAAQAAAAAAAAIAAgAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Generic\Trigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lever">
+    <Position X="1.5" Y="25.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAAAAAAAABCAAAAAEAAAAAEAAAgIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Lever\Lever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlinkPlatform">
+    <Position X="9.75" Y="24.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAEgBAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Platform\BlinkPlatform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovingPlatform">
+    <Position X="41" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAgAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Platform\MovingPlatform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pressure_plate">
+    <Position X="4.75" Y="25.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAAACgAAAAEAAAAAAQAAgIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Pressure-plate\Pressure_plate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spikes">
+    <Position X="13" Y="24.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAECCAAAAAAAgKAAAAAEgDAAACAEAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interactive\Spikes\Spikes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController">
+    <Position X="23" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAACAAAAABAAAASAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Level1\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CutsceneManager">
+    <Position X="53.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>wEQAAAAgACAAAAAAQAAAAAAAACABIAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\CutsceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="11.25" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>wAQAgKgBEiAaFQAAwEAAQCAEUAQQBIAgAQgAAANAqBA=</HashCode>
+      <FileName>Assets\Scripts\Managers\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManager">
+    <Position X="18.5" Y="2" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAgAAAAEAAAAAAAEAABAEAABAIAAAQAAAAIAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\InputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VideoManager">
+    <Position X="50" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAEAAAAAAAAgAABAAAAQAAAAAAAAAAAAAFAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\VideoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="credits">
+    <Position X="56.75" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAAAAAAAAQAAAAAQAAIAQAAAABAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\credits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="43" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AcQAACgAACMgBAABAAQAAKCAQEAIAACAABAAABEABAI=</HashCode>
+      <FileName>Assets\Scripts\Menu\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="menu">
+    <Position X="47" Y="2.5" Width="2.25" />
+    <Members>
+      <Field Name="i" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAQABAIACCACAAAAACAAAAADAAAAAIAAIAAAAABAAIA=</HashCode>
+      <FileName>Assets\Scripts\Menu\menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaitingScript">
+    <Position X="52.5" Y="21.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAiAAAAAAAAAAAAAAQAAAAAAAAAAAEAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\WaitingScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Message">
+    <Position X="56.5" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIDAAEAAAAAAAIAQAgABFAAAAABQBABgAEAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\data\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="15.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>hsQCAEAAEOAAAQIAAEiAAKACBFAAAAAIAEAAJABAACA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wheel">
+    <Position X="43.75" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABQAEAAAEiAAAAAAAEAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Wheel\Wheel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scripts.Networking.ClientUDP">
+    <Position X="59.5" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AwAAAIAAIJAAAAAEADIAAAQCgABACCAAQAAgEACAAQA=</HashCode>
+      <FileName>Assets\Scripts\Networking\client\ClientUDP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

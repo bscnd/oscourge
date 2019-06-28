@@ -46,8 +46,7 @@ public class bigBoy : MonoBehaviour
 		values.Add("Player2");
 		values.Add("bigBoy");
 
-
-		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();	
+	
 
 
 		pos2=transform.position;
@@ -109,7 +108,6 @@ public class bigBoy : MonoBehaviour
 
 
 
-        tilemap =gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
 		pos2=transform.position;
 
 
@@ -158,7 +156,6 @@ public class bigBoy : MonoBehaviour
         tiles.Clear();
 
 
-		tilemap=gameManager.GetComponent<GameManager>().currentGrid.transform.GetChild(0).gameObject.GetComponent<Tilemap>();
 		for(int i=-15;i<50;i++){
 
 			for(int j=-20;j<6;j++){
