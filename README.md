@@ -36,7 +36,7 @@ Audacity <https://www.audacityteam.org/>
 * **Léo Cauvin**
 * **Dorian Bouillet**
 * **Alexandre De Rycke**
-* **Donatien Sattler**
+* **Sc1pi0**
 
 ## License
 
